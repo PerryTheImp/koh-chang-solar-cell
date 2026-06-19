@@ -109,44 +109,157 @@ const eduArticles = [
           </div>
         </div>
       </div>
+      {/* CONTACT FORM - Multi-step with icon service selection */}
       <div class="bg-white text-gray-900 rounded-2xl shadow-2xl p-8">
-        <h3 class="text-2xl font-bold mb-2">{t.ctaFormTitle}</h3>
-        <p class="text-gray-500 text-sm mb-6">Fill in your details and we'll call you back within 24 hours.</p>
-        <form action="https://formspree.io/f/xnqevwyg" method="POST" class="space-y-4">
+        <div class="text-center mb-6">
+          <h3 class="text-2xl font-bold">{t.ctaFormTitle}</h3>
+          <p class="text-gray-500 text-sm mt-1">All requests processed within 24 hours</p>
+          <div class="mt-4 h-1 bg-gray-100 rounded-full overflow-hidden">
+            <div id="form-progress" class="h-full bg-solar-green transition-all duration-300" style="width: 33%"></div>
+          </div>
+          <p class="text-xs text-gray-400 mt-2">Step <span id="step-num">1</span> of 3</p>
+        </div>
+
+        <form id="multi-step-form" action="https://formspree.io/f/FORMSPREE_ID" method="POST" class="space-y-4">
           <input type="hidden" name="_cc" value="blendlsm@gmail.com" />
           <input type="hidden" name="_subject" value="New Solar Inquiry - kohchangsolarcell.com" />
-          <div>
-            <label class="block text-sm font-medium mb-1">{t.ctaFormName}</label>
-            <input type="text" name="name" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green focus:border-transparent outline-none transition-all" placeholder="John Smith" />
+          <input type="hidden" name="service" id="selected-service" value="" />
+
+          <div id="step-1">
+            <p class="text-sm font-semibold text-gray-700 mb-4">Choose Your Service <span class="text-red-500">*</span></p>
+            <div class="grid grid-cols-2 gap-3">
+              <button type="button" data-value="solar-panels" class="service-option flex flex-col items-center gap-2 p-4 border-2 border-gray-200 rounded-xl hover:border-solar-green hover:bg-green-50 transition-all cursor-pointer" onclick="selectService(this, 'solar-panels')">
+                <span class="text-3xl">\u2600\ufe0f</span>
+                <span class="text-xs font-medium text-center">Solar Panels</span>
+              </button>
+              <button type="button" data-value="battery" class="service-option flex flex-col items-center gap-2 p-4 border-2 border-gray-200 rounded-xl hover:border-solar-green hover:bg-green-50 transition-all cursor-pointer" onclick="selectService(this, 'battery')">
+                <span class="text-3xl">\u26a1</span>
+                <span class="text-xs font-medium text-center">Battery Storage</span>
+              </button>
+              <button type="button" data-value="grid-tie" class="service-option flex flex-col items-center gap-2 p-4 border-2 border-gray-200 rounded-xl hover:border-solar-green hover:bg-green-50 transition-all cursor-pointer" onclick="selectService(this, 'grid-tie')">
+                <span class="text-3xl">\ud83d\udd0c</span>
+                <span class="text-xs font-medium text-center">Grid-Tie System</span>
+              </button>
+              <button type="button" data-value="off-grid" class="service-option flex flex-col items-center gap-2 p-4 border-2 border-gray-200 rounded-xl hover:border-solar-green hover:bg-green-50 transition-all cursor-pointer" onclick="selectService(this, 'off-grid')">
+                <span class="text-3xl">\ud83c\udfe0</span>
+                <span class="text-xs font-medium text-center">Off-Grid System</span>
+              </button>
+              <button type="button" data-value="inverter" class="service-option flex flex-col items-center gap-2 p-4 border-2 border-gray-200 rounded-xl hover:border-solar-green hover:bg-green-50 transition-all cursor-pointer" onclick="selectService(this, 'inverter')">
+                <span class="text-3xl">\ud83d\udd27</span>
+                <span class="text-xs font-medium text-center">Inverter</span>
+              </button>
+              <button type="button" data-value="cleaning" class="service-option flex flex-col items-center gap-2 p-4 border-2 border-gray-200 rounded-xl hover:border-solar-green hover:bg-green-50 transition-all cursor-pointer" onclick="selectService(this, 'cleaning')">
+                <span class="text-3xl">\ud83e\uddfc</span>
+                <span class="text-xs font-medium text-center">Panel Cleaning</span>
+              </button>
+            </div>
+            <p id="service-error" class="text-red-500 text-xs mt-2 hidden">Please select a service to continue.</p>
           </div>
-          <div>
-            <label class="block text-sm font-medium mb-1">{t.ctaFormPhone}</label>
-            <input type="tel" name="phone" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green focus:border-transparent outline-none transition-all" placeholder="094 050 9623" />
+
+          <div id="step-2" class="hidden">
+            <p class="text-sm font-semibold text-gray-700 mb-4">How Can We Contact You?</p>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-medium mb-1">First Name <span class="text-red-500">*</span></label>
+                <input type="text" name="first_name" required class="w-full px-3 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green outline-none text-sm" placeholder="John" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium mb-1">Last Name <span class="text-red-500">*</span></label>
+                <input type="text" name="last_name" required class="w-full px-3 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green outline-none text-sm" placeholder="Smith" />
+              </div>
+            </div>
+            <div class="mt-3">
+              <label class="block text-xs font-medium mb-1">Phone <span class="text-red-500">*</span></label>
+              <input type="tel" name="phone" required class="w-full px-3 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green outline-none text-sm" placeholder="094 050 9623" />
+            </div>
+            <div class="mt-3">
+              <label class="block text-xs font-medium mb-1">Email</label>
+              <input type="email" name="email" class="w-full px-3 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green outline-none text-sm" placeholder="you@example.com" />
+            </div>
+            <div class="mt-3">
+              <label class="block text-xs font-medium mb-1">Brief Description of Work</label>
+              <textarea name="message" rows="3" class="w-full px-3 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green outline-none text-sm" placeholder="Tell us about your project..."></textarea>
+            </div>
           </div>
-          <div>
-            <label class="block text-sm font-medium mb-1">{t.ctaFormEmail}</label>
-            <input type="email" name="email" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green focus:border-transparent outline-none transition-all" placeholder="you@example.com" />
+
+          <div id="step-3" class="hidden">
+            <p class="text-sm font-semibold text-gray-700 mb-4">Where Is The Project?</p>
+            <div>
+              <label class="block text-xs font-medium mb-1">Address</label>
+              <input type="text" name="address" class="w-full px-3 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green outline-none text-sm" placeholder="113/10 Moo 4" />
+            </div>
+            <div class="grid grid-cols-2 gap-3 mt-3">
+              <div>
+                <label class="block text-xs font-medium mb-1">City / District</label>
+                <input type="text" name="city" class="w-full px-3 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green outline-none text-sm" placeholder="Ko Chang" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium mb-1">Province</label>
+                <input type="text" name="province" class="w-full px-3 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green outline-none text-sm" placeholder="Trat" />
+              </div>
+            </div>
+            <div class="mt-4 p-3 bg-gray-50 rounded-lg text-xs text-gray-500">
+              By submitting this form you agree to be contacted by WhatsApp, SMS, phone call and email.
+            </div>
           </div>
-          <div>
-            <label class="block text-sm font-medium mb-1">{t.ctaFormService}</label>
-            <select name="service" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green focus:border-transparent outline-none transition-all">
-              <option>Solar Panel Installation</option>
-              <option>Battery Storage System</option>
-              <option>Inverter Replacement</option>
-              <option>Panel Cleaning</option>
-              <option>Full System Upgrade</option>
-              <option>Consultation Only</option>
-            </select>
+
+          <div class="flex gap-3 mt-6">
+            <button type="button" id="btn-prev" class="hidden flex-1 py-3 border border-gray-300 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">Previous</button>
+            <button type="button" id="btn-next" class="flex-1 py-3 bg-solar-green text-white rounded-lg text-sm font-medium hover:bg-green-700 transition-colors">Next</button>
+            <button type="submit" id="btn-submit" class="hidden flex-1 py-3 bg-solar-green text-white rounded-lg text-sm font-medium hover:bg-green-700 transition-colors">{t.ctaFormSubmit}</button>
           </div>
-          <div>
-            <label class="block text-sm font-medium mb-1">Message (Optional)</label>
-            <textarea name="message" rows="3" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green focus:border-transparent outline-none transition-all" placeholder="Tell us about your project..."></textarea>
-          </div>
-          <button type="submit" class="w-full bg-solar-green text-white font-semibold py-4 rounded-lg hover:bg-green-700 transition-colors shadow-lg">
-            {t.ctaFormSubmit}
-          </button>
-          <p class="text-xs text-gray-400 text-center">{t.ctaFormPrivacy}</p>
+          <p class="text-xs text-gray-400 text-center mt-3">{t.ctaFormPrivacy}</p>
         </form>
+
+        <script is:inline>
+          (function() {
+            var currentStep = 1;
+            var totalSteps = 3;
+            var selectedService = '';
+
+            function updateUI() {
+              document.getElementById('step-1').classList.toggle('hidden', currentStep !== 1);
+              document.getElementById('step-2').classList.toggle('hidden', currentStep !== 2);
+              document.getElementById('step-3').classList.toggle('hidden', currentStep !== 3);
+              document.getElementById('step-num').textContent = currentStep;
+              document.getElementById('form-progress').style.width = (currentStep / totalSteps * 100) + '%';
+              document.getElementById('btn-prev').classList.toggle('hidden', currentStep === 1);
+              document.getElementById('btn-next').classList.toggle('hidden', currentStep === totalSteps);
+              document.getElementById('btn-submit').classList.toggle('hidden', currentStep !== totalSteps);
+            }
+
+            window.selectService = function(btn, value) {
+              selectedService = value;
+              document.getElementById('selected-service').value = value;
+              document.querySelectorAll('.service-option').forEach(function(b) {
+                b.classList.remove('border-solar-green', 'bg-green-50');
+                b.classList.add('border-gray-200');
+              });
+              btn.classList.remove('border-gray-200');
+              btn.classList.add('border-solar-green', 'bg-green-50');
+              document.getElementById('service-error').classList.add('hidden');
+            };
+
+            document.getElementById('btn-next').addEventListener('click', function() {
+              if (currentStep === 1 && !selectedService) {
+                document.getElementById('service-error').classList.remove('hidden');
+                return;
+              }
+              if (currentStep < totalSteps) {
+                currentStep++;
+                updateUI();
+              }
+            });
+
+            document.getElementById('btn-prev').addEventListener('click', function() {
+              if (currentStep > 1) {
+                currentStep--;
+                updateUI();
+              }
+            });
+          })();
+        </script>
+      </div>
       </div>
     </div>
   </section>
