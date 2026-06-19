@@ -1,0 +1,340 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const t = {
+  title: 'เจเจคอมโซล่าเซลล์ | ติดตั้งระบบพลังงานแสงอาทิตย์ในประเทศไทย',
+  desc: 'ติดตั้งและดูแลระบบพลังงานแสงอาทิตย์ครบวงจรในประเทศไทย ตั้งแต่ปี 2016 ตั้งอยู่ที่เกาะช้าง ให้บริการทั่วประเทศ',
+  heroH1: 'ติดตั้งและดูแลระบบพลังงานแสงอาทิตย์ในประเทศไทย',
+  heroSub: 'ผู้เชี่ยวชาญด้านพลังงานแสงอาทิตย์ที่เชื่อถือได้ตั้งแต่ปี 2016 เราออกแบบ ติดตั้ง และดูแลระบบพลังงานแสงอาทิตย์แบบครบวงจรสำหรับบ้านและธุรกิจทั่วประเทศไทย',
+  benefit1: 'บริการติดตั้งทั่วประเทศ ด้วยประสบการณ์กว่า 10 ปี',
+  benefit2: 'บริการหลังการขายและการบำรุงรักษาฟรี 1 ปี',
+  benefit3: 'แบรนด์ชั้นนำ พร้อมการรับประกันสูงสุด 5 ปี',
+  reviewSnippet: '\"ติดตั้งมืออาชีพ ดูแลดีมาก ค่าไฟฟ้าลดลง 80% แนะนำเลยค่ะ!\" — คุณสมชาย จ.ตราด',
+  ctaFormTitle: 'ขอใบเสนอราคาฟรีวันนี้',
+  ctaFormName: 'ชื่อ-นามสกุล',
+  ctaFormPhone: 'เบอร์โทรศัพท์',
+  ctaFormEmail: 'อีเมล',
+  ctaFormService: 'บริการที่สนใจ',
+  ctaFormSubmit: 'ขอใบเสนอราคาฟรี',
+  ctaFormPrivacy: 'ข้อมูลของคุณปลอดภัย เราติดต่อกลับภายใน 24 ชั่วโมง',
+  servicesTitle: 'บริการของเรา',
+  servicesSub: 'ตั้งแต่การให้คำปรึกษา ติดตั้ง และดูแลบำรุงรักษาต่อเนื่อง',
+  productsTitle: 'ผลิตภัณฑ์โซลาร์เซลล์ครบวงจร',
+  productsSub: 'เราจัดหาและติดตั้งส่วนประกอบทุกอย่างสำหรับระบบพลังงานแสงอาทิตย์ที่สมบูรณ์',
+  aboutTitle: 'ทำไมต้องเลือก เจเจคอมโซล่าเซลล์',
+  aboutSub: 'ประสบการณ์กว่าทศวรรษในการติดตั้งโซลาร์ทั่วประเทศไทย ตั้งอยู่ที่เกาะช้าง ให้บริการทั่วประเทศ',
+  aboutItem1: 'ติดตั้งแผงโซลาร์เซลล์มากว่า 10 ปีในประเทศไทย',
+  aboutItem2: 'ตั้งอยู่ที่เกาะช้าง จังหวัดตราด',
+  aboutItem3: 'มีผลิตภัณฑ์โซลาร์แบรนด์ชั้นนำทุกยี่ห้อ',
+  aboutItem4: 'บริการหลังการขายและบำรุงรักษาฟรี 1 ปี',
+  aboutItem5: 'บริการทำความสะอาดแผง 300 บาทต่อแผ่น',
+  aboutItem6: 'การรับประกันผลิตภัณฑ์ 1-5 ปี ขึ้นอยู่กับผู้ผลิต',
+  aboutItem7: 'บริการติดตั้งทั่วประเทศไทย',
+  aboutItem8: 'ประสบการณ์มากมายในภาคตะวันออกเฉียงเหนือและภาคตะวันออก',
+  aboutItem9: 'ค่าเดินทางแยกต่างหากสำหรับภาคเหนือ ใต้ และกลาง',
+  aboutItem10: 'ภาคตะวันออกค่าเดินทางขั้นต่ำประมาณ 5,000 บาท',
+  statsInstalls: '500+',
+  statsInstallsLabel: 'การติดตั้ง',
+  statsRegions: '6',
+  statsRegionsLabel: 'ภูมิภาค',
+  statsYears: '10+',
+  statsYearsLabel: 'ปีประสบการณ์',
+  eduTitle: 'ศูนย์การเรียนรู้พลังงานแสงอาทิตย์',
+  eduSub: 'เรียนรู้วิธีการทำงานของพลังงานแสงอาทิตย์ในประเทศไทย',
+  eduLink: 'อ่านคู่มือ',
+  contactTitle: 'พร้อมใช้พลังงานแสงอาทิตย์หรือยัง',
+  contactSub: 'ติดต่อเราวันนี้เพื่อขอคำปรึกษาและใบเสนอราคาฟรี',
+  contactPhone: 'โทร: 094 050 9623',
+  contactEmail: 'อีเมล: jjcomandsolarcell@gmail.com',
+  contactPayment: 'การชำระเงิน: รับโอนเงินและเงินสด ยังไม่รับบัตรเครดิต',
+};
+const services = [
+  { icon: '\u2600\ufe0f', title: 'ติดตั้งแผงโซลาร์เซลล์', desc: 'ระบบแผงโซลาร์บนหลังคาและติดตั้งบนพื้นดินสำหรับที่อยู่อาศัยและอาคารพาณิชย์' },
+  { icon: '\u26a1', title: 'ระบบเก็บพลังงานแบตเตอรี่', desc: 'เก็บพลังงานส่วนเกินสำหรับใช้ในตอนกลางคนหรือไฟดับ' },
+  { icon: '\ud83d\udd27', title: 'ติดตั้งอินเวอร์เตอร์', desc: 'อินเวอร์เตอร์ Grid-tie, Off-grid และ Hybrid จากผู้ผลิตชั้นนำ' },
+  { icon: '\ud83e\uddfc', title: 'ทำความสะอาดและบำรุงรักษา', desc: 'ทำความสะอาดเป็นประจำ 300 บาทต่อแผ่น รวมค่าเดินทาง รักษาประสิทธิภาพสูงสุด' },
+  { icon: '\ud83d\udcf1', title: 'ระบบตรวจสอบ', desc: 'แอพตรวจสอบอัจฉริยะเพื่อติดตามการผลิตและการใช้พลังงาน' },
+  { icon: '\ud83c\udfd7\ufe0f', title: 'ระบบยึดติด', desc: 'ระบบยึดอลูมิเนียมกันสนิมออกแบบสำหรับภูมิอากาศเขตร้อนของไทย' },
+];
+const products = [
+  { name: 'แผงโซลาร์เซลล์', desc: 'แผงโมโนคริสตัลไลน์และพอลิคริสตัลไลน์ประสิทธิภาพสูงจากผู้ผลิตระดับ Tier 1', img: '/images/42.webp' },
+  { name: 'อินเวอร์เตอร์โซลาร์', desc: 'อินเวอร์เตอร์ Grid-tie, Hybrid และ Off-grid แบรนด์ Deye และ Sofar', img: '/images/Deye.webp' },
+  { name: 'ระบบยึดติด', desc: 'ระบบยึดอลูมิเนียมกันสนิมออกแบบสำหรับภูมิอากาศเขตร้อน', img: '/images/roof fittings.webp' },
+  { name: 'แบตเตอรี่เก็บพลังงาน', desc: 'แบตเตอรี่ลิเธียมไอออนและ LiFePO4 เพื่อความเป็นอิสระด้านพลังงาน', img: '/images/off grid 6kw 48v bat 200a.webp' },
+  { name: 'เซ็นเซอร์พลังงานอัจฉริยะ', desc: 'ตรวจสอบและปรับปรุงการใช้พลังงานด้วยเซ็นเซอร์อัจฉริยะ', img: '/images/smart power sensor.webp' },
+  { name: 'ส่วนประกอบระบบ', desc: 'สายเคเบิล ตัวเชื่อมต่อ กล่องจ่าย สวิตซ์ และอุปกรณ์นิรภัย', img: '/images/switches.webp' },
+];
+const eduArticles = [
+  { title: 'ชั่วโมงแดดในประเทศไทย', desc: 'ประเทศไทยมีชั่วโมงแดดสูงสุดเฉลี่ย 4.5-6.5 ชั่วโมงต่อวัน สำรวจว่าเดือนไหนเหมาะสมที่สุดสำหรับการผลิตพลังงานแสงอาทิตย์' },
+  { title: 'แผงโซลาร์ทำงานอย่างไรในวันที่เมฆมาก', desc: 'แผงโซลาร์สมัยใหม่ยังสามารถผลิตพลังงานได้ 10-25% ในสภาพอากาศเมฆมากหรือฝนตก' },
+  { title: 'คำนวณขนาดระบบโซลาร์', desc: 'คำนวณขนาดระบบที่เหมาะสมตามค่าไฟฟ้าและการใช้พลังงานรายเดือนของคุณ' },
+  { title: 'คู่มือการบำรุงรักษาระบบโซลาร์', desc: 'เรียนรู้วิธีตรวจสอบ ทำความสะอาด และบำรุงรักษาระบบโซลาร์ด้วยแอพบนมือถือ' },
+];
+---
+<Layout title={t.title} description={t.desc} lang="th">
+  <section class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-30">
+      <img src="/images/26.webp" alt="การติดตั้งโซลาร์ในประเทศไทย" class="w-full h-full object-cover" />
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 py-20 md:py-28 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 bg-solar-yellow/20 text-solar-yellow px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <span class="text-lg">\u2714\ufe0f</span>
+          <span>ให้บริการทั่วประเทศไทยตั้งแต่ปี 2016</span>
+        </div>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">{t.heroH1}</h1>
+        <p class="text-lg text-gray-300 mb-8 max-w-xl">{t.heroSub}</p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-3">
+            <span class="text-solar-yellow text-xl">\u2714\ufe0f</span>
+            <span>{t.benefit1}</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-solar-yellow text-xl">\u2714\ufe0f</span>
+            <span>{t.benefit2}</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-solar-yellow text-xl">\u2714\ufe0f</span>
+            <span>{t.benefit3}</span>
+          </li>
+        </ul>
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">\u2b50</span>
+            <div>
+              <p class="text-sm italic">{t.reviewSnippet}</p>
+              <div class="flex gap-1 mt-2">
+                {[1,2,3,4,5].map(() => <span class="text-solar-yellow">\u2b50</span>)}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white text-gray-900 rounded-2xl shadow-2xl p-8">
+        <h3 class="text-2xl font-bold mb-2">{t.ctaFormTitle}</h3>
+        <p class="text-gray-500 text-sm mb-6">กรอกข้อมูลของคุณ เราจะโทรกลับภายใน 24 ชั่วโมง</p>
+        <form action="https://formspree.io/f/xnqevwyg" method="POST" class="space-y-4">
+          <input type="hidden" name="_cc" value="blendlsm@gmail.com" />
+          <input type="hidden" name="_subject" value="สอบถามใหม่ - kohchangsolarcell.com" />
+          <div>
+            <label class="block text-sm font-medium mb-1">{t.ctaFormName}</label>
+            <input type="text" name="name" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green focus:border-transparent outline-none transition-all" placeholder="สมชาย ใจดี" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">{t.ctaFormPhone}</label>
+            <input type="tel" name="phone" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green focus:border-transparent outline-none transition-all" placeholder="094 050 9623" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">{t.ctaFormEmail}</label>
+            <input type="email" name="email" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green focus:border-transparent outline-none transition-all" placeholder="คุณ@example.com" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">{t.ctaFormService}</label>
+            <select name="service" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green focus:border-transparent outline-none transition-all">
+              <option>ติดตั้งแผงโซลาร์เซลล์</option>
+              <option>ระบบเก็บพลังงาน</option>
+              <option>เปลี่ยนอินเวอร์เตอร์</option>
+              <option>ทำความสะอาดแผง</option>
+              <option>อัปเกรดระบบ</option>
+              <option>ปรึกษาเท่านั้น</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">ข้อความ (ถ้ามี)</label>
+            <textarea name="message" rows="3" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green focus:border-transparent outline-none transition-all" placeholder="เล่าให้เราฟังเกี่ยวกับโครงการของคุณ..."></textarea>
+          </div>
+          <button type="submit" class="w-full bg-solar-green text-white font-semibold py-4 rounded-lg hover:bg-green-700 transition-colors shadow-lg">
+            {t.ctaFormSubmit}
+          </button>
+          <p class="text-xs text-gray-400 text-center">{t.ctaFormPrivacy}</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">{t.servicesTitle}</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">{t.servicesSub}</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((s) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-gray-100">
+            <div class="w-12 h-12 bg-solar-yellow/10 rounded-lg flex items-center justify-center mb-4 text-2xl">
+              {s.icon}
+            </div>
+            <h3 class="font-bold text-lg mb-2">{s.title}</h3>
+            <p class="text-gray-600 text-sm">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">{t.productsTitle}</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">{t.productsSub}</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {products.map((p) => (
+          <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-gray-100">
+            <div class="aspect-video overflow-hidden bg-gray-100">
+              <img src={p.img} alt={p.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-bold text-lg mb-2">{p.name}</h3>
+              <p class="text-gray-600 text-sm">{p.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">ผลงานของเราทั่วประเทศไทย</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">การติดตั้งจริงที่เสร็จสมบูรณ์ในภาคตะวันออกเฉียงเหนือและภาคตะวันออก ภาพทั้งหมดจากโครงการลูกค้าจริง</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="col-span-2 row-span-2 rounded-xl overflow-hidden">
+          <img src="/images/20kw Solar on grid.webp" alt="ติดตั้งโซลาร์ออนกริด 20kW" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden aspect-square">
+          <img src="/images/new build solar systems.webp" alt="ระบบโซลาร์บ้านใหม่" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden aspect-square">
+          <img src="/images/new build solar systems 2.webp" alt="ระบบโซลาร์บ้านใหม่ 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden aspect-square">
+          <img src="/images/solar roof model.webp" alt="แบบจำลองหลังคาโซลาร์" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden aspect-square">
+          <img src="/images/solar model.webp" alt="แบบจำลองระบบโซลาร์" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">{t.aboutTitle}</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">{t.aboutSub}</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <div class="text-center p-6 bg-solar-green/5 rounded-xl">
+          <div class="text-4xl font-bold text-solar-green mb-2">{t.statsInstalls}</div>
+          <div class="text-gray-600">{t.statsInstallsLabel}</div>
+        </div>
+        <div class="text-center p-6 bg-solar-green/5 rounded-xl">
+          <div class="text-4xl font-bold text-solar-green mb-2">{t.statsRegions}</div>
+          <div class="text-gray-600">{t.statsRegionsLabel}</div>
+        </div>
+        <div class="text-center p-6 bg-solar-green/5 rounded-xl">
+          <div class="text-4xl font-bold text-solar-green mb-2">{t.statsYears}</div>
+          <div class="text-gray-600">{t.statsYearsLabel}</div>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        {[t.aboutItem1, t.aboutItem2, t.aboutItem3, t.aboutItem4, t.aboutItem5, t.aboutItem6, t.aboutItem7, t.aboutItem8, t.aboutItem9, t.aboutItem10].map((item) => (
+          <div class="flex items-start gap-3">
+            <span class="text-solar-green text-xl">\u2714\ufe0f</span>
+            <span class="text-gray-700">{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">{t.eduTitle}</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">{t.eduSub}</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {eduArticles.map((a) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-4 text-xl">\ud83d\udcda</div>
+            <h3 class="font-bold mb-2">{a.title}</h3>
+            <p class="text-gray-600 text-sm mb-4">{a.desc}</p>
+            <span class="text-solar-green text-sm font-medium">{t.eduLink} →</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">{t.contactTitle}</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">{t.contactSub}</p>
+      </div>
+      <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+        <div class="space-y-6">
+          <div class="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
+            <div class="w-12 h-12 bg-solar-green/10 rounded-full flex items-center justify-center text-xl">\ud83d\udcde</div>
+            <div>
+              <div class="text-sm text-gray-500">โทรศัพท์</div>
+              <a href="tel:+66940509623" class="text-xl font-bold text-solar-dark hover:text-solar-green transition-colors">094 050 9623</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
+            <div class="w-12 h-12 bg-solar-green/10 rounded-full flex items-center justify-center text-xl">\u2709\ufe0f</div>
+            <div>
+              <div class="text-sm text-gray-500">อีเมล</div>
+              <a href="mailto:jjcomandsolarcell@gmail.com" class="text-lg font-medium text-solar-dark hover:text-solar-green transition-colors">jjcomandsolarcell@gmail.com</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
+            <div class="w-12 h-12 bg-solar-green/10 rounded-full flex items-center justify-center text-xl">\ud83d\udccd</div>
+            <div>
+              <div class="text-sm text-gray-500">ที่อยู่</div>
+              <span class="text-lg font-medium text-solar-dark">113/10 หมู่ 4 ต.เกาะช้าง อ.เกาะช้าง จ.ตราด 23170</span>
+            </div>
+          </div>
+          <div class="p-4 bg-yellow-50 border border-yellow-200 rounded-lg text-sm text-gray-700">
+            <strong>การชำระเงิน:</strong> รับโอนเงินผ่านธนาคารและเงินสด ยังไม่รับบัตรเครดิต
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="chatbot-container"></div>
+  <script is:inline>
+    window.addEventListener('load', function() {
+      var chatToggle = document.createElement('button');
+      chatToggle.id = 'chat-toggle';
+      chatToggle.textContent = '\uD83D\uDCAC';
+      chatToggle.style.cssText = 'position:fixed;bottom:24px;right:24px;width:56px;height:56px;border-radius:50%;background:#2d7a3e;color:white;border:none;box-shadow:0 4px 12px rgba(0,0,0,0.3);cursor:pointer;z-index:999;font-size:24px;';
+      document.body.appendChild(chatToggle);
+      
+      var chatPanel = document.createElement('div');
+      chatPanel.id = 'chat-panel';
+      chatPanel.style.cssText = 'position:fixed;bottom:90px;right:24px;width:340px;height:450px;background:white;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,0.2);z-index:998;display:none;overflow:hidden;border:1px solid #e5e7eb;';
+      chatPanel.innerHTML = '<div style="background:#2d7a3e;color:white;padding:16px;font-weight:bold;display:flex;justify-content:space-between;align-items:center;">' +
+        '<span>เจเจคอมโซล่าเซลล์</span>' +
+        '<button id="chat-close" style="background:none;border:none;color:white;font-size:20px;cursor:pointer;">\u00D7</button></div>' +
+        '<div style="padding:16px;height:320px;overflow-y:auto;background:#f9fafb;">' +
+        '<div style="background:white;padding:12px;border-radius:12px 12px 12px 2px;margin-bottom:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1);max-width:85%;">' +
+        '<p style="margin:0;font-size:14px;">สวัสดีค่ะ! ฉันผู้ช่วยของเจเจคอมโซล่าเซลล์ มีอะไรให้ช่วยคะ?</p></div>' +
+        '<div style="display:flex;flex-direction:column;gap:8px;margin-top:12px;">' +
+        '<button class="chat-opt" style="text-align:left;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;background:white;cursor:pointer;font-size:13px;">\uD83D\uDCA1 แผงโซลาร์ทำงานอย่างไร?</button>' +
+        '<button class="chat-opt" style="text-align:left;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;background:white;cursor:pointer;font-size:13px;">\uD83D\uDCB0 ขอใบเสนอราคาฟรี</button>' +
+        '<button class="chat-opt" style="text-align:left;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;background:white;cursor:pointer;font-size:13px;">\uD83D\uDD27 การบำรุงรักษาและทำความสะอาด</button>' +
+        '<button class="chat-opt" style="text-align:left;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;background:white;cursor:pointer;font-size:13px;">\uD83D\uDCDE ติดต่อเจ้าหน้าที่</button></div></div>' +
+        '<div style="padding:12px;border-top:1px solid #e5e7eb;background:white;">' +
+        '<input type="text" placeholder="พิมพ์ข้อความ..." style="width:100%;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;font-size:14px;outline:none;"></div>';
+      document.body.appendChild(chatPanel);
+      
+      document.getElementById('chat-toggle').onclick = function() { chatPanel.style.display = chatPanel.style.display === 'none' ? 'block' : 'none'; };
+      document.getElementById('chat-close').onclick = function() { chatPanel.style.display = 'none'; };
+    });
+  </script>
+</Layout>

@@ -1,0 +1,342 @@
+---
+import Layout from '../layouts/Layout.astro';
+const t = {
+  title: 'JJ Com Solar Cell | Solar System Installation Thailand',
+  desc: 'Complete solar system installation and care in Thailand since 2016. Based on Koh Chang. Serving nationwide.',
+  heroH1: 'Solar System Installation \u0026 Care in Thailand',
+  heroSub: 'Trusted solar experts since 2016. We design, install, and maintain complete solar systems for homes and businesses across Thailand.',
+  benefit1: 'Nationwide installation service with 10+ years experience',
+  benefit2: 'Free 1-year after-sales service and maintenance included',
+  benefit3: 'Leading brands with warranties up to 5 years',
+  reviewSnippet: '\"Professional installation, great aftercare. Our electricity bills dropped by 80%. Highly recommend!\" — Khun Somchai, Trat',
+  ctaFormTitle: 'Get Your Free Quote Today',
+  ctaFormName: 'Full Name',
+  ctaFormPhone: 'Phone Number',
+  ctaFormEmail: 'Email Address',
+  ctaFormService: 'Interested Service',
+  ctaFormSubmit: 'Request Free Quote',
+  ctaFormPrivacy: 'Your information is secure. We respond within 24 hours.',
+  servicesTitle: 'Our Solar Services',
+  servicesSub: 'From consultation to installation and ongoing maintenance, we handle everything.',
+  productsTitle: 'Complete Solar Hardware',
+  productsSub: 'We supply and install all major components for a fully operational solar system.',
+  aboutTitle: 'Why Choose JJ Com Solar Cell?',
+  aboutSub: 'A decade of experience installing solar across Thailand. Based on Koh Chang, serving nationwide.',
+  aboutItem1: '10 years installing solar panels across Thailand',
+  aboutItem2: 'Based on Koh Chang island, Trat province',
+  aboutItem3: 'All leading brands of solar products available',
+  aboutItem4: 'Free after-sales service and maintenance for 1 year',
+  aboutItem5: 'Panel cleaning available at 300 THB per panel',
+  aboutItem6: 'Product warranties from 1 to 5 years depending on manufacturer',
+  aboutItem7: 'Nationwide installation service across Thailand',
+  aboutItem8: 'Extensive experience in Northeast and Eastern regions',
+  aboutItem9: 'Travel fees separate for North, South, Central regions',
+  aboutItem10: 'Eastern region travel from approximately 5,000 THB',
+  statsInstalls: '500+',
+  statsInstallsLabel: 'Installations',
+  statsRegions: '6',
+  statsRegionsLabel: 'Regions Served',
+  statsYears: '10+',
+  statsYearsLabel: 'Years Experience',
+  eduTitle: 'Solar Education Centre',
+  eduSub: 'Learn how solar works in Thailand and make informed decisions.',
+  eduLink: 'Read Our Guides',
+  contactTitle: 'Ready to Go Solar?',
+  contactSub: 'Contact us today for a free consultation and quote.',
+  contactPhone: 'Call Us: 094 050 9623',
+  contactEmail: 'Email: jjcomandsolarcell@gmail.com',
+  contactPayment: 'Payment: Bank transfer and cash accepted. Credit cards coming soon.',
+};
+const services = [
+  { icon: '\u2600\ufe0f', title: 'Solar Panel Installation', desc: 'Complete rooftop and ground-mount solar panel systems for residential and commercial properties.' },
+  { icon: '\u26a1', title: 'Battery Storage Systems', desc: 'Store excess solar energy for night use or backup power during outages.' },
+  { icon: '\ud83d\udd27', title: 'Inverter Installation', desc: 'Grid-tie, off-grid, and hybrid inverters from leading manufacturers.' },
+  { icon: '\ud83e\uddfc', title: 'Panel Cleaning \u0026 Maintenance', desc: 'Regular cleaning at 300 THB per panel plus travel. Keep your system performing at peak efficiency.' },
+  { icon: '\ud83d\udcf1', title: 'System Monitoring', desc: 'Smart monitoring apps to track your energy production and consumption in real-time.' },
+            { icon: '\ud83c\udfd7\ufe0f', title: 'Racking \u0026 Mounting', desc: 'Professional mounting systems engineered for Thailands tropical climate and wind conditions.' },
+];
+const products = [
+  { name: 'Solar Panels', desc: 'High-efficiency monocrystalline and polycrystalline panels from Tier 1 manufacturers.', img: '/images/42.webp' },
+  { name: 'Solar Inverters', desc: 'Grid-tie, hybrid, and off-grid inverters. Brands include Deye and Sofar.', img: '/images/Deye.webp' },
+  { name: 'Racking \u0026 Mounting', desc: 'Corrosion-resistant aluminium mounting systems designed for tropical climates.', img: '/images/roof fittings.webp' },
+  { name: 'Battery Storage', desc: 'Lithium-ion and LiFePO4 battery banks for energy independence.', img: '/images/off grid 6kw 48v bat 200a.webp' },
+  { name: 'Smart Power Sensors', desc: 'Monitor and optimise your energy consumption with smart sensors.', img: '/images/smart power sensor.webp' },
+  { name: 'Balance of System', desc: 'Cables, connectors, junction boxes, switches, and safety equipment.', img: '/images/switches.webp' },
+];
+const eduArticles = [
+  { title: 'Sunlight Hours in Thailand', desc: 'Thailand receives an average of 4.5-6.5 peak sun hours daily. Discover which months are best for solar generation.' },
+  { title: 'How Solar Panels Work on Cloudy Days', desc: 'Modern panels still generate 10-25% of their rated capacity during cloudy or rainy weather.' },
+  { title: 'Sizing Your Solar System', desc: 'Calculate the right system size based on your monthly electricity bill and consumption patterns.' },
+  { title: 'Solar System Maintenance Guide', desc: 'Learn how to monitor, clean, and maintain your solar system using available smartphone apps.' },
+];
+---
+<Layout title={t.title} description={t.desc}>
+  <section class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-30">
+      <img src="/images/26.webp" alt="Solar installation in Thailand" class="w-full h-full object-cover" />
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 py-20 md:py-28 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 bg-solar-yellow/20 text-solar-yellow px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <span class="text-lg">\u2714\ufe0f</span>
+          <span>Serving Thailand Since 2016</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">{t.heroH1}</h1>
+        <p class="text-lg text-gray-300 mb-8 max-w-xl">{t.heroSub}</p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-3">
+            <span class="text-solar-yellow text-xl">\u2714\ufe0f</span>
+            <span>{t.benefit1}</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-solar-yellow text-xl">\u2714\ufe0f</span>
+            <span>{t.benefit2}</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-solar-yellow text-xl">\u2714\ufe0f</span>
+            <span>{t.benefit3}</span>
+          </li>
+        </ul>
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">\u2b50</span>
+            <div>
+              <p class="text-sm italic">{t.reviewSnippet}</p>
+              <div class="flex gap-1 mt-2">
+                {[1,2,3,4,5].map(() => <span class="text-solar-yellow">\u2b50</span>)}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white text-gray-900 rounded-2xl shadow-2xl p-8">
+        <h3 class="text-2xl font-bold mb-2">{t.ctaFormTitle}</h3>
+        <p class="text-gray-500 text-sm mb-6">Fill in your details and we'll call you back within 24 hours.</p>
+        <form action="https://formspree.io/f/xnqevwyg" method="POST" class="space-y-4">
+          <input type="hidden" name="_cc" value="blendlsm@gmail.com" />
+          <input type="hidden" name="_subject" value="New Solar Inquiry - kohchangsolarcell.com" />
+          <div>
+            <label class="block text-sm font-medium mb-1">{t.ctaFormName}</label>
+            <input type="text" name="name" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green focus:border-transparent outline-none transition-all" placeholder="John Smith" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">{t.ctaFormPhone}</label>
+            <input type="tel" name="phone" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green focus:border-transparent outline-none transition-all" placeholder="094 050 9623" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">{t.ctaFormEmail}</label>
+            <input type="email" name="email" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green focus:border-transparent outline-none transition-all" placeholder="you@example.com" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">{t.ctaFormService}</label>
+            <select name="service" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green focus:border-transparent outline-none transition-all">
+              <option>Solar Panel Installation</option>
+              <option>Battery Storage System</option>
+              <option>Inverter Replacement</option>
+              <option>Panel Cleaning</option>
+              <option>Full System Upgrade</option>
+              <option>Consultation Only</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Message (Optional)</label>
+            <textarea name="message" rows="3" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-solar-green focus:border-transparent outline-none transition-all" placeholder="Tell us about your project..."></textarea>
+          </div>
+          <button type="submit" class="w-full bg-solar-green text-white font-semibold py-4 rounded-lg hover:bg-green-700 transition-colors shadow-lg">
+            {t.ctaFormSubmit}
+          </button>
+          <p class="text-xs text-gray-400 text-center">{t.ctaFormPrivacy}</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">{t.servicesTitle}</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">{t.servicesSub}</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((s) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-gray-100">
+            <div class="w-12 h-12 bg-solar-yellow/10 rounded-lg flex items-center justify-center mb-4 text-2xl">
+              {s.icon}
+            </div>
+            <h3 class="font-bold text-lg mb-2">{s.title}</h3>
+            <p class="text-gray-600 text-sm">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">{t.productsTitle}</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">{t.productsSub}</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {products.map((p) => (
+          <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-gray-100">
+            <div class="aspect-video overflow-hidden bg-gray-100">
+              <img src={p.img} alt={p.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-bold text-lg mb-2">{p.name}</h3>
+              <p class="text-gray-600 text-sm">{p.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Work Across Thailand</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Real installations completed in the Northeast and Eastern regions. All photos from actual client projects.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="col-span-2 row-span-2 rounded-xl overflow-hidden">
+          <img src="/images/20kw Solar on grid.webp" alt="20kW solar on-grid installation" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden aspect-square">
+          <img src="/images/new build solar systems.webp" alt="New build solar system" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden aspect-square">
+          <img src="/images/new build solar systems 2.webp" alt="New build solar system 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden aspect-square">
+          <img src="/images/solar roof model.webp" alt="Solar roof model" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden aspect-square">
+          <img src="/images/solar model.webp" alt="Solar system model" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">{t.aboutTitle}</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">{t.aboutSub}</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <div class="text-center p-6 bg-solar-green/5 rounded-xl">
+          <div class="text-4xl font-bold text-solar-green mb-2">{t.statsInstalls}</div>
+          <div class="text-gray-600">{t.statsInstallsLabel}</div>
+        </div>
+        <div class="text-center p-6 bg-solar-green/5 rounded-xl">
+          <div class="text-4xl font-bold text-solar-green mb-2">{t.statsRegions}</div>
+          <div class="text-gray-600">{t.statsRegionsLabel}</div>
+        </div>
+        <div class="text-center p-6 bg-solar-green/5 rounded-xl">
+          <div class="text-4xl font-bold text-solar-green mb-2">{t.statsYears}</div>
+          <div class="text-gray-600">{t.statsYearsLabel}</div>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        {[t.aboutItem1, t.aboutItem2, t.aboutItem3, t.aboutItem4, t.aboutItem5, t.aboutItem6, t.aboutItem7, t.aboutItem8, t.aboutItem9, t.aboutItem10].map((item) => (
+          <div class="flex items-start gap-3">
+            <span class="text-solar-green text-xl">\u2714\ufe0f</span>
+            <span class="text-gray-700">{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">{t.eduTitle}</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">{t.eduSub}</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {eduArticles.map((a) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+              <span class="text-xl">\ud83d\udcda</span>
+            </div>
+            <h3 class="font-bold mb-2">{a.title}</h3>
+            <p class="text-gray-600 text-sm mb-4">{a.desc}</p>
+            <span class="text-solar-green text-sm font-medium">{t.eduLink} →</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">{t.contactTitle}</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">{t.contactSub}</p>
+      </div>
+      <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+        <div class="space-y-6">
+          <div class="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
+            <div class="w-12 h-12 bg-solar-green/10 rounded-full flex items-center justify-center text-xl">\ud83d\udcde</div>
+            <div>
+              <div class="text-sm text-gray-500">Phone</div>
+              <a href="tel:+66940509623" class="text-xl font-bold text-solar-dark hover:text-solar-green transition-colors">094 050 9623</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
+            <div class="w-12 h-12 bg-solar-green/10 rounded-full flex items-center justify-center text-xl">\u2709\ufe0f</div>
+            <div>
+              <div class="text-sm text-gray-500">Email</div>
+              <a href="mailto:jjcomandsolarcell@gmail.com" class="text-lg font-medium text-solar-dark hover:text-solar-green transition-colors">jjcomandsolarcell@gmail.com</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
+            <div class="w-12 h-12 bg-solar-green/10 rounded-full flex items-center justify-center text-xl">\ud83d\udccd</div>
+            <div>
+              <div class="text-sm text-gray-500">Address</div>
+              <span class="text-lg font-medium text-solar-dark">113/10 Moo 4, Ko Chang District, Trat 23170, Thailand</span>
+            </div>
+          </div>
+          <div class="p-4 bg-yellow-50 border border-yellow-200 rounded-lg text-sm text-gray-700">
+            <strong>Payment:</strong> Bank transfer and cash accepted. Credit cards coming soon.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="chatbot-container"></div>
+  <script is:inline>
+    window.addEventListener('load', function() {
+      var chatToggle = document.createElement('button');
+      chatToggle.id = 'chat-toggle';
+      chatToggle.textContent = '\uD83D\uDCAC';
+      chatToggle.style.cssText = 'position:fixed;bottom:24px;right:24px;width:56px;height:56px;border-radius:50%;background:#2d7a3e;color:white;border:none;box-shadow:0 4px 12px rgba(0,0,0,0.3);cursor:pointer;z-index:999;font-size:24px;';
+      document.body.appendChild(chatToggle);
+      
+      var chatPanel = document.createElement('div');
+      chatPanel.id = 'chat-panel';
+      chatPanel.style.cssText = 'position:fixed;bottom:90px;right:24px;width:340px;height:450px;background:white;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,0.2);z-index:998;display:none;overflow:hidden;border:1px solid #e5e7eb;';
+      chatPanel.innerHTML = '<div style="background:#2d7a3e;color:white;padding:16px;font-weight:bold;display:flex;justify-content:space-between;align-items:center;">' +
+        '<span>JJ Com Solar Cell</span>' +
+        '<button id="chat-close" style="background:none;border:none;color:white;font-size:20px;cursor:pointer;">\u00D7</button></div>' +
+        '<div style="padding:16px;height:320px;overflow-y:auto;background:#f9fafb;">' +
+        '<div style="background:white;padding:12px;border-radius:12px 12px 12px 2px;margin-bottom:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1);max-width:85%;">' +
+        '<p style="margin:0;font-size:14px;">Hello! I\'m the JJ Com Solar assistant. How can I help you today?</p></div>' +
+        '<div style="display:flex;flex-direction:column;gap:8px;margin-top:12px;">' +
+        '<button class="chat-opt" style="text-align:left;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;background:white;cursor:pointer;font-size:13px;">\uD83D\uDCA1 How do solar panels work?</button>' +
+        '<button class="chat-opt" style="text-align:left;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;background:white;cursor:pointer;font-size:13px;">\uD83D\uDCB0 Get a free quote</button>' +
+        '<button class="chat-opt" style="text-align:left;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;background:white;cursor:pointer;font-size:13px;">\uD83D\uDD27 Maintenance and cleaning</button>' +
+        '<button class="chat-opt" style="text-align:left;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;background:white;cursor:pointer;font-size:13px;">\uD83D\uDCDE Speak to a human</button></div></div>' +
+        '<div style="padding:12px;border-top:1px solid #e5e7eb;background:white;">' +
+        '<input type="text" placeholder="Type your message..." style="width:100%;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;font-size:14px;outline:none;"></div>';
+      document.body.appendChild(chatPanel);
+      
+      document.getElementById('chat-toggle').onclick = function() { chatPanel.style.display = chatPanel.style.display === 'none' ? 'block' : 'none'; };
+      document.getElementById('chat-close').onclick = function() { chatPanel.style.display = 'none'; };
+    });
+  </script>
+</Layout>
