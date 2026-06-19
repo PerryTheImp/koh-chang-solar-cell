@@ -78,28 +78,28 @@ const eduArticles = [
     <div class="relative max-w-7xl mx-auto px-4 py-20 md:py-28 grid lg:grid-cols-2 gap-12 items-center">
       <div>
         <div class="inline-flex items-center gap-2 bg-solar-yellow/20 text-solar-yellow px-4 py-2 rounded-full text-sm font-medium mb-6">
-          <span class="text-lg">\u2714\ufe0f</span>
+          <span class="text-lg font-bold text-solar-green">✓</span>
           <span>Serving Thailand Since 2016</span>
         </div>
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">{t.heroH1}</h1>
         <p class="text-lg text-gray-300 mb-8 max-w-xl">{t.heroSub}</p>
         <ul class="space-y-3 mb-8">
           <li class="flex items-start gap-3">
-            <span class="text-solar-yellow text-xl">\u2714\ufe0f</span>
+            <span class="text-solar-yellow text-xl font-bold text-solar-green">✓</span>
             <span>{t.benefit1}</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-solar-yellow text-xl">\u2714\ufe0f</span>
+            <span class="text-solar-yellow text-xl font-bold text-solar-green">✓</span>
             <span>{t.benefit2}</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-solar-yellow text-xl">\u2714\ufe0f</span>
+            <span class="text-solar-yellow text-xl font-bold text-solar-green">✓</span>
             <span>{t.benefit3}</span>
           </li>
         </ul>
         <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
           <div class="flex items-start gap-3">
-            <span class="text-2xl">\u2b50</span>
+            <span class="text-2xl font-bold text-solar-yellow">★</span>
             <div>
               <p class="text-sm italic">{t.reviewSnippet}</p>
               <div class="flex gap-1 mt-2">
@@ -129,27 +129,27 @@ const eduArticles = [
             <p class="text-sm font-semibold text-gray-700 mb-4">Choose Your Service <span class="text-red-500">*</span></p>
             <div class="grid grid-cols-2 gap-3">
               <button type="button" data-value="solar-panels" class="service-option flex flex-col items-center gap-2 p-4 border-2 border-gray-200 rounded-xl hover:border-solar-green hover:bg-green-50 transition-all cursor-pointer" onclick="selectService(this, 'solar-panels')">
-                <span class="text-3xl">\u2600\ufe0f</span>
+                <span class="text-3xl font-bold text-solar-yellow">SP</span>
                 <span class="text-xs font-medium text-center">Solar Panels</span>
               </button>
               <button type="button" data-value="battery" class="service-option flex flex-col items-center gap-2 p-4 border-2 border-gray-200 rounded-xl hover:border-solar-green hover:bg-green-50 transition-all cursor-pointer" onclick="selectService(this, 'battery')">
-                <span class="text-3xl">\u26a1</span>
+                <span class="text-3xl font-bold text-solar-yellow">BT</span>
                 <span class="text-xs font-medium text-center">Battery Storage</span>
               </button>
               <button type="button" data-value="grid-tie" class="service-option flex flex-col items-center gap-2 p-4 border-2 border-gray-200 rounded-xl hover:border-solar-green hover:bg-green-50 transition-all cursor-pointer" onclick="selectService(this, 'grid-tie')">
-                <span class="text-3xl">\ud83d\udd0c</span>
+                <span class="text-3xl font-bold text-solar-yellow">GT</span>
                 <span class="text-xs font-medium text-center">Grid-Tie System</span>
               </button>
               <button type="button" data-value="off-grid" class="service-option flex flex-col items-center gap-2 p-4 border-2 border-gray-200 rounded-xl hover:border-solar-green hover:bg-green-50 transition-all cursor-pointer" onclick="selectService(this, 'off-grid')">
-                <span class="text-3xl">\ud83c\udfe0</span>
+                <span class="text-3xl font-bold text-solar-yellow">OG</span>
                 <span class="text-xs font-medium text-center">Off-Grid System</span>
               </button>
               <button type="button" data-value="inverter" class="service-option flex flex-col items-center gap-2 p-4 border-2 border-gray-200 rounded-xl hover:border-solar-green hover:bg-green-50 transition-all cursor-pointer" onclick="selectService(this, 'inverter')">
-                <span class="text-3xl">\ud83d\udd27</span>
+                <span class="text-3xl font-bold text-solar-yellow">IN</span>
                 <span class="text-xs font-medium text-center">Inverter</span>
               </button>
               <button type="button" data-value="cleaning" class="service-option flex flex-col items-center gap-2 p-4 border-2 border-gray-200 rounded-xl hover:border-solar-green hover:bg-green-50 transition-all cursor-pointer" onclick="selectService(this, 'cleaning')">
-                <span class="text-3xl">\ud83e\uddfc</span>
+                <span class="text-3xl font-bold text-solar-yellow">CL</span>
                 <span class="text-xs font-medium text-center">Panel Cleaning</span>
               </button>
             </div>
@@ -355,7 +355,7 @@ const eduArticles = [
       <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
         {[t.aboutItem1, t.aboutItem2, t.aboutItem3, t.aboutItem4, t.aboutItem5, t.aboutItem6, t.aboutItem7, t.aboutItem8, t.aboutItem9, t.aboutItem10].map((item) => (
           <div class="flex items-start gap-3">
-            <span class="text-solar-green text-xl">\u2714\ufe0f</span>
+            <span class="text-solar-green text-xl font-bold text-solar-green">✓</span>
             <span class="text-gray-700">{item}</span>
           </div>
         ))}
@@ -373,7 +373,7 @@ const eduArticles = [
         {eduArticles.map((a) => (
           <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
             <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-              <span class="text-xl">\ud83d\udcda</span>
+              <span class="text-xl font-bold text-blue-600">EDU</span>
             </div>
             <h3 class="font-bold mb-2">{a.title}</h3>
             <p class="text-gray-600 text-sm mb-4">{a.desc}</p>
@@ -393,21 +393,21 @@ const eduArticles = [
       <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
         <div class="space-y-6">
           <div class="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
-            <div class="w-12 h-12 bg-solar-green/10 rounded-full flex items-center justify-center text-xl">\ud83d\udcde</div>
+            <div class="w-12 h-12 bg-solar-green/10 rounded-full flex items-center justify-center text-xl font-bold text-solar-green">PHN</div>
             <div>
               <div class="text-sm text-gray-500">Phone</div>
               <a href="tel:+66940509623" class="text-xl font-bold text-solar-dark hover:text-solar-green transition-colors">094 050 9623</a>
             </div>
           </div>
           <div class="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
-            <div class="w-12 h-12 bg-solar-green/10 rounded-full flex items-center justify-center text-xl">\u2709\ufe0f</div>
+            <div class="w-12 h-12 bg-solar-green/10 rounded-full flex items-center justify-center text-xl font-bold text-solar-green">EML</div>
             <div>
               <div class="text-sm text-gray-500">Email</div>
               <a href="mailto:jjcomandsolarcell@gmail.com" class="text-lg font-medium text-solar-dark hover:text-solar-green transition-colors">jjcomandsolarcell@gmail.com</a>
             </div>
           </div>
           <div class="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
-            <div class="w-12 h-12 bg-solar-green/10 rounded-full flex items-center justify-center text-xl">\ud83d\udccd</div>
+            <div class="w-12 h-12 bg-solar-green/10 rounded-full flex items-center justify-center text-xl font-bold text-solar-green">LOC</div>
             <div>
               <div class="text-sm text-gray-500">Address</div>
               <span class="text-lg font-medium text-solar-dark">113/10 Moo 4, Ko Chang District, Trat 23170, Thailand</span>
