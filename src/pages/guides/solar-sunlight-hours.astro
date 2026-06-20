@@ -1,0 +1,142 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const title = 'Solar Sunlight Hours in Thailand: Monthly Peak Sun Guide';
+const description = 'Thailand averages 4.5-6.5 peak sun hours daily. Explore monthly and regional sunlight data to estimate your solar system output and savings.';
+const keywords = 'sunlight hours Thailand, peak sun hours Thailand, solar potential Thailand, solar irradiance Thailand, best months for solar Thailand';
+---
+<Layout title={title} description={description}>
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-sm text-gray-500 mb-6">
+      <a href="/" class="hover:text-solar-green">Home</a> / <span>Guides</span> / <span>Sunlight Hours</span>
+    </nav>
+
+    <h1 class="text-3xl md:text-4xl font-bold mb-4">Solar Sunlight Hours in Thailand: Your Monthly Peak Sun Guide</h1>
+    <p class="text-gray-600 mb-8">
+      Understanding sunlight patterns is the first step to estimating your solar system's performance. 
+      Thailand's tropical climate delivers excellent solar potential year-round.
+    </p>
+
+    <div class="bg-solar-green/5 rounded-xl p-6 mb-8">
+      <div class="flex items-center gap-4">
+        <div class="text-4xl font-bold text-solar-green">5.5</div>
+        <div>
+          <div class="font-semibold">Average Peak Sun Hours</div>
+          <div class="text-gray-600 text-sm">per day, nationwide average</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">Why Thailand Is Ideal for Solar Energy</h2>
+      <p class="text-gray-700 mb-4">
+        Thailand sits between 5°N and 20°N latitude, placing it in one of the world's best solar zones. 
+        The country receives abundant sunshine throughout the year, with only minor variations during the monsoon season.
+      </p>
+      <ul class="space-y-2">
+        <li class="flex items-start gap-2"><span class="text-solar-green">✓</span> <span><strong>High irradiance:</strong> 4.5–6.5 kWh/m²/day across most regions</span></li>
+        <li class="flex items-start gap-2"><span class="text-solar-green">✓</span> <span><strong>Consistent sunshine:</strong> Even rainy months average 3–4 peak hours</span></li>
+        <li class="flex items-start gap-2"><span class="text-solar-green">✓</span> <span><strong>Hot climate advantage:</strong> Higher temperatures slightly reduce efficiency, but longer days compensate</span></li>
+      </ul>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">Monthly Peak Sun Hours by Region</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-50">
+              <th class="p-3 text-left border">Month</th>
+              <th class="p-3 text-center border">Bangkok (Central)</th>
+              <th class="p-3 text-center border">Chiang Mai (North)</th>
+              <th class="p-3 text-center border">Udon Thani (NE)</th>
+              <th class="p-3 text-center border">Phuket (South)</th>
+              <th class="p-3 text-center border">Trat (East)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="p-3 border font-medium">Jan</td><td class="p-3 border text-center">6.2</td><td class="p-3 border text-center">6.0</td><td class="p-3 border text-center">6.3</td><td class="p-3 border text-center">6.5</td><td class="p-3 border text-center">6.1</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 border font-medium">Feb</td><td class="p-3 border text-center">6.5</td><td class="p-3 border text-center">6.3</td><td class="p-3 border text-center">6.5</td><td class="p-3 border text-center">6.8</td><td class="p-3 border text-center">6.4</td></tr>
+            <tr><td class="p-3 border font-medium">Mar</td><td class="p-3 border text-center">6.3</td><td class="p-3 border text-center">6.1</td><td class="p-3 border text-center">6.4</td><td class="p-3 border text-center">6.5</td><td class="p-3 border text-center">6.2</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 border font-medium">Apr</td><td class="p-3 border text-center">6.0</td><td class="p-3 border text-center">5.8</td><td class="p-3 border text-center">6.1</td><td class="p-3 border text-center">5.8</td><td class="p-3 border text-center">5.9</td></tr>
+            <tr><td class="p-3 border font-medium">May</td><td class="p-3 border text-center">5.2</td><td class="p-3 border text-center">5.0</td><td class="p-3 border text-center">5.3</td><td class="p-3 border text-center">5.0</td><td class="p-3 border text-center">5.1</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 border font-medium">Jun</td><td class="p-3 border text-center">4.8</td><td class="p-3 border text-center">4.6</td><td class="p-3 border text-center">4.9</td><td class="p-3 border text-center">4.5</td><td class="p-3 border text-center">4.7</td></tr>
+            <tr><td class="p-3 border font-medium">Jul</td><td class="p-3 border text-center">4.5</td><td class="p-3 border text-center">4.3</td><td class="p-3 border text-center">4.6</td><td class="p-3 border text-center">4.2</td><td class="p-3 border text-center">4.4</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 border font-medium">Aug</td><td class="p-3 border text-center">4.6</td><td class="p-3 border text-center">4.4</td><td class="p-3 border text-center">4.7</td><td class="p-3 border text-center">4.3</td><td class="p-3 border text-center">4.5</td></tr>
+            <tr><td class="p-3 border font-medium">Sep</td><td class="p-3 border text-center">5.0</td><td class="p-3 border text-center">4.8</td><td class="p-3 border text-center">5.1</td><td class="p-3 border text-center">4.8</td><td class="p-3 border text-center">4.9</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 border font-medium">Oct</td><td class="p-3 border text-center">5.5</td><td class="p-3 border text-center">5.3</td><td class="p-3 border text-center">5.6</td><td class="p-3 border text-center">5.2</td><td class="p-3 border text-center">5.4</td></tr>
+            <tr><td class="p-3 border font-medium">Nov</td><td class="p-3 border text-center">6.0</td><td class="p-3 border text-center">5.8</td><td class="p-3 border text-center">6.1</td><td class="p-3 border text-center">5.8</td><td class="p-3 border text-center">5.9</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 border font-medium">Dec</td><td class="p-3 border text-center">6.1</td><td class="p-3 border text-center">5.9</td><td class="p-3 border text-center">6.2</td><td class="p-3 border text-center">6.0</td><td class="p-3 border text-center">6.0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-gray-500 mt-2">Values represent average daily peak sun hours (kWh/m²/day). Data sourced from NASA satellite measurements.</p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">What Does This Mean for Your Solar System?</h2>
+      <p class="text-gray-700 mb-4">
+        Peak sun hours tell you how much energy your panels can generate. A 5 kW system in Bangkok produces roughly:
+      </p>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="bg-gray-50 rounded-lg p-4 text-center">
+          <div class="text-2xl font-bold text-solar-green">25–32 kWh</div>
+          <div class="text-sm text-gray-600">Daily (average)</div>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-4 text-center">
+          <div class="text-2xl font-bold text-solar-green">750–960 kWh</div>
+          <div class="text-sm text-gray-600">Monthly</div>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-4 text-center">
+          <div class="text-2xl font-bold text-solar-green">9,000–11,500 kWh</div>
+          <div class="text-sm text-gray-600">Yearly</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">Best Months for Solar Installation</h2>
+      <p class="text-gray-700 mb-4">
+        While solar works year-round, <strong>November to February</strong> offer the highest output in most regions. 
+        Installing during the rainy season (May–October) means your system is ready to capture maximum energy when the dry season begins.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">How Sunlight Hours Affect System Sizing</h2>
+      <p class="text-gray-700 mb-4">
+        A home in Phuket (6.5 peak hours) needs fewer panels than the same home in Chiang Mai (6.0 hours) to produce the same energy. 
+        When sizing your system, installers calculate using your <a href="/guides/solar-system-sizing-calculator" class="text-solar-green underline">monthly electricity bill</a> 
+        and local peak sun data.
+      </p>
+    </section>
+
+    <section class="bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-8 mb-12">
+      <h2 class="text-2xl font-bold mb-4">Related Guides</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <a href="/guides/solar-panels-cloudy-days" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">Do Solar Panels Work on Cloudy Days?</div>
+          <div class="text-sm text-gray-600">Monsoon performance in Thailand</div>
+        </a>
+        <a href="/guides/solar-system-sizing-calculator" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">Solar System Sizing Calculator</div>
+          <div class="text-sm text-gray-600">Size your system by electricity bill</div>
+        </a>
+        <a href="/guides/solar-panel-maintenance" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">Maintenance & Cleaning Guide</div>
+          <div class="text-sm text-gray-600">Keep your panels performing at peak</div>
+        </a>
+      </div>
+    </section>
+
+    <div class="bg-solar-green text-white rounded-xl p-8 text-center">
+      <h2 class="text-2xl font-bold mb-2">Ready to Harness Thailand's Sunshine?</h2>
+      <p class="mb-6">Calculate your system's potential with a free on-site assessment.</p>
+      <a href="/#contact" class="inline-block bg-white text-solar-green font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+        Calculate Your System's Potential — Get a Free Quote
+      </a>
+      <p class="text-sm mt-4 opacity-80">
+        We serve all regions of Thailand from our base in <a href="/" class="underline">Koh Chang</a>.
+      </p>
+    </div>
+  </article>
+</Layout>

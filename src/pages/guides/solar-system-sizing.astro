@@ -1,0 +1,126 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const title = 'Solar System Sizing Calculator for Thailand Homes';
+const description = 'Calculate the right solar system size for your Thai home using your monthly electricity bill. Includes sizing chart, roof space guide, and savings estimates.';
+---
+<Layout title={title} description={description}>
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-sm text-gray-500 mb-6">
+      <a href="/" class="hover:text-solar-green">Home</a> / <span>Guides</span> / <span>System Sizing</span>
+    </nav>
+
+    <h1 class="text-3xl md:text-4xl font-bold mb-4">Solar System Sizing Calculator for Thailand Homes</h1>
+    <p class="text-gray-600 mb-8">
+      The easiest way to size your solar system is to match it to your monthly electricity bill. 
+      Use our guide below or <a href="/#contact" class="text-solar-green underline">contact us</a> for a professional assessment.
+    </p>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">Quick Reference: System Size by Monthly Bill</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-50">
+              <th class="p-3 text-left border">Monthly Bill (THB)</th>
+              <th class="p-3 text-center border">Approx. Usage (kWh)</th>
+              <th class="p-3 text-center border">Recommended System</th>
+              <th class="p-3 text-center border">Panel Count (550W)</th>
+              <th class="p-3 text-center border">Roof Area Needed</th>
+              <th class="p-3 text-center border">Est. Monthly Savings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="p-3 border">1,500 – 2,500</td><td class="p-3 border text-center">150–250</td><td class="p-3 border text-center">3 kW</td><td class="p-3 border text-center">6</td><td class="p-3 border text-center">~18 m²</td><td class="p-3 border text-center">1,200–2,000 THB</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 border">2,500 – 4,000</td><td class="p-3 border text-center">250–400</td><td class="p-3 border text-center">5 kW</td><td class="p-3 border text-center">10</td><td class="p-3 border text-center">~30 m²</td><td class="p-3 border text-center">2,000–3,500 THB</td></tr>
+            <tr><td class="p-3 border">4,000 – 6,000</td><td class="p-3 border text-center">400–600</td><td class="p-3 border text-center">7 kW</td><td class="p-3 border text-center">14</td><td class="p-3 border text-center">~42 m²</td><td class="p-3 border text-center">3,500–5,500 THB</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 border">6,000 – 9,000</td><td class="p-3 border text-center">600–900</td><td class="p-3 border text-center">10 kW</td><td class="p-3 border text-center">20</td><td class="p-3 border text-center">~60 m²</td><td class="p-3 border text-center">5,500–8,500 THB</td></tr>
+            <tr><td class="p-3 border">9,000 – 15,000</td><td class="p-3 border text-center">900–1,500</td><td class="p-3 border text-center">15 kW</td><td class="p-3 border text-center">30</td><td class="p-3 border text-center">~90 m²</td><td class="p-3 border text-center">8,500–14,000 THB</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 border">15,000+</td><td class="p-3 border text-center">1,500+</td><td class="p-3 border text-center">20+ kW</td><td class="p-3 border text-center">40+</td><td class="p-3 border text-center">120+ m²</td><td class="p-3 border text-center">Custom quote</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-gray-500 mt-2">Based on 4.5–5.5 peak sun hours, 550W monocrystalline panels, and MEA/PEA electricity tariffs. Actual savings vary by shading, roof orientation, and local tariff.</p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">How to Calculate Your Exact System Size</h2>
+      <p class="text-gray-700 mb-4">Follow these steps for a rough estimate, then get a professional survey for precision:</p>
+      <ol class="space-y-4 list-decimal list-inside">
+        <li class="text-gray-700">
+          <strong>Find your monthly kWh usage:</strong> Check your electricity bill. Divide the total kWh by 30 for daily usage.
+        </li>
+        <li class="text-gray-700">
+          <strong>Estimate daily production needed:</strong> Multiply your daily kWh by 1.2 (accounts for system losses and rainy days).
+        </li>
+        <li class="text-gray-700">
+          <strong>Divide by peak sun hours:</strong> Use 4.5–5.5 hours for most of Thailand. See our <a href="/guides/solar-sunlight-hours" class="text-solar-green underline">sunlight hours guide</a> for regional data.
+        </li>
+        <li class="text-gray-700">
+          <strong>Result = system size in kW:</strong> For example: 30 kWh/day ÷ 5 hours = 6 kW system.
+        </li>
+      </ol>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">Roof Space & Orientation</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h3 class="font-bold mb-2">Ideal Roof Direction</h3>
+          <p class="text-sm text-gray-600"><strong>South-facing</strong> is best in Thailand. East and west-facing roofs lose 10–15% but are still viable. North-facing is least ideal.</p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h3 class="font-bold mb-2">Roof Angle</h3>
+          <p class="text-sm text-gray-600"><strong>15–20°</strong> tilt is optimal. Flat roofs work too — we use adjustable tilt mounts.</p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h3 class="font-bold mb-2">Shading Check</h3>
+          <p class="text-sm text-gray-600">Trees, buildings, or water tanks casting shadows between 10am–3pm significantly reduce output. We assess this during our site survey.</p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h3 class="font-bold mb-2">Structural Load</h3>
+          <p class="text-sm text-gray-600">A 5 kW system adds ~150 kg. Most concrete roofs handle this easily. We verify roof integrity before installation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">Net Metering Considerations</h2>
+      <p class="text-gray-700 mb-4">
+        Thailand's net metering program (SCO 1/2561) allows you to sell excess solar energy back to the grid at <strong>~2.20 THB/kWh</strong>. 
+        This means you can install a slightly larger system to maximize long-term savings, even if you don't use all the energy immediately.
+      </p>
+      <p class="text-gray-700">
+        We help you register for net metering and handle all MEA/PEA paperwork as part of our <a href="/" class="text-solar-green underline">professional solar installation</a> service.
+      </p>
+    </section>
+
+    <section class="bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-8 mb-12">
+      <h2 class="text-2xl font-bold mb-4">Related Guides</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <a href="/guides/solar-sunlight-hours" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">Sunlight Hours in Thailand</div>
+          <div class="text-sm text-gray-600">Regional peak sun data for accurate sizing</div>
+        </a>
+        <a href="/guides/solar-panels-cloudy-days" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">Cloudy Day Performance</div>
+          <div class="text-sm text-gray-600">Year-round output expectations</div>
+        </a>
+        <a href="/guides/solar-panel-maintenance" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">Maintenance & Cleaning Guide</div>
+          <div class="text-sm text-gray-600">Keep your sized system performing optimally</div>
+        </a>
+      </div>
+    </section>
+
+    <div class="bg-solar-green text-white rounded-xl p-8 text-center">
+      <h2 class="text-2xl font-bold mb-2">Get a Tailored System Recommendation</h2>
+      <p class="mb-6">Send us your latest electricity bill. We'll calculate your ideal system size, panel count, and estimated savings — free.</p>
+      <a href="/#contact" class="inline-block bg-white text-solar-green font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+        Get a Free Quote
+      </a>
+      <p class="text-sm mt-4 opacity-80">
+        Based in <a href="/" class="underline">Koh Chang</a>, serving all of Thailand since 2016.
+      </p>
+    </div>
+  </article>
+</Layout>
