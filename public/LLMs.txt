@@ -1,0 +1,53 @@
+# LLMs.txt — kohchangsolarcell.com
+
+## Site Information
+
+- **Site Name:** JJ Com Solar Cell
+- **URL:** https://www.kohchangsolarcell.com/
+- **Language:** English (Thai version at /th/)
+- **Location:** Ko Chang District, Trat Province, Thailand
+- **Established:** 2016
+- **Contact:** +66 94 050 9623 | jjcomandsolarcell@gmail.com
+- **Description:** Complete solar system installation and care in Thailand. Residential and commercial solar panel installation, battery storage, inverters, system monitoring, and panel cleaning. Based on Koh Chang, serving nationwide.
+
+## Key Pages
+
+### Homepage
+- URL: https://www.kohchangsolarcell.com/
+- Purpose: Lead generation, free quote request form, service overview
+- Keywords: solar installation Thailand, solar panels Koh Chang, solar system Thailand
+
+### Service Pages
+- https://www.kohchangsolarcell.com/services/solar-panel-installation/ — Rooftop and ground-mount systems
+- https://www.kohchangsolarcell.com/services/battery-storage/ — Lithium-ion and LiFePO4 battery storage
+- https://www.kohchangsolarcell.com/services/inverter-installation/ — Grid-tie, hybrid, off-grid inverters
+- https://www.kohchangsolarcell.com/services/system-monitoring/ — Remote monitoring and performance tracking
+- https://www.kohchangsolarcell.com/services/panel-cleaning/ — Professional cleaning at 300 THB/panel
+- https://www.kohchangsolarcell.com/services/racking-mounting/ — Aluminium mounting systems
+
+### Educational Guides
+- https://www.kohchangsolarcell.com/guides/solar-panel-maintenance/ — Cleaning schedules and annual inspection checklists
+- https://www.kohchangsolarcell.com/guides/solar-panels-cloudy-days/ — Performance in cloudy weather
+- https://www.kohchangsolarcell.com/guides/solar-sunlight-hours/ — Peak sun hours by region in Thailand
+- https://www.kohchangsolarcell.com/guides/solar-system-sizing/ — How to size a solar system for your usage
+
+### Thai Version
+- https://www.kohchangsolarcell.com/th/ — Full Thai language homepage
+
+## Business Details
+
+- **Business Type:** Local solar installation company
+- **Address:** 113/10 Moo 4, Ko Chang District, Trat 23170, Thailand
+- **Hours:** Mon–Sat, 08:00–18:00
+- **Service Area:** Nationwide (all provinces of Thailand)
+- **Specialties:** Solar panel installation, battery storage, inverters, monitoring, cleaning, maintenance
+- **Experience:** 10+ years
+- **Unique Value Proposition:** Free 1-year after-sales service and maintenance included with every installation
+
+## Important Notes
+
+- All installations come with free 1-year maintenance
+- Panel cleaning service available at 300 THB per panel
+- Product warranties range from 1 to 5 years depending on manufacturer
+- Free consultation and quote available via website form or WhatsApp
+- Multilingual support: English and Thai

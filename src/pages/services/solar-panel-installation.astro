@@ -3,7 +3,18 @@ import Layout from '../../layouts/Layout.astro';
 const title = 'Solar Panel Installation Thailand | Residential & Commercial | JJ Com Solar Cell';
 const description = 'Professional solar panel installation across Thailand. Rooftop and ground-mount systems for homes and businesses. 10+ years experience, free quote.';
 ---
-<Layout title={title} description={description}>
+<Layout
+  title={title}
+  description={description}
+  ogType="website"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Solar Panel Installation",
+    "provider": { "@type": "Organization", "name": "JJ Com Solar Cell" },
+    "areaServed": { "@type": "Country", "name": "Thailand" }
+  }}
+>
   <article class="max-w-4xl mx-auto px-4 py-12">
     <nav class="text-sm text-gray-500 mb-6">
       <a href="/" class="hover:text-solar-green">Home</a> / <span>Services</span> / <span>Solar Panel Installation</span>

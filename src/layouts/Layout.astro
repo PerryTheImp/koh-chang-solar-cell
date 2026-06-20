@@ -1,34 +1,112 @@
 ---
 import '../styles/global.css';
+
 interface Props {
   title: string;
   description?: string;
   lang?: string;
+  canonicalUrl?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogType?: string;
+  ogUrl?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  noindex?: boolean;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
-const { title, description = 'JJ Com Solar Cell - Complete solar system installation and care in Thailand since 2016', lang = 'en' } = Astro.props;
+
+const {
+  title,
+  description = 'JJ Com Solar Cell - Complete solar system installation and care in Thailand since 2016',
+  lang = 'en',
+  canonicalUrl,
+  ogTitle,
+  ogDescription,
+  ogImage = '/images/og-default.jpg',
+  ogType = 'website',
+  ogUrl,
+  twitterCard = 'summary_large_image',
+  twitterTitle,
+  twitterDescription,
+  twitterImage,
+  noindex = false,
+  jsonLd,
+} = Astro.props;
 
 const isThai = lang === 'th';
 const alternateLang = isThai ? 'en' : 'th';
 const alternatePath = isThai ? '/' : '/th/';
+
+const siteOrigin = 'https://www.kohchangsolarcell.com';
+const pagePath = Astro.url.pathname;
+const absoluteCanonical = canonicalUrl ? (canonicalUrl.startsWith('http') ? canonicalUrl : `${siteOrigin}${canonicalUrl}`) : `${siteOrigin}${pagePath}`;
+
+const finalOgTitle = ogTitle || title;
+const finalOgDescription = ogDescription || description;
+const finalOgImage = ogImage.startsWith('http') ? ogImage : `${siteOrigin}${ogImage}`;
+const finalOgUrl = ogUrl || absoluteCanonical;
+
+const finalTwitterTitle = twitterTitle || finalOgTitle;
+const finalTwitterDescription = twitterDescription || finalOgDescription;
+const finalTwitterImage = twitterImage ? (twitterImage.startsWith('http') ? twitterImage : `${siteOrigin}${twitterImage}`) : finalOgImage;
+
+function serializeJsonLd(data: Record<string, unknown> | Record<string, unknown>[]): string {
+  if (Array.isArray(data)) {
+    return JSON.stringify(data);
+  }
+  return JSON.stringify(data);
+}
 ---
 <!DOCTYPE html>
 <html lang={lang} class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="alternate" hreflang={lang} href={Astro.url.pathname} />
-  <link rel="alternate" hreflang={alternateLang} href={alternatePath} />
+  <link rel="alternate" hreflang={lang} href={`${siteOrigin}${pagePath}`} />
+  <link rel="alternate" hreflang={alternateLang} href={`${siteOrigin}${alternatePath}`} />
+  <link rel="alternate" hreflang="x-default" href={`${siteOrigin}/`} />
   <title>{title}</title>
   <meta name="description" content={description} />
+  {noindex ? (
+    <meta name="robots" content="noindex, nofollow" />
+  ) : (
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  )}
+  <link rel="canonical" href={absoluteCanonical} />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={finalOgTitle} />
+  <meta property="og:description" content={finalOgDescription} />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:url" content={finalOgUrl} />
+  <meta property="og:image" content={finalOgImage} />
+  <meta property="og:image:alt" content={finalOgTitle} />
+  <meta property="og:site_name" content="JJ Com Solar Cell" />
+  <meta property="og:locale" content={isThai ? 'th_TH' : 'en_US'} />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content={twitterCard} />
+  <meta name="twitter:title" content={finalTwitterTitle} />
+  <meta name="twitter:description" content={finalTwitterDescription} />
+  <meta name="twitter:image" content={finalTwitterImage} />
+  <meta name="twitter:image:alt" content={finalTwitterTitle} />
+
+  <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- LocalBusiness JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "JJ Com Solar Cell",
-    "image": "https://kohchangsolarcell.com/images/logo.jpg",
+    "image": "https://www.kohchangsolarcell.com/images/logo.jpg",
     "telephone": "+66940509623",
     "email": "jjcomandsolarcell@gmail.com",
     "address": {
@@ -44,7 +122,7 @@ const alternatePath = isThai ? '/' : '/th/';
       "latitude": 12.0,
       "longitude": 102.3
     },
-    "url": "https://kohchangsolarcell.com",
+    "url": "https://www.kohchangsolarcell.com",
     "priceRange": "$$",
     "areaServed": {
       "@type": "Country",
@@ -65,6 +143,11 @@ const alternatePath = isThai ? '/' : '/th/';
     }
   }
   </script>
+
+  <!-- Additional JSON-LD -->
+  {jsonLd && (
+    <script type="application/ld+json" set:html={serializeJsonLd(jsonLd)} />
+  )}
 </head>
 <body class="bg-white text-gray-900 antialiased">
   <!-- Sticky Phone Bar -->
@@ -119,10 +202,10 @@ const alternatePath = isThai ? '/' : '/th/';
       <div>
         <h4 class="text-white font-semibold mb-4">{isThai ? 'บริการ' : 'Services'}</h4>
         <ul class="space-y-2 text-sm">
-          <li><a href="#" class="hover:text-solar-yellow transition-colors">{isThai ? 'ติดตั้งแผงโซลาร์เซลล์' : 'Solar Panel Installation'}</a></li>
-          <li><a href="#" class="hover:text-solar-yellow transition-colors">{isThai ? 'ระบบเก็บพลังงาน' : 'Battery Storage Systems'}</a></li>
-          <li><a href="#" class="hover:text-solar-yellow transition-colors">{isThai ? 'อินเวอร์เตอร์' : 'Inverter Installation'}</a></li>
-          <li><a href="#" class="hover:text-solar-yellow transition-colors">{isThai ? 'ทำความสะอาดแผง' : 'Panel Cleaning'}</a></li>
+          <li><a href="/services/solar-panel-installation/" class="hover:text-solar-yellow transition-colors">{isThai ? 'ติดตั้งแผงโซลาร์เซลล์' : 'Solar Panel Installation'}</a></li>
+          <li><a href="/services/battery-storage/" class="hover:text-solar-yellow transition-colors">{isThai ? 'ระบบเก็บพลังงาน' : 'Battery Storage Systems'}</a></li>
+          <li><a href="/services/inverter-installation/" class="hover:text-solar-yellow transition-colors">{isThai ? 'อินเวอร์เตอร์' : 'Inverter Installation'}</a></li>
+          <li><a href="/services/panel-cleaning/" class="hover:text-solar-yellow transition-colors">{isThai ? 'ทำความสะอาดแผง' : 'Panel Cleaning'}</a></li>
         </ul>
       </div>
       <div>

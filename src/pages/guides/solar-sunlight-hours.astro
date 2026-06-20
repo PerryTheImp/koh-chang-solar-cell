@@ -4,7 +4,21 @@ const title = 'Solar Sunlight Hours in Thailand: Monthly Peak Sun Guide';
 const description = 'Thailand averages 4.5-6.5 peak sun hours daily. Explore monthly and regional sunlight data to estimate your solar system output and savings.';
 const keywords = 'sunlight hours Thailand, peak sun hours Thailand, solar potential Thailand, solar irradiance Thailand, best months for solar Thailand';
 ---
-<Layout title={title} description={description}>
+<Layout
+  title={title}
+  description={description}
+  ogType="article"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": title,
+    "description": description,
+    "author": { "@type": "Organization", "name": "JJ Com Solar Cell" },
+    "publisher": { "@type": "Organization", "name": "JJ Com Solar Cell" },
+    "datePublished": "2024-06-01",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.kohchangsolarcell.com/guides/solar-sunlight-hours/" }
+  }}
+>
   <article class="max-w-4xl mx-auto px-4 py-12">
     <nav class="text-sm text-gray-500 mb-6">
       <a href="/" class="hover:text-solar-green">Home</a> / <span>Guides</span> / <span>Sunlight Hours</span>

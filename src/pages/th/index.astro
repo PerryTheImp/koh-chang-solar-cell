@@ -70,7 +70,31 @@ const eduArticles = [
   { title: 'คู่มือการบำรุงรักษาระบบโซลาร์', desc: 'เรียนรู้วิธีตรวจสอบ ทำความสะอาด และบำรุงรักษาระบบโซลาร์ด้วยแอพบนมือถือ' },
 ];
 ---
-<Layout title={t.title} description={t.desc} lang="th">
+<Layout
+  title={t.title}
+  description={t.desc}
+  lang="th"
+  ogType="website"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "JJ Com Solar Cell",
+        "url": "https://www.kohchangsolarcell.com/th/",
+        "inLanguage": "th",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.kohchangsolarcell.com/th/?search={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }}
+>
   <section class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
     <div class="absolute inset-0 opacity-30">
       <img src="/images/26.webp" alt="การติดตั้งโซลาร์ในประเทศไทย" class="w-full h-full object-cover" />
