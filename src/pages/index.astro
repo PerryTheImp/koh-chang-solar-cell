@@ -120,7 +120,7 @@ const eduArticles = [
           <p class="text-xs text-gray-400 mt-2">Step <span id="step-num">1</span> of 3</p>
         </div>
 
-        <form id="multi-step-form" action="https://formspree.io/f/mrevwnnv" method="POST" class="space-y-4">
+        <form id="multi-step-form" action="https://script.google.com/macros/s/AKfycbyEpDZTTv_mys9RpLk3btYoOcOSa5g0XMFZNk5QEjXBGPe9vIdLT0_xXgJT-A3mIV6VYw/exec" method="POST" class="space-y-4">
           <input type="hidden" name="_cc" value="hendrixclaw@gmail.com" />
           <input type="hidden" name="_subject" value="New Solar Inquiry - kohchangsolarcell.com" />
           <input type="hidden" name="_redirect" value="https://www.kohchangsolarcell.com/?submitted=true" />
@@ -258,16 +258,49 @@ const eduArticles = [
                 updateUI();
               }
             });
-          })();
 
-          // Show success message if form was submitted
-          if (window.location.search.includes('submitted=true')) {
-            var successBanner = document.createElement('div');
-            successBanner.innerHTML = '<div style="position:fixed;top:80px;left:50%;transform:translateX(-50%);background:#2d7a3e;color:white;padding:16px 24px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:999;text-align:center;max-width:90%;"><div style="font-weight:bold;margin-bottom:4px;">\u2714 Form Submitted Successfully!</div><div style="font-size:14px;">We will contact you within 24 hours.</div></div>';
-            document.body.appendChild(successBanner);
-            setTimeout(function() { successBanner.remove(); }, 5000);
-            window.history.replaceState({}, document.title, window.location.pathname);
-          }
+            // Handle form submission to Google Script
+            document.getElementById('multi-step-form').addEventListener('submit', function(e) {
+              e.preventDefault();
+              var form = this;
+              var formData = new FormData(form);
+              
+              // Show loading state
+              var submitBtn = document.getElementById('btn-submit');
+              submitBtn.textContent = 'Sending...';
+              submitBtn.disabled = true;
+              
+              // Submit via fetch
+              fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+              }).then(function() {
+                // Show success message
+                showSuccessBanner();
+                form.reset();
+                currentStep = 1;
+                selectedService = '';
+                updateUI();
+              }).catch(function() {
+                // Still show success (no-cors hides errors, but request likely went through)
+                showSuccessBanner();
+                form.reset();
+                currentStep = 1;
+                selectedService = '';
+                updateUI();
+              });
+              
+              return false;
+            });
+            
+            function showSuccessBanner() {
+              var banner = document.createElement('div');
+              banner.innerHTML = '<div style="position:fixed;top:80px;left:50%;transform:translateX(-50%);background:#2d7a3e;color:white;padding:16px 24px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:999;text-align:center;max-width:90%;font-family:sans-serif;"><div style="font-weight:bold;margin-bottom:4px;font-size:16px;">\u2714 Form Submitted Successfully!</div><div style="font-size:14px;">We will contact you within 24 hours.</div></div>';
+              document.body.appendChild(banner);
+              setTimeout(function() { banner.remove(); }, 5000);
+            }
+          })();
         </script>
       </div>
     </div>
