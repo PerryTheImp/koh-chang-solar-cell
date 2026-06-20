@@ -64,10 +64,10 @@ const products = [
   { name: 'Balance of System', desc: 'Cables, connectors, junction boxes, switches, and safety equipment.', img: '/images/switches.webp' },
 ];
 const eduArticles = [
-  { title: 'Sunlight Hours in Thailand', desc: 'Thailand receives an average of 4.5-6.5 peak sun hours daily. Discover which months are best for solar generation.' },
-  { title: 'How Solar Panels Work on Cloudy Days', desc: 'Modern panels still generate 10-25% of their rated capacity during cloudy or rainy weather.' },
-  { title: 'Sizing Your Solar System', desc: 'Calculate the right system size based on your monthly electricity bill and consumption patterns.' },
-  { title: 'Solar System Maintenance Guide', desc: 'Learn how to monitor, clean, and maintain your solar system using available smartphone apps.' },
+  { title: 'Sunlight Hours in Thailand', desc: 'Thailand receives an average of 4.5-6.5 peak sun hours daily. Discover which months are best for solar generation.', link: '/guides/solar-sunlight-hours/' },
+  { title: 'How Solar Panels Work on Cloudy Days', desc: 'Modern panels still generate 10-25% of their rated capacity during cloudy or rainy weather.', link: '/guides/solar-panels-cloudy-days/' },
+  { title: 'Sizing Your Solar System', desc: 'Calculate the right system size based on your monthly electricity bill and consumption patterns.', link: '/guides/solar-system-sizing/' },
+  { title: 'Solar System Maintenance Guide', desc: 'Learn how to monitor, clean, and maintain your solar system using available smartphone apps.', link: '/guides/solar-panel-maintenance/' },
 ];
 ---
 <Layout title={t.title} description={t.desc}>
@@ -452,7 +452,7 @@ const eduArticles = [
             </div>
             <h3 class="font-bold mb-2">{a.title}</h3>
             <p class="text-gray-600 text-sm mb-4">{a.desc}</p>
-            <span class="text-solar-green text-sm font-medium">{t.eduLink} →</span>
+            <a href={a.link} class="text-solar-green text-sm font-medium hover:underline">{t.eduLink} →</a>
           </div>
         ))}
       </div>
