@@ -123,6 +123,7 @@ const eduArticles = [
         <form id="multi-step-form" action="https://formspree.io/f/mrevwnnv" method="POST" class="space-y-4">
           <input type="hidden" name="_cc" value="hendrixclaw@gmail.com" />
           <input type="hidden" name="_subject" value="New Solar Inquiry - kohchangsolarcell.com" />
+          <input type="hidden" name="_redirect" value="https://www.kohchangsolarcell.com/?submitted=true" />
           <input type="hidden" name="service" id="selected-service" value="" />
 
           <div id="step-1">
@@ -258,6 +259,15 @@ const eduArticles = [
               }
             });
           })();
+
+          // Show success message if form was submitted
+          if (window.location.search.includes('submitted=true')) {
+            var successBanner = document.createElement('div');
+            successBanner.innerHTML = '<div style="position:fixed;top:80px;left:50%;transform:translateX(-50%);background:#2d7a3e;color:white;padding:16px 24px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:999;text-align:center;max-width:90%;"><div style="font-weight:bold;margin-bottom:4px;">\u2714 Form Submitted Successfully!</div><div style="font-size:14px;">We will contact you within 24 hours.</div></div>';
+            document.body.appendChild(successBanner);
+            setTimeout(function() { successBanner.remove(); }, 5000);
+            window.history.replaceState({}, document.title, window.location.pathname);
+          }
         </script>
       </div>
     </div>
