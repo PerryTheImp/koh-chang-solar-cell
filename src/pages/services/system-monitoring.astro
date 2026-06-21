@@ -1,63 +1,262 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-const title = 'Solar System Monitoring Thailand | Smart Energy Tracking | JJ Com Solar Cell';
-const description = 'Smart solar monitoring systems for Thailand. Track energy production, consumption, and savings in real-time via smartphone apps. Professional installation.';
----
-<Layout
-  title={title}
-  description={description}
-  ogType="website"
-  jsonLd={{
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Solar System Monitoring",
-    "provider": { "@type": "Organization", "name": "JJ Com Solar Cell" },
-    "areaServed": { "@type": "Country", "name": "Thailand" }
-  }}
->
-  <article class="max-w-4xl mx-auto px-4 py-12">
-    <nav class="text-sm text-gray-500 mb-6">
-      <a href="/" class="hover:text-solar-green">Home</a> / <span>Services</span> / <span>System Monitoring</span>
-    </nav>
 
-    <div class="text-center mb-12">
-      <div class="inline-flex items-center gap-2 bg-solar-yellow/20 text-solar-yellow px-4 py-2 rounded-full text-sm font-medium mb-6">
-        Serving Thailand Since 2016
+---
+
+<Layout
+  title="Solar System Monitoring in Koh Chang, Thailand"
+  description="Advanced solar monitoring systems for Thai solar installations. Real-time tracking of energy production, consumption, and system health for residential and commercial arrays."
+>
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs container" aria-label="Breadcrumb">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href={`/`}><span itemprop="name">Home</span></a>
+        <meta itemprop="position" content="1" />
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href={`/services/`}><span itemprop="name">Services</span></a>
+        <meta itemprop="position" content="2" />
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name">System Monitoring</span>
+        <meta itemprop="position" content="3" />
+      </li>
+    </ol>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero hero--service">
+    <div class="hero__content container">
+      <h1>Solar System Monitoring</h1>
+      <p class="hero__subtitle">
+        Real-time visibility into your solar energy production, consumption, and system health --
+        because what you measure, you can improve.
+      </p>
+      <div class="hero__cta">
+        <a href={`/contact/`} class="btn btn--primary">Get a Monitoring System</a>
       </div>
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">System Monitoring</h1>
-      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-        Smart monitoring apps to track your energy production, consumption, and savings in real-time.
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats container">
+    <div class="stats__grid">
+      <div class="stat-card">
+        <span class="stat-card__number">Real-Time</span>
+        <span class="stat-card__label">Production Tracking</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__number">98%+</span>
+        <span class="stat-card__label">Fault Detection Accuracy</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__number">15+ yr</span>
+        <span class="stat-card__label">Data Retention</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="section container">
+    <div class="section__content">
+      <h2>See Your Solar System in Action</h2>
+      <p>
+        A solar installation without monitoring is like a business without accounting --
+        you have no visibility into whether your investment is performing as expected. System
+        monitoring provides real-time data on energy production from your photovoltaic modules,
+        consumption patterns in your home or business, battery state of charge if you have
+        storage, and the overall financial return on your solar investment. Without this data,
+        a failing panel string, a malfunctioning inverter, or shading issue could reduce your
+        annual production by 20% or more while you remain unaware for months.
+      </p>
+      <p>
+        At Koh Chang Solar Cell, we install and configure monitoring systems that give you
+        complete transparency into your solar system's operation. Our solutions range from
+        basic inverter-integrated monitoring that tracks total system output, to advanced
+        smart-meter installations that measure individual circuit consumption and identify
+        opportunities for additional energy savings. We support both cloud-based platforms
+        accessible from any smartphone and local data-logging systems for properties where
+        internet connectivity is unreliable -- a common reality on Koh Chang's more remote
+        beaches and hillside locations.
+      </p>
+      <p>
+        For commercial installations, monitoring becomes even more critical. A 50 kilowatt-peak
+        resort system experiencing a 15% production loss represents approximately 15,000
+        kilowatt-hours of lost annual generation -- worth 60,000 to 100,000 Thai Baht in
+        electricity costs or lost net metering revenue. Our monitoring systems detect such
+        issues within hours rather than months, and our optional monitoring service includes
+        remote analysis that identifies problems before you even notice them. The monitoring
+        investment typically pays for itself within the first year through avoided production
+        losses alone.
       </p>
     </div>
+  </section>
 
-    <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-4">What You Can Track</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-gray-50 p-4 rounded-lg">
-          <h3 class="font-bold mb-2">Real-Time Production</h3>
-          <p class="text-sm text-gray-600">See exactly how much energy your panels are generating right now.</p>
-        </div>
-        <div class="bg-gray-50 p-4 rounded-lg">
-          <h3 class="font-bold mb-2">Historical Data</h3>
-          <p class="text-sm text-gray-600">Daily, weekly, monthly, and yearly production charts.</p>
-        </div>
-        <div class="bg-gray-50 p-4 rounded-lg">
-          <h3 class="font-bold mb-2">Fault Detection</h3>
-          <p class="text-sm text-gray-600">Automatic alerts when a panel or inverter underperforms.</p>
-        </div>
-        <div class="bg-gray-50 p-4 rounded-lg">
-          <h3 class="font-bold mb-2">Savings Calculator</h3>
-          <p class="text-sm text-gray-600">Track cumulative savings vs. your old electricity bills.</p>
-        </div>
-      </div>
-    </section>
-
-    <div class="bg-solar-green text-white rounded-xl p-8 text-center">
-      <h2 class="text-2xl font-bold mb-2">Start Monitoring Your System</h2>
-      <p class="mb-6">Get smart monitoring installed with your solar system.</p>
-      <a href="/#contact" class="inline-block bg-white text-solar-green font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">
-        Get a Free Quote
-      </a>
+  <!-- How It Works -->
+  <section class="section section--alt container">
+    <div class="section__content">
+      <h2>How Solar Monitoring Systems Work</h2>
+      <p>
+        Modern solar monitoring combines hardware sensors, data communication, and software
+        analytics into an integrated visibility platform. Understanding these components helps
+        you select the appropriate monitoring level for your installation and budget.
+      </p>
+      <p>
+        The hardware layer starts with your inverter, which already measures DC input voltage
+        and current from each MPPT channel, AC output power, and operational parameters such
+        as temperature and grid frequency. Basic monitoring simply transmits this inverter data
+        to a cloud server via Wi-Fi, Ethernet, or cellular connection. For more granular
+        visibility, we add DC string-level monitors that measure production from individual
+        panel groups -- typically 8 to 12 panels per string on residential systems. This
+        string-level monitoring detects issues such as partial shading, soiling, or failed
+        bypass diodes that reduce output from a specific section while the rest of the array
+        performs normally.
+      </p>
+      <p>
+        AC-side monitoring uses smart meters installed at your main distribution panel to
+        measure total property consumption, grid import/export for net metering tracking, and
+        individual circuit loads if sub-metering is installed. Advanced systems combine
+        inverter data with consumption data to calculate self-consumption ratio -- the
+        percentage of your solar generation that you use directly rather than exporting to
+        the grid. This metric is crucial for optimizing battery storage sizing and evaluating
+        the financial return of time-of-use electricity strategies.
+      </p>
+      <p>
+        The software layer presents this data through mobile apps and web dashboards that
+        display current power, daily energy totals, monthly production graphs, and historical
+        comparisons. Algorithms analyze performance against weather-adjusted expectations,
+        flagging underperformance that exceeds normal variation. For example, if your 5
+        kilowatt-peak system produces 18 kilowatt-hours on a sunny day when historical data
+        shows 22 to 25 kilowatt-hours under similar conditions, the system generates an alert
+        for investigation. We configure alert thresholds appropriate to Thailand's variable
+        cloud patterns, avoiding nuisance notifications from normal weather fluctuations.
+      </p>
+      <p>
+        Data storage and retention vary by platform. Cloud-based systems from manufacturers
+        like SolarWeb (Fronius), SolarEdge Monitoring, or Huawei FusionSolar retain data for
+        the product lifetime. Local dataloggers using SD cards or USB storage provide
+        ownership of your data but require manual retrieval and carry higher risk of data
+        loss if the device fails. For most Thai installations, we recommend cloud platforms
+        with local backup loggers where internet connectivity is intermittent.
+      </p>
     </div>
-  </article>
+  </section>
+
+  <!-- Why Thailand -->
+  <section class="section container">
+    <div class="section__content">
+      <h2>Why Monitoring Is Essential in Thailand</h2>
+      <p>
+        Thailand's specific climate, grid characteristics, and regulatory environment create
+        monitoring requirements beyond what generic international solutions address. Local
+        expertise in monitoring configuration makes the difference between useful data and
+        misleading alerts.
+      </p>
+      <p>
+        Thailand's tropical weather creates highly variable solar production that makes
+        performance benchmarking challenging. A clear January day at Koh Chang delivers
+        over 6 peak sun hours, while a July monsoon day might provide only 1.5 hours. Simple
+        monitoring systems without weather integration cannot distinguish between normal
+        weather-related low production and actual system problems. We configure monitoring
+        platforms with satellite weather integration that adjusts expected production based
+        on actual irradiance at your location, providing meaningful alerts only when performance
+        falls below weather-adjusted expectations.
+      </p>
+      <p>
+        The Provincial Electricity Authority's net metering program requires accurate
+        production and export documentation for billing reconciliation. Many monitoring
+        systems measure inverter output but not actual grid export, creating discrepancies
+        between monitored generation and credited exports due to self-consumption timing.
+        Our installations include bidirectional meters that measure true grid exchange,
+        ensuring your net metering credits match actual export. We provide monthly reconciliation
+        reports that compare monitoring data against PEA bills, identifying any metering
+        inconsistencies that could cost you money.
+      </p>
+      <p>
+        Grid voltage and frequency fluctuations in Thailand's distribution network occasionally
+        trigger inverter protective shutdowns. Without monitoring, these brief disconnections
+        go unnoticed -- you simply lose production for minutes or hours without knowing why.
+        Our monitoring systems log grid parameter events and inverter fault codes, allowing
+        us to distinguish between random grid disturbances that require no action and
+        systematic problems indicating your inverter settings need adjustment or your local
+        transformer requires attention.
+      </p>
+      <p>
+        The combination of high humidity, salt air, and tropical storms creates specific
+        failure modes in Thai solar installations that monitoring detects early. Ground fault
+        leakage currents increase as moisture penetrates cable insulation -- a gradual failure
+        mode that monitoring identifies before it triggers inverter shutdown or creates safety
+        hazards. Arc fault detection, required by modern standards but not present in older
+        installations, identifies dangerous series arcing in damaged DC cabling that could
+        cause fires if left undetected.
+      </p>
+    </div>
+  </section>
+
+  <!-- What You Get -->
+  <section class="section section--alt container">
+    <div class="section__content">
+      <h2>What You Get with Our Monitoring Service</h2>
+      <p>
+        Our monitoring installation and service package provides everything needed for
+        complete visibility into your solar system's operation, from hardware installation
+        through ongoing analytical support.
+      </p>
+      <p>
+        The hardware package includes monitoring equipment appropriate to your system size
+        and complexity. For standard residential installations up to 10 kilowatt-peak, this
+        typically means the manufacturer's cloud monitoring dongle (Wi-Fi or cellular) that
+        connects to your inverter's communication port, plus a bidirectional smart meter at
+        your main panel for consumption and export tracking. Total installed cost ranges from
+        8,000 to 15,000 Thai Baht depending on meter specifications and communication method.
+        For larger commercial systems with multiple inverters or complex panel layouts, we
+        install string-level monitoring and potentially weather station integration for
+        performance ratio calculation -- installations ranging from 25,000 to 75,000 Thai
+        Baht based on scope.
+      </p>
+      <p>
+        Configuration and commissioning ensures your monitoring provides meaningful data
+        rather than raw numbers. We program system capacity, panel specifications, orientation,
+        and tilt into the monitoring platform so expected production curves match your actual
+        installation. Alert thresholds are calibrated based on Thailand's irradiance patterns
+        and your specific location's historical weather. We connect your mobile app, verify
+        data transmission, and provide a training walkthrough showing how to read dashboards,
+        interpret daily production graphs, and respond to alerts. For business customers, we
+        configure automated monthly production reports suitable for accounting and net metering
+        documentation.
+      </p>
+      <p>
+        Our optional monitoring service adds human expertise to automated data collection.
+        For a monthly fee starting at 500 Thai Baht for residential systems, we remotely
+        review your system's performance weekly, investigate any alerts or underperformance
+        notifications, and contact you with specific recommendations before small issues
+        become expensive problems. This service includes annual performance benchmarking
+        that compares your actual annual production against weather-adjusted design estimates,
+        identifying gradual degradation trends that indicate warranty-repairable panel issues
+        or inverter efficiency loss.
+      </p>
+      <p>
+        All monitoring installations include a one-year hardware warranty and lifetime
+        software access. If communication devices fail or smart meters require replacement
+        under warranty, we handle the swap at no cost. We also provide firmware update
+        management -- keeping your monitoring hardware current with manufacturer improvements
+        and security patches without requiring your involvement. Data migration is handled
+        seamlessly if you upgrade inverters or monitoring platforms, preserving your
+        historical production records for long-term analysis.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-section__content container">
+      <h2>Start Monitoring Your Solar Investment</h2>
+      <p>
+        Know exactly how your solar system is performing -- every day, every month, every year.
+        Contact us to add professional monitoring to your existing or new solar installation.
+      </p>
+      <a href={`/contact/`} class="btn btn--primary btn--large">Get Your Monitoring System</a>
+    </div>
+  </section>
 </Layout>

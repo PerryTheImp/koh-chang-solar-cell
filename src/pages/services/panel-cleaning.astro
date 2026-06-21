@@ -1,78 +1,245 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-const title = 'Solar Panel Cleaning Thailand | 300 THB Per Panel | JJ Com Solar Cell';
-const description = 'Professional solar panel cleaning across Thailand. 300 THB per panel + travel. Dust, bird dropping, and monsoon residue removal. Maximize system efficiency.';
----
-<Layout
-  title={title}
-  description={description}
-  ogType="website"
-  jsonLd={{
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Solar Panel Cleaning \u0026 Maintenance",
-    "provider": { "@type": "Organization", "name": "JJ Com Solar Cell" },
-    "areaServed": { "@type": "Country", "name": "Thailand" }
-  }}
->
-  <article class="max-w-4xl mx-auto px-4 py-12">
-    <nav class="text-sm text-gray-500 mb-6">
-      <a href="/" class="hover:text-solar-green">Home</a> / <span>Services</span> / <span>Panel Cleaning</span>
-    </nav>
 
-    <div class="text-center mb-12">
-      <div class="inline-flex items-center gap-2 bg-solar-yellow/20 text-solar-yellow px-4 py-2 rounded-full text-sm font-medium mb-6">
-        Serving Thailand Since 2016
+---
+
+<Layout
+  title="Solar Panel Cleaning Services in Koh Chang, Thailand"
+  description="Professional solar panel cleaning in Koh Chang. Remove dust, salt, and debris from photovoltaic modules to maximize energy production in Thailand's tropical climate."
+>
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs container" aria-label="Breadcrumb">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href={`/`}><span itemprop="name">Home</span></a>
+        <meta itemprop="position" content="1" />
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href={`/services/`}><span itemprop="name">Services</span></a>
+        <meta itemprop="position" content="2" />
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name">Panel Cleaning</span>
+        <meta itemprop="position" content="3" />
+      </li>
+    </ol>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero hero--service">
+    <div class="hero__content container">
+      <h1>Solar Panel Cleaning Services</h1>
+      <p class="hero__subtitle">
+        Professional cleaning of photovoltaic modules to restore lost production from dust,
+        salt, pollen, and tropical debris on Koh Chang solar installations.
+      </p>
+      <div class="hero__cta">
+        <a href={`/contact/`} class="btn btn--primary">Book a Cleaning Service</a>
       </div>
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Solar Panel Cleaning & Maintenance</h1>
-      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-        Professional cleaning at 300 THB per panel plus travel. Remove dust, bird droppings, and monsoon residue to maintain peak efficiency.
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats container">
+    <div class="stats__grid">
+      <div class="stat-card">
+        <span class="stat-card__number">15-25%</span>
+        <span class="stat-card__label">Production Recovery</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__number">Same Day</span>
+        <span class="stat-card__label">Service Available</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__number">100%</span>
+        <span class="stat-card__label">Safe, Non-Abrasive Methods</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="section container">
+    <div class="section__content">
+      <h2>Keep Your Solar Panels Performing at Peak</h2>
+      <p>
+        Solar panels on Koh Chang and throughout Thailand face a challenging environment.
+        Coastal salt spray, red dust from dry-season winds, pollen from tropical vegetation,
+        bird droppings, and monsoon residue all accumulate on photovoltaic module surfaces,
+        blocking sunlight and reducing energy production. Studies consistently show that
+        dirty panels lose 15% to 25% of their rated output -- and in extreme cases near
+        construction sites or unpaved roads, losses can reach 40%. For a typical 5 kilowatt-peak
+        residential system, this translates to 600 to 1,000 kilowatt-hours of lost annual
+        generation worth 2,500 to 6,000 Thai Baht in electricity value.
+      </p>
+      <p>
+        At Koh Chang Solar Cell, we provide professional cleaning services using methods
+        specifically adapted for monocrystalline and polycrystalline solar panels installed
+        in tropical conditions. Our technicians are trained to work safely on Thailand's
+        common roof types -- concrete slabs, metal sheets, and ceramic tiles -- using
+        fall-protection equipment and low-pressure washing systems that clean effectively
+        without damaging anti-reflective coatings or frame seals. We clean both residential
+        rooftop arrays and commercial ground-mounted solar installations across Trat province.
+      </p>
+      <p>
+        Unlike general cleaning services that treat solar panels like windows, we understand
+        the technical requirements. Our cleaning process addresses not just visible dirt
+        but also the microscopic salt film that builds up on coastal properties and corrodes
+        electrical connections over time. We inspect panels during cleaning for micro-cracks,
+        hot spots, and delamination -- catching warranty-repairable issues before they cause
+        permanent performance degradation. This technical inspection component distinguishes
+        our service from basic pressure-washing companies.
       </p>
     </div>
+  </section>
 
-    <div class="bg-solar-green/5 rounded-xl p-6 mb-12">
-      <div class="grid md:grid-cols-3 gap-4 text-center">
-        <div>
-          <div class="text-3xl font-bold text-solar-green">300 THB</div>
-          <div class="text-sm text-gray-600">Per panel + travel</div>
-        </div>
-        <div>
-          <div class="text-3xl font-bold text-solar-green">15-25%</div>
-          <div class="text-sm text-gray-600">Efficiency gain after cleaning</div>
-        </div>
-        <div>
-          <div class="text-3xl font-bold text-solar-green">1 Year</div>
-          <div class="text-sm text-gray-600">Free maintenance included</div>
-        </div>
-      </div>
+  <!-- How It Works -->
+  <section class="section section--alt container">
+    <div class="section__content">
+      <h2>How Our Panel Cleaning Process Works</h2>
+      <p>
+        Effective solar panel cleaning requires more than spraying water on your roof. Our
+        systematic process maximizes production recovery while protecting your investment
+        and ensuring technician safety on elevated installations.
+      </p>
+      <p>
+        We begin each service with a pre-cleaning inspection and performance baseline. Using
+        a clamp meter on the DC cabling and your inverter's monitoring display, we record
+        current power output under existing light conditions. This measurement provides an
+        objective before-and-after comparison rather than relying on visual appearance alone.
+        We photograph each array section to document soiling patterns and identify any physical
+        damage requiring separate repair attention.
+      </p>
+      <p>
+        The cleaning itself uses deionized or filtered water applied through soft-bristle
+        brushes and low-pressure spray wands -- never high-pressure washers that can force
+        water past frame seals or delaminate cell connections. For salt-encrusted coastal
+        installations common on Koh Chang, we apply a mild, biodegradable cleaning solution
+        specifically formulated for photovoltaic modules that dissolves mineral deposits
+        without degrading anti-reflective coatings. The cleaning sequence follows the panel
+        electrical layout to avoid tracking water across junction boxes or cable entries.
+      </p>
+      <p>
+        After washing, we squeegee excess water from panel surfaces and inspect drainage
+        channels in frame extrusions where organic debris often accumulates and causes
+        localized staining. For tilted rooftop arrays on Thai metal sheet roofs, we check
+        that cleaning runoff drains properly without pooling on roofing materials. We then
+        repeat the power output measurement under equivalent light conditions and calculate
+        actual production recovery percentage.
+      </p>
+      <p>
+        The service concludes with a detailed report showing before/after power readings,
+        photographs, any damage or issues identified, and a recommended cleaning schedule
+        based on your specific environment. Properties near the Koh Chang coastline typically
+        benefit from quarterly cleaning due to salt accumulation, while inland locations
+        with dust but minimal coastal exposure may require only bi-annual service.
+      </p>
     </div>
+  </section>
 
-    <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-4">What's Included</h2>
-      <ul class="space-y-3">
-        <li class="flex items-start gap-2"><span class="text-solar-green">✓</span> <span><strong>Visual inspection:</strong> Crack, chip, and hotspot check</span></li>
-        <li class="flex items-start gap-2"><span class="text-solar-green">✓</span> <span><strong>Soft brush cleaning:</strong> No scratches or damage</span></li>
-        <li class="flex items-start gap-2"><span class="text-solar-green">✓</span> <span><strong>Deionized water rinse:</strong> No mineral residue</span></li>
-        <li class="flex items-start gap-2"><span class="text-solar-green">✓</span> <span><strong>Performance test:</strong> Before and after output comparison</span></li>
-      </ul>
-    </section>
-
-    <section class="bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-8 mb-12">
-      <h2 class="text-2xl font-bold mb-4">Related Resources</h2>
-      <div class="grid md:grid-cols-2 gap-4">
-        <a href="/guides/solar-panel-maintenance" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
-          <div class="font-bold">Maintenance & Cleaning Guide</div>
-          <div class="text-sm text-gray-600">DIY cleaning tips and schedules</div>
-        </a>
-      </div>
-    </section>
-
-    <div class="bg-solar-green text-white rounded-xl p-8 text-center">
-      <h2 class="text-2xl font-bold mb-2">Book Your Cleaning Service</h2>
-      <p class="mb-6">Restore your panels to peak performance. 300 THB per panel + travel.</p>
-      <a href="/#contact" class="inline-block bg-white text-solar-green font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">
-        Book Now
-      </a>
+  <!-- Why Thailand -->
+  <section class="section container">
+    <div class="section__content">
+      <h2>Why Regular Cleaning Matters in Thailand</h2>
+      <p>
+        Thailand's tropical climate creates soiling challenges distinctly different from
+        temperate regions where much solar maintenance research originates. Understanding
+        these local factors explains why Thai solar arrays need more frequent, specialized
+        cleaning than manufacturers' generic maintenance schedules suggest.
+      </p>
+      <p>
+        The dry season, roughly November through April, brings dust storms from continental
+        Asia that deposit fine particulates across the country. This "red dust" contains
+        iron oxides and clay minerals that adhere to panel surfaces more tenaciously than
+        organic debris, forming a thin film that reduces light transmission even when panels
+        appear superficially clean. Rain during the early monsoon may rinse loose dust but
+        often leaves a mineral residue that bakes onto surfaces during the hot season. Our
+        cleaning process specifically addresses this baked-on layer with appropriate
+        surfactants and gentle mechanical action.
+      </p>
+      <p>
+        Coastal salt spray presents another Thailand-specific challenge intensified on
+        islands like Koh Chang. Airborne salt crystallizes on panel surfaces and in frame
+        crevices, creating a conductive film that can cause potential-induced degradation
+        (PID) in susceptible photovoltaic modules over time. Regular cleaning removes this
+        salt before it migrates into electrical connections. For properties within 500
+        meters of the coastline, we recommend quarterly cleaning during the dry season
+        when salt accumulation peaks without rain to provide natural rinsing.
+      </p>
+      <p>
+        Tropical vegetation produces pollen and organic matter that decomposes on panel
+        surfaces, creating acidic byproducts that can etch anti-reflective coatings if
+        left for extended periods. Bird droppings, common near fruit trees and in rural
+        Thai settings, contain uric acid that damages module surfaces more aggressively
+        than simple dust. Our cleaning service removes these biological deposits before
+        they cause permanent optical degradation.
+      </p>
+      <p>
+        Thailand's high humidity, often exceeding 80% year-round, means that dirt and salt
+        films retain moisture longer than in arid climates. This persistent dampness
+        accelerates frame corrosion and can promote mold or algae growth on panel edges
+        in shaded installations. Regular cleaning interrupts these moisture-retention cycles
+        and preserves both the optical and mechanical integrity of your solar arrays.
+      </p>
     </div>
-  </article>
+  </section>
+
+  <!-- What You Get -->
+  <section class="section section--alt container">
+    <div class="section__content">
+      <h2>What You Get with Our Cleaning Service</h2>
+      <p>
+        Our panel cleaning service includes comprehensive deliverables designed to maximize
+        your solar system's financial return while minimizing your involvement. We handle
+        the technical work and provide documentation that protects your warranty and tracks
+        system health over time.
+      </p>
+      <p>
+        The standard residential cleaning package covers arrays up to 10 kilowatt-peak
+        (approximately 20 to 30 panels) at a flat rate of 3,500 to 5,000 Thai Baht per visit
+        depending on roof accessibility and system size. Commercial installations are
+        quoted individually based on array area, mounting height, and soiling severity.
+        Discounted quarterly maintenance contracts are available for properties requiring
+        frequent service, typically reducing per-visit costs by 20% to 30% while ensuring
+        priority scheduling during peak demand periods.
+      </p>
+      <p>
+        Each cleaning visit includes the complete technical service described above plus
+        a system health inspection at no additional charge. We check DC cabling connections
+        for corrosion, inspect junction box seals, verify inverter display readings against
+        expected values, and note any physical damage such as micro-cracks or hot-spot
+        discoloration visible to the trained eye. Issues identified are documented with
+        photographs and repair recommendations, allowing you to address warranty claims
+        promptly before damage progresses.
+      </p>
+      <p>
+        You receive a written service report within 24 hours of cleaning completion.
+        This report includes the before-and-after power measurements with calculated
+        production recovery, photographs of any issues identified, a recommended cleaning
+        schedule for your specific environment, and an updated system status summary.
+        These records support warranty claims, document maintenance compliance for insurance
+        purposes, and provide historical data that helps detect gradual performance trends
+        indicating inverter or panel degradation.
+      </p>
+      <p>
+        Our technicians carry full liability insurance and work-safety certification for
+        rooftop operations. We use appropriate fall-arrest systems on all elevated work
+        and take care to protect your roof surface, garden, and property during the cleaning
+        process. You do not need to be present during service, though we welcome the
+        opportunity to walk through findings with you if you are available.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-section__content container">
+      <h2>Restore Your Lost Solar Production</h2>
+      <p>
+        Don't let dirt and salt steal your electricity savings. Book a professional cleaning
+        service and see immediate improvement in your solar output -- backed by measured
+        before-and-after data.
+      </p>
+      <a href={`/contact/`} class="btn btn--primary btn--large">Schedule Cleaning Now</a>
+    </div>
+  </section>
 </Layout>
