@@ -1,0 +1,142 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+const title = 'แผงโซลาร์ทำงานอย่างไรในวันที่เมฆมาก? คู่มือมรสุมไทย';
+const description = 'แผงโซลาร์ยังผลิตได้ 10-25% ในวันที่เมฆมาก เรียนรู้ว่าแผงสมัยใหม่ทำงานอย่างไรในช่วงมรสุมไทยและทำไมสภาพอากาศไม่ใช่ปัญหา';
+---
+<Layout
+  title={title}
+  description={description}
+  ogType="article"
+  lang="th"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": title,
+    "description": description,
+    "author": { "@type": "Organization", "name": "JJ Com Solar Cell" },
+    "publisher": { "@type": "Organization", "name": "JJ Com Solar Cell" },
+    "datePublished": "2024-06-01",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.kohchangsolarcell.com/th/guides/solar-panels-cloudy-days/" }
+  }}
+>
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-sm text-gray-500 mb-6">
+      <a href="/th/" class="hover:text-solar-green">หน้าแรก</a> / <span>คู่มือ</span> / <span>ประสิทธิภาพวันฟ้าคลึม</span>
+    </nav>
+
+    <h1 class="text-3xl md:text-4xl font-bold mb-4">แผงโซลาร์ทำงานอย่างไรในวันที่เมฆมาก? คู่มือมรสุมไทย</h1>
+    <p class="text-gray-600 mb-8">
+      กังวลเรื่องฤดูฝน? เทคโนโลยีโซลาร์สมัยใหม่ดูดซับแสงกระจายและผลิตพลังงานต่อเนื่อง 
+      แม้ในท้องฟ้ามืดครึ้ม นี่คือสิ่งที่คาดหวังได้ในประเทศไทย
+    </p>
+
+    <div class="bg-solar-green/5 rounded-xl p-6 mb-8">
+      <div class="grid md:grid-cols-3 gap-4 text-center">
+        <div>
+          <div class="text-3xl font-bold text-solar-green">10-25%</div>
+          <div class="text-sm text-gray-600">ของกำลังผลิตเมื่อเมฆมาก</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-solar-green">60-80%</div>
+          <div class="text-sm text-gray-600">ของกำลังผลิตเมื่อเมฆบาง</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-solar-green">90-100%</div>
+          <div class="text-sm text-gray-600">ในวันแดดจัด</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">แผงโซลาร์จัดการเมฆอย่างไร</h2>
+      <p class="text-gray-700 mb-4">
+        แผงโซลาร์ไม่ต้องการแสงจ้าโดยตรงเพื่อทำงาน แผงดูดซับทั้งแสง <strong>ตรง</strong> และ <strong>กระจาย</strong> 
+        เมื่อเมฆบังดวงอาทิตย์ แสงกระจายยังคงถึงแผงจากทุกทิศทาง แผง monocrystalline สมัยใหม่ 
+        มีประสิทธิภาพสูงในการดูดซับแสงอ้อมนี้
+      </p>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+          <h3 class="font-bold mb-2">แสงตรง</h3>
+          <p class="text-sm text-gray-600">แดดจัด ฟ้าใส ผลผลิตสูงสุด แผงผลิตตามกำลังติดตั้งเต็มที่</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+          <h3 class="font-bold mb-2">แสงกระจาย</h3>
+          <p class="text-sm text-gray-600">เมฆมาก ฟ้าครึ้ม ผลผลิตลดแต่คงที่ แผงสมัยใหม่ยังดูดซับพลังงานจากแสงกระจายได้มาก</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">ผลผลิตในช่วงมรสุมของไทย</h2>
+      <p class="text-gray-700 mb-4">
+        ฤดูฝนของไทยอยู่ระหว่าง <strong>พฤษภาคม-ตุลาคม</strong> แม้ผลผลิตรายวันจะลด แต่ไม่หยุด 
+        นี่คือสิ่งที่ระบบ 5 กิโลวัตต์ผลิตในสภาวะต่างๆ:
+      </p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-50">
+              <th class="p-3 text-left border">สภาพอากาศ</th>
+              <th class="p-3 text-center border">ผลผลิตรายวัน (5 กิโลวัตต์)</th>
+              <th class="p-3 text-center border">% ของกำลังติดตั้ง</th>
+              <th class="p-3 text-center border">วันทั่วไป/เดือน</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="p-3 border">แดดจัด ไม่มีเมฆ</td><td class="p-3 border text-center">25-30 กิโลวัตต์ชั่วโมง</td><td class="p-3 border text-center">100%</td><td class="p-3 border text-center">10-15 (ฤดูแล้ง)</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 border">เมฆบาง</td><td class="p-3 border text-center">18-22 กิโลวัตต์ชั่วโมง</td><td class="p-3 border text-center">70-80%</td><td class="p-3 border text-center">8-12</td></tr>
+            <tr><td class="p-3 border">เมฆมาก/ฝนเล็กน้อย</td><td class="p-3 border text-center">8-12 กิโลวัตต์ชั่วโมง</td><td class="p-3 border text-center">30-45%</td><td class="p-3 border text-center">3-6</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 border">ฝนตกหนัก/พายุ</td><td class="p-3 border text-center">3-6 กิโลวัตต์ชั่วโมง</td><td class="p-3 border text-center">10-20%</td><td class="p-3 border text-center">2-4</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">ทำไมฤดูฝนจึงไม่ใช่ปัญหา</h2>
+      <ul class="space-y-3">
+        <li class="flex items-start gap-2"><span class="text-solar-green">✓</span> <span><strong>อุณหภูมิเย็นปรับปรุงประสิทธิภาพ:</strong> แผงทำงานดีกว่าในสภาพอากาศเย็น วันที่ 25 องศาเซลเซียสเมฆมากอาจผลิตได้ดีกว่าวันที่ 40 องศาแดดจัด</span></li>
+        <li class="flex items-start gap-2"><span class="text-solar-green">✓</span> <span><strong>ฝนชำระล้างแผงตามธรรมชาติ:</strong> ฝุ่นและสิ่งสกปรกถูกชำระล้าง ปรับปรุงผลผลิตเมื่อแดดกลับมา</span></li>
+        <li class="flex items-start gap-2"><span class="text-solar-green">✓</span> <span><strong>ค่าเฉลี่ยรายปีสำคัญ:</strong> ระบบโซลาร์คำนวณจากผลผลิตรายปี ไม่ใช่วันที่แย่ที่สุด ฤดูแล้งยาวนานของไทยชดเชย</span></li>
+        <li class="flex items-start gap-2"><span class="text-solar-green">✓</span> <span><strong>แบตเตอรี่กักเก็บช่วยราบรื่น:</strong> กักเก็บพลังงานส่วนเกินในฤดูแล้งใช้ในวันฝน ดู <a href="/th/guides/solar-system-sizing/" class="text-solar-green underline">คู่มือคำนวณขนาด</a> สำหรับคำแนะนำแบตเตอรี่</span></li>
+      </ul>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">ความทนทานแผงในอากาศเขตร้อน</h2>
+      <p class="text-gray-700 mb-4">
+        แผงโซลาร์คุณภาพออกแบบทนต่อสภาพอากาศไทย ฝนตกหนัก ความชื้นสูง รังสี UV และสเปรย์เกลือริมทะเล 
+        แผงที่เราติดตั้งทุกแผ่นได้รับการรับรอง IEC 61215 สำหรับความทนทานในเขตร้อน
+      </p>
+    </section>
+
+    <section class="bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-8 mb-12">
+      <h2 class="text-2xl font-bold mb-4">คู่มือที่เกี่ยวข้อง</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <a href="/th/guides/solar-sunlight-hours/" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">ชั่วโมงแดดในประเทศไทย</div>
+          <div class="text-sm text-gray-600">ข้อมูลแดดรายเดือนตามภูมิภาค</div>
+        </a>
+        <a href="/th/guides/solar-system-sizing/" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">คำนวณขนาดระบบ</div>
+          <div class="text-sm text-gray-600">ขนาดระบบสำหรับผลผลิตตลอดปี</div>
+        </a>
+        <a href="/th/guides/solar-panel-maintenance/" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">คู่มือการบำรุงรักษา</div>
+          <div class="text-sm text-gray-600">เคล็ดลับล้างแผงหลังมรสุม</div>
+        </a>
+      </div>
+    </section>
+
+    <div class="bg-solar-green text-white rounded-xl p-8 text-center">
+      <h2 class="text-2xl font-bold mb-2">อย่าให้อากาศเป็นกังวล</h2>
+      <p class="mb-6">ระบบของเราออกแบบสำหรับภูมิอากาศไทย ขอประเมินฟรีและดูการประหยัดรายปีที่คาดการณ์</p>
+      <a href="/th/#contact" class="inline-block bg-white text-solar-green font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+        ขอประเมินฟรี
+      </a>
+      <p class="text-sm mt-4 opacity-80">
+        สอบถามเรื่อง <a href="/th/" class="underline">การติดตั้งโซลาร์ครบวงจร</a> พร้อมแบตเตอรี่สำรอง
+      </p>
+    </div>
+  </article>
+</Layout>

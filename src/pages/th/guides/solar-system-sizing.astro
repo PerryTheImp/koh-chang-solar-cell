@@ -1,0 +1,141 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+const title = 'คำนวณขนาดระบบโซลาร์สำหรับบ้านในประเทศไทย';
+const description = 'คำนวณขนาดระบบโซลาร์ที่เหมาะสมสำหรับบ้านไทยของคุณโดยใช้บิลค่าไฟรายเดือน รวมตารางขนาด คู่มือพื้นที่หลังคา และการประมาณการประหยัด';
+---
+<Layout
+  title={title}
+  description={description}
+  ogType="article"
+  lang="th"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": title,
+    "description": description,
+    "author": { "@type": "Organization", "name": "JJ Com Solar Cell" },
+    "publisher": { "@type": "Organization", "name": "JJ Com Solar Cell" },
+    "datePublished": "2024-06-01",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.kohchangsolarcell.com/th/guides/solar-system-sizing/" }
+  }}
+>
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-sm text-gray-500 mb-6">
+      <a href="/th/" class="hover:text-solar-green">หน้าแรก</a> / <span>คู่มือ</span> / <span>คำนวณขนาดระบบ</span>
+    </nav>
+
+    <h1 class="text-3xl md:text-4xl font-bold mb-4">คำนวณขนาดระบบโซลาร์สำหรับบ้านในประเทศไทย</h1>
+    <p class="text-gray-600 mb-8">
+      วิธีที่ง่ายที่สุดในการคำนวณขนาดระบบโซลาร์คือจับคู่กับบิลค่าไฟรายเดือนของคุณ 
+      ใช้คู่มือด้านล่างหรือ <a href="/th/#contact" class="text-solar-green underline">ติดต่อเรา</a> สำหรับการประเมินมืออาชีพ
+    </p>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">ตารางอ้างอิง: ขนาดระบบตามบิลรายเดือน</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-50">
+              <th class="p-3 text-left border">บิลรายเดือน (บาท)</th>
+              <th class="p-3 text-center border">การใช้ไฟโดยประมาณ (kWh)</th>
+              <th class="p-3 text-center border">ขนาดระบบที่แนะนำ</th>
+              <th class="p-3 text-center border">จำนวนแผง (550W)</th>
+              <th class="p-3 text-center border">พื้นที่หลังคาที่ต้องการ</th>
+              <th class="p-3 text-center border">ประหยัดรายเดือนโดยประมาณ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="p-3 border">1,500 - 2,500</td><td class="p-3 border text-center">150-250</td><td class="p-3 border text-center">3 กิโลวัตต์</td><td class="p-3 border text-center">6</td><td class="p-3 border text-center">~18 ตร.ม.</td><td class="p-3 border text-center">1,200-2,000 บาท</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 border">2,500 - 4,000</td><td class="p-3 border text-center">250-400</td><td class="p-3 border text-center">5 กิโลวัตต์</td><td class="p-3 border text-center">10</td><td class="p-3 border text-center">~30 ตร.ม.</td><td class="p-3 border text-center">2,000-3,500 บาท</td></tr>
+            <tr><td class="p-3 border">4,000 - 6,000</td><td class="p-3 border text-center">400-600</td><td class="p-3 border text-center">7 กิโลวัตต์</td><td class="p-3 border text-center">14</td><td class="p-3 border text-center">~42 ตร.ม.</td><td class="p-3 border text-center">3,500-5,500 บาท</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 border">6,000 - 9,000</td><td class="p-3 border text-center">600-900</td><td class="p-3 border text-center">10 กิโลวัตต์</td><td class="p-3 border text-center">20</td><td class="p-3 border text-center">~60 ตร.ม.</td><td class="p-3 border text-center">5,500-8,500 บาท</td></tr>
+            <tr><td class="p-3 border">9,000 - 15,000</td><td class="p-3 border text-center">900-1,500</td><td class="p-3 border text-center">15 กิโลวัตต์</td><td class="p-3 border text-center">30</td><td class="p-3 border text-center">~90 ตร.ม.</td><td class="p-3 border text-center">8,500-14,000 บาท</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 border">15,000+</td><td class="p-3 border text-center">1,500+</td><td class="p-3 border text-center">20+ กิโลวัตต์</td><td class="p-3 border text-center">40+</td><td class="p-3 border text-center">120+ ตร.ม.</td><td class="p-3 border text-center">ใบเสนอราคาเฉพาะ</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-gray-500 mt-2">อ้างอิง 4.5-5.5 ชั่วโมงแดดสูงสุด แผง monocrystalline 550 วัตต์ และอัตราค่าไฟ PEA การประหยัดจริงขึ้นกับร่มเงา ทิศทางหลังคา และอัตราท้องถิ่น</p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">วิธีคำนวณขนาดระบบที่แม่นยำ</h2>
+      <p class="text-gray-700 mb-4">ทำตามขั้นตอนนี้เพื่อประมาณการคร่าวๆ แล้วขอสำรวจมืออาชีพเพื่อความแม่นยำ:</p>
+      <ol class="space-y-4 list-decimal list-inside">
+        <li class="text-gray-700">
+          <strong>หาจำนวน kWh รายเดือน:</strong> ตรวจบิลค่าไฟ หาร kWh ทั้งหมดด้วย 30 เพื่อได้การใช้รายวัน
+        </li>
+        <li class="text-gray-700">
+          <strong>ประมาณการผลิตรายวันที่ต้องการ:</strong> คูณการใช้รายวันด้วย 1.2 (คิดการสูญเสียระบบและวันฝน)
+        </li>
+        <li class="text-gray-700">
+          <strong>หารด้วยชั่วโมงแดดสูงสุด:</strong> ใช้ 4.5-5.5 ชั่วโมงสำหรับส่วนใหญ่ของไทย ดู <a href="/th/guides/solar-sunlight-hours/" class="text-solar-green underline">คู่มือชั่วโมงแดด</a> สำหรับข้อมูลภูมิภาค
+        </li>
+        <li class="text-gray-700">
+          <strong>ผลลัพธ์ = ขนาดระบบเป็นกิโลวัตต์:</strong> ตัวอย่าง: 30 กิโลวัตต์ชั่วโมง/วัน หาร 5 ชั่วโมง = ระบบ 6 กิโลวัตต์
+        </li>
+      </ol>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">ทิศทางหลังคาและพื้นที่</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h3 class="font-bold mb-2">ทิศทางหลังคาที่เหมาะสม</h3>
+          <p class="text-sm text-gray-600"><strong>หันหน้าไปทางใต้</strong> ดีที่สุดในไทย หลังคาทิศตะวันออกและตะวันตกเสีย 10-15% แต่ยังใช้ได้ ทิศเหนือไม่เหมาะ</p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h3 class="font-bold mb-2">องศาเอียงหลังคา</h3>
+          <p class="text-sm text-gray-600"><strong>15-20 องศา</strong> เหมาะสมที่สุด หลังคาเรียบใช้ได้ เราใช้ขาตั้งปรับองศาได้</p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h3 class="font-bold mb-2">การตรวจสอบร่มเงา</h3>
+          <p class="text-sm text-gray-600">ต้นไม้ อาคาร หรือถังน้ำที่ทอดเงาระหว่าง 10.00-15.00 น. ลดผลผลิตอย่างมาก เราประเมินนี้ในวันสำรวจ</p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h3 class="font-bold mb-2">โหลดโครงสร้าง</h3>
+          <p class="text-sm text-gray-600">ระบบ 5 กิโลวัตต์เพิ่มน้ำหนัก ~150 กิโลกรัม หลังคาคอนกรีตส่วนใหญ่รับได้สบาย เราตรวจสอบความสมบูรณ์หลังคาก่อนติดตั้ง</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">การพิจารณาผลิตไฟเกินคืน</h2>
+      <p class="text-gray-700 mb-4">
+        โครงการผลิตไฟเกินคืนของไทย (SCO 1/2561) ช่วยให้คุณขายพลังงานโซลาร์ส่วนเกินกลับคืนระบบไฟในราคา <strong>~2.20 บาท/กิโลวัตต์ชั่วโมง</strong> 
+        หมายความว่าคุณติดตั้งระบบที่ใหญ่ขึ้นเล็กน้อยเพื่อเพิ่มการประหยัดระยะยาว แม้จะไม่ได้ใช้พลังงานทั้งหมดทันที
+      </p>
+      <p class="text-gray-700">
+        เราช่วยคุณลงทะเบียนผลิตไฟเกินคืนและจัดการเอกสาร PEA ทั้งหมด เป็นส่วนหนึ่งของบริการ <a href="/th/" class="text-solar-green underline">ติดตั้งโซลาร์มืออาชีพ</a> ของเรา
+      </p>
+    </section>
+
+    <section class="bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-8 mb-12">
+      <h2 class="text-2xl font-bold mb-4">คู่มือที่เกี่ยวข้อง</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <a href="/th/guides/solar-sunlight-hours/" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">ชั่วโมงแดดในประเทศไทย</div>
+          <div class="text-sm text-gray-600">ข้อมูลแดดสูงสุดภูมิภาคสำหรับการคำนวณขนาดที่แม่นยำ</div>
+        </a>
+        <a href="/th/guides/solar-panels-cloudy-days/" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">ประสิทธิภาพวันฟ้าคลึม</div>
+          <div class="text-sm text-gray-600">คาดหวังผลผลิตตลอดปี</div>
+        </a>
+        <a href="/th/guides/solar-panel-maintenance/" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">คู่มือการบำรุงรักษา</div>
+          <div class="text-sm text-gray-600">รักษาระบบที่คำนวณขนาดแล้วให้ทำงานสูงสุด</div>
+        </a>
+      </div>
+    </section>
+
+    <div class="bg-solar-green text-white rounded-xl p-8 text-center">
+      <h2 class="text-2xl font-bold mb-2">รับคำแนะนำระบบที่เหมาะกับคุณ</h2>
+      <p class="mb-6">ส่งบิลค่าไฟล่าสุดของคุณ เราจะคำนวณขนาดระบบที่เหมาะสม จำนวนแผง และการประหยัดที่คาดการณ์ ฟรี</p>
+      <a href="/th/#contact" class="inline-block bg-white text-solar-green font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+        ขอใบเสนอราคาฟรี
+      </a>
+      <p class="text-sm mt-4 opacity-80">
+        ตั้งอยู่ที่ <a href="/th/" class="underline">เกาะช้าง</a> ให้บริการทั่วประเทศไทยตั้งแต่ปี 2016
+      </p>
+    </div>
+  </article>
+</Layout>

@@ -1,0 +1,137 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+const title = 'คู่มือการบำรุงรักษาและล้างแผงโซลาร์ในประเทศไทย';
+const description = 'รักษาประสิทธิภาพแผงโซลาร์สูงสุดด้วยคู่มือการบำรุงรักษาไทย ตารางล้าง ค่าใช้จ่าย (300 บาท/แผง) แอพตรวจสอบ และรายการตรวจสอบประจำปี';
+---
+<Layout
+  title={title}
+  description={description}
+  ogType="article"
+  lang="th"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": title,
+    "description": description,
+    "author": { "@type": "Organization", "name": "JJ Com Solar Cell" },
+    "publisher": { "@type": "Organization", "name": "JJ Com Solar Cell" },
+    "datePublished": "2024-06-01",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.kohchangsolarcell.com/th/guides/solar-panel-maintenance/" }
+  }}
+>
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-sm text-gray-500 mb-6">
+      <a href="/th/" class="hover:text-solar-green">หน้าแรก</a> / <span>คู่มือ</span> / <span>การบำรุงรักษาและล้างแผง</span>
+    </nav>
+
+    <h1 class="text-3xl md:text-4xl font-bold mb-4">คู่มือการบำรุงรักษาและล้างแผงโซลาร์ในประเทศไทย</h1>
+    <p class="text-gray-600 mb-8">
+      ภูมิอากาศเขตร้อนของไทยหมายความว่าฝุ่น ละอองเรณู มูลนก และตะกอนมรสุม 
+      อาจลดประสิทธิภาพแผง 15-25% การล้างและตรวจสอบเป็นประจำรักษาระบบให้ผลิตสูงสุด
+    </p>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">ควรล้างแผงโซลาร์บ่อยแค่ไหนในประเทศไทย</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-orange-50 p-4 rounded-lg border border-orange-200">
+          <h3 class="font-bold mb-2">ฤดูแล้ง (พ.ย.-เม.ย.)</h3>
+          <p class="text-sm text-gray-700">ฝุ่นสะสมเร็ว ล้าง <strong>ทุก 2-4 สัปดาห์</strong> ในพื้นที่ฝุ่นหรือเกษตร ในเมือง: รายเดือน</p>
+        </div>
+        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+          <h3 class="font-bold mb-2">ฤดูฝน (พ.ค.-ต.ค.)</h3>
+          <p class="text-sm text-gray-700">ฝนช่วยแต่ทิ้งตะกอนแร่ธาตุ ล้าง <strong>ทุก 1-2 เดือน</strong> เพื่อกำจัดคราบน้ำและเศษซาก</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">ล้างเองกับใช้บริการมืออาชีพ</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-50">
+              <th class="p-3 text-left border">ปัจจัย</th>
+              <th class="p-3 text-center border">ล้างเอง</th>
+              <th class="p-3 text-center border">บริการมืออาชีพ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="p-3 border">ค่าใช้จ่าย</td><td class="p-3 border text-center">ฟรี (น้ำ + แปรงอ่อน)</td><td class="p-3 border text-center">300 บาทต่อแผง + ค่าเดินทาง</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 border">ความปลอดภัย</td><td class="p-3 border text-center">เสี่ยงตก/ไฟดูด</td><td class="p-3 border text-center">มีประกัน ช่างฝึกอบรม</td></tr>
+            <tr><td class="p-3 border">อุปกรณ์</td><td class="p-3 border text-center">สายยาง + ผ้านุ่ม</td><td class="p-3 border text-center">น้ำ deionised แปรงอ่อน อุปกรณ์นิรภัย</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 border">การตรวจสอบ</td><td class="p-3 border text-center">ดูด้วยตาเท่านั้น</td><td class="p-3 border text-center">รวมตรวจรอยแตก จุดร้อน สายไฟ</td></tr>
+            <tr><td class="p-3 border">เหมาะสำหรับ</td><td class="p-3 border text-center">ติดพื้น เข้าถึงง่าย</td><td class="p-3 border text-center">หลังคา ระบบใหญ่ ปกป้องการรับประกัน</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-gray-600 mt-2">
+        <strong>เคล็ดลับ:</strong> ผู้ผลิตหลายรายต้องการล้างมืออาชีพเพื่อความใช้การรับประกัน ตรวจสอบเงื่อนไขการรับประกันแผงของคุณ
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">ขั้นตอนการล้างเองอย่างปลอดภัย</h2>
+      <p class="text-gray-700 mb-2">หากล้างแผงเอง ปฏิบัติตามขั้นตอนนี้:</p>
+      <ol class="list-decimal list-inside space-y-2 text-gray-700">
+        <li><strong>ปิดระบบ</strong> ปิดอินเวอร์เตอร์และตัวแยก DC</li>
+        <li><strong>ฉีดน้ำสะอาด</strong> ใช้สายยางธรรมดา หลีกเลี่ยงฉีดแรงดันสูง</li>
+        <li><strong>เช็ดเบาๆ</strong> ผ้าไมโครไฟเบอร์หรือฟองน้ำนุ่ม ไม่ใช้ของขัดถู</li>
+        <li><strong>ไม่ต้องใช้น้ำยา</strong> อาจทิ้งคราบ</li>
+        <li><strong>ล้างตอนเช้าหรือบ่ายเย็น</strong> หลีกเลี่ยง shock ความร้อนจากน้ำเย็นบนแผงร้อน</li>
+        <li><strong>อย่าเดินบนแผง</strong> เสี่ยงแตกร้าวและอันตรายไฟฟ้า</li>
+      </ol>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">รายการตรวจสอบประจำปี</h2>
+      <p class="text-gray-700 mb-4">จองตรวจสอบมืออาชีพปีละครั้ง สิ่งที่ควรตรวจ:</p>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="bg-gray-50 p-3 rounded-lg"><div class="font-bold">ตรวจสอบแผงด้วยตา</div><div class="text-sm text-gray-600">รอยแตก บิ่น เปลี่ยนสี จุดร้อน</div></div>
+        <div class="bg-gray-50 p-3 rounded-lg"><div class="font-bold">สายไฟและการเชื่อมต่อ</div><div class="text-sm text-gray-600">การเชื่อมต่อหลวม สนิม ฉนวนสึก</div></div>
+        <div class="bg-gray-50 p-3 rounded-lg"><div class="font-bold">รางและขาตั้ง</div><div class="text-sm text-gray-600">ความแน่นของน็อต สนิม โครงสร้าง</div></div>
+        <div class="bg-gray-50 p-3 rounded-lg"><div class="font-bold">สุขภาพอินเวอร์เตอร์</div><div class="text-sm text-gray-600">บันทึกข้อผิดพลาด พัดลมระบายความร้อน การระบายอากาศ</div></div>
+        <div class="bg-gray-50 p-3 rounded-lg"><div class="font-bold">ทดสอบประสิทธิภาพ</div><div class="text-sm text-gray-600">เปรียบเทียบผลผลิตจริงกับที่คาดหวัง</div></div>
+        <div class="bg-gray-50 p-3 rounded-lg"><div class="font-bold">ระบบตรวจสอบ</div><div class="text-sm text-gray-600">การเชื่อมต่อแอพ ความแม่นยำของเซ็นเซอร์</div></div>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">ปัญหาเฉพาะในประเทศไทยที่ต้องระวัง</h2>
+      <ul class="space-y-3">
+        <li class="flex items-start gap-2"><span class="text-solar-green">✓</span> <span><strong>สนิมจากเกลือ (พื้นที่ชายฝั่ง):</strong> ริมทะเล? ล้างแผงบ่อยขึ้น พื้นที่ชายฝั่งเช่น ตราด ภูเก็ต และชลบุรี พบการกัดกร่อนกรอบเร็วขึ้น</span></li>
+        <li class="flex items-start gap-2"><span class="text-solar-green">✓</span> <span><strong>Potential Induced Degradation (PID):</strong> ความร้อนและความชื้นสูงเร่ง PID ในแผงคุณภาพต่ำ แผง Tier 1 ต้านทานได้ดีกว่า</span></li>
+        <li class="flex items-start gap-2"><span class="text-solar-green">✓</span> <span><strong>จุดร้อน:</strong> ร่มเงาบางส่วนจากต้นไม้หรือเสาอากาศทำให้เกิดความร้อนท้องถิ่น ทำลายเซลล์ถาวร</span></li>
+        <li class="flex items-start gap-2"><span class="text-solar-green">✓</span> <span><strong>มูลนก:</strong> เป็นกรดและทึบแสง กำจัดภายในไม่กี่วันเพื่อป้องกันการกัดกร่อนและลดผลผลิต</span></li>
+      </ul>
+    </section>
+
+    <section class="bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-8 mb-12">
+      <h2 class="text-2xl font-bold mb-4">คู่มือที่เกี่ยวข้อง</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <a href="/th/guides/solar-sunlight-hours/" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">ชั่วโมงแดดในประเทศไทย</div>
+          <div class="text-sm text-gray-600">ข้อมูลแดดสูงสุดสำหรับวางแผนการบำรุงรักษา</div>
+        </a>
+        <a href="/th/guides/solar-panels-cloudy-days/" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">ประสิทธิภาพวันฟ้าคลึม</div>
+          <div class="text-sm text-gray-600">ความสำคัญการล้างหลังมรสุม</div>
+        </a>
+        <a href="/th/guides/solar-system-sizing/" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">คำนวณขนาดระบบ</div>
+          <div class="text-sm text-gray-600">ขนาดระบบสำหรับผลผลิตตลอดปี</div>
+        </a>
+      </div>
+    </section>
+
+    <div class="bg-solar-green text-white rounded-xl p-8 text-center">
+      <h2 class="text-2xl font-bold mb-2">จองล้างแผงมืออาชีพครั้งแรก</h2>
+      <p class="mb-6">ทีมบำรุงรักษาของเราครอบคลุมทั่วประเทศไทย 300 บาทต่อแผง รวมค่าเดินทาง ตรวจสอบฟรีทุกครั้งที่ล้าง</p>
+      <a href="/th/#contact" class="inline-block bg-white text-solar-green font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+        จองบริการล้างแผง -- ติดต่อเรา
+      </a>
+      <p class="text-sm mt-4 opacity-80">
+        สอบถามแพ็กเกจ <a href="/th/" class="underline">บริการล้างแผงโซลาร์ประจำปี</a>
+      </p>
+    </div>
+  </article>
+</Layout>

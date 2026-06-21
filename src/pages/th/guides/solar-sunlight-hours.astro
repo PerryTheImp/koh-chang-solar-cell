@@ -1,0 +1,157 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+const title = 'ชั่วโมงแดดในประเทศไทย: คู่มือชั่วโมงแดดสูงสุดรายเดือน';
+const description = 'ประเทศไทยมีชั่วโมงแดดสูงสุดเฉลี่ย 4.5-6.5 ชั่วโมงต่อวัน สำรวจข้อมูลแดดรายเดือนและภูมิภาคเพื่อประมาณการผลผลิตระบบโซลาร์และการประหยัดของคุณ';
+const keywords = 'ชั่วโมงแดดไทย, ชั่วโมงแดดสูงสุดไทย, ศักยภาพโซลาร์ไทย, รังสีแสงอาทิตย์ไทย, เดือนที่ดีที่สุดสำหรับโซลาร์ไทย';
+---
+<Layout
+  title={title}
+  description={description}
+  ogType="article"
+  lang="th"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": title,
+    "description": description,
+    "author": { "@type": "Organization", "name": "JJ Com Solar Cell" },
+    "publisher": { "@type": "Organization", "name": "JJ Com Solar Cell" },
+    "datePublished": "2024-06-01",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.kohchangsolarcell.com/th/guides/solar-sunlight-hours/" }
+  }}
+>
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-sm text-gray-500 mb-6">
+      <a href="/th/" class="hover:text-solar-green">หน้าแรก</a> / <span>คู่มือ</span> / <span>ชั่วโมงแดด</span>
+    </nav>
+
+    <h1 class="text-3xl md:text-4xl font-bold mb-4">ชั่วโมงแดดในประเทศไทย: คู่มือชั่วโมงแดดสูงสุดรายเดือน</h1>
+    <p class="text-gray-600 mb-8">
+      การเข้าใจรูปแบบแสงอาทิตย์เป็นก้าวแรกในการประมาณการประสิทธิภาพระบบโซลาร์ของคุณ 
+      ภูมิอากาศเขตร้อนของไทยให้ศักยภาพโซลาร์ที่ยอดเยี่ยมตลอดทั้งปี
+    </p>
+
+    <div class="bg-solar-green/5 rounded-xl p-6 mb-8">
+      <div class="flex items-center gap-4">
+        <div class="text-4xl font-bold text-solar-green">5.5</div>
+        <div>
+          <div class="font-semibold">ชั่วโมงแดดสูงสุดเฉลี่ย</div>
+          <div class="text-gray-600 text-sm">ต่อวัน เฉลี่ยทั่วประเทศ</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">ทำไมประเทศไทยจึงเหมาะกับพลังงานแสงอาทิตย์</h2>
+      <p class="text-gray-700 mb-4">
+        ประเทศไทยตั้งอยู่ระหว่างละติจูด 5°N ถึง 20°N ซึ่งเป็นเขตโซลาร์ที่ดีที่สุดแห่งหนึ่งของโลก 
+        ประเทศได้รับแสงอาทิตย์อุดมสมบูรณ์ตลอดทั้งปี โดยมีความแปรปรวนเล็กน้อยในช่วงมรสุมเท่านั้น
+      </p>
+      <ul class="space-y-2">
+        <li class="flex items-start gap-2"><span class="text-solar-green">✓</span> <span><strong>รังสีสูง:</strong> 4.5-6.5 กิโลวัตต์ชั่วโมง/ตร.ม./วัน ในส่วนใหญ่ของภูมิภาค</span></li>
+        <li class="flex items-start gap-2"><span class="text-solar-green">✓</span> <span><strong>แดดสม่ำเสมอ:</strong> แม้เดือนที่ฝนตกยังเฉลี่ย 3-4 ชั่วโมงแดดสูงสุด</span></li>
+        <li class="flex items-start gap-2"><span class="text-solar-green">✓</span> <span><strong>ข้อได้เปรียบอากาศร้อน:</strong> อุณหภูมิสูงลดประสิทธิภาพเล็กน้อย แต่ช่วงกลางวันยาวชดเชย</span></li>
+      </ul>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">ชั่วโมงแดดสูงสุดรายเดือนตามภูมิภาค</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-50">
+              <th class="p-3 text-left border">เดือน</th>
+              <th class="p-3 text-center border">กรุงเทพฯ (ภาคกลาง)</th>
+              <th class="p-3 text-center border">เชียงใหม่ (ภาคเหนือ)</th>
+              <th class="p-3 text-center border">อุดรธานี (ภาคตะวันออกเฉียงเหนือ)</th>
+              <th class="p-3 text-center border">ภูเก็ต (ภาคใต้)</th>
+              <th class="p-3 text-center border">ตราด (ภาคตะวันออก)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="p-3 border font-medium">ม.ค.</td><td class="p-3 border text-center">6.2</td><td class="p-3 border text-center">6.0</td><td class="p-3 border text-center">6.3</td><td class="p-3 border text-center">6.5</td><td class="p-3 border text-center">6.1</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 border font-medium">ก.พ.</td><td class="p-3 border text-center">6.5</td><td class="p-3 border text-center">6.3</td><td class="p-3 border text-center">6.5</td><td class="p-3 border text-center">6.8</td><td class="p-3 border text-center">6.4</td></tr>
+            <tr><td class="p-3 border font-medium">มี.ค.</td><td class="p-3 border text-center">6.3</td><td class="p-3 border text-center">6.1</td><td class="p-3 border text-center">6.4</td><td class="p-3 border text-center">6.5</td><td class="p-3 border text-center">6.2</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 border font-medium">เม.ย.</td><td class="p-3 border text-center">6.0</td><td class="p-3 border text-center">5.8</td><td class="p-3 border text-center">6.1</td><td class="p-3 border text-center">5.8</td><td class="p-3 border text-center">5.9</td></tr>
+            <tr><td class="p-3 border font-medium">พ.ค.</td><td class="p-3 border text-center">5.2</td><td class="p-3 border text-center">5.0</td><td class="p-3 border text-center">5.3</td><td class="p-3 border text-center">5.0</td><td class="p-3 border text-center">5.1</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 border font-medium">มิ.ย.</td><td class="p-3 border text-center">4.8</td><td class="p-3 border text-center">4.6</td><td class="p-3 border text-center">4.9</td><td class="p-3 border text-center">4.5</td><td class="p-3 border text-center">4.7</td></tr>
+            <tr><td class="p-3 border font-medium">ก.ค.</td><td class="p-3 border text-center">4.5</td><td class="p-3 border text-center">4.3</td><td class="p-3 border text-center">4.6</td><td class="p-3 border text-center">4.2</td><td class="p-3 border text-center">4.4</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 border font-medium">ส.ค.</td><td class="p-3 border text-center">4.6</td><td class="p-3 border text-center">4.4</td><td class="p-3 border text-center">4.7</td><td class="p-3 border text-center">4.3</td><td class="p-3 border text-center">4.5</td></tr>
+            <tr><td class="p-3 border font-medium">ก.ย.</td><td class="p-3 border text-center">5.0</td><td class="p-3 border text-center">4.8</td><td class="p-3 border text-center">5.1</td><td class="p-3 border text-center">4.8</td><td class="p-3 border text-center">4.9</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 border font-medium">ต.ค.</td><td class="p-3 border text-center">5.5</td><td class="p-3 border text-center">5.3</td><td class="p-3 border text-center">5.6</td><td class="p-3 border text-center">5.2</td><td class="p-3 border text-center">5.4</td></tr>
+            <tr><td class="p-3 border font-medium">พ.ย.</td><td class="p-3 border text-center">6.0</td><td class="p-3 border text-center">5.8</td><td class="p-3 border text-center">6.1</td><td class="p-3 border text-center">5.8</td><td class="p-3 border text-center">5.9</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 border font-medium">ธ.ค.</td><td class="p-3 border text-center">6.1</td><td class="p-3 border text-center">5.9</td><td class="p-3 border text-center">6.2</td><td class="p-3 border text-center">6.0</td><td class="p-3 border text-center">6.0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-gray-500 mt-2">ค่าแสดงชั่วโมงแดดสูงสุดเฉลี่ยรายวัน (กิโลวัตต์ชั่วโมง/ตร.ม./วัน) ข้อมูลจากการวัดดาวเทียม NASA</p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">สิ่งนี้หมายความว่าอย่างไรสำหรับระบบโซลาร์ของคุณ</h2>
+      <p class="text-gray-700 mb-4">
+        ชั่วโมงแดดสูงสุดบอกว่าแผงของคุณสามารถผลิตพลังงานได้เท่าไร ระบบ 5 กิโลวัตต์ในกรุงเทพฯ ผลิตโดยประมาณ:
+      </p>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="bg-gray-50 rounded-lg p-4 text-center">
+          <div class="text-2xl font-bold text-solar-green">25-32 kWh</div>
+          <div class="text-sm text-gray-600">ต่อวัน (เฉลี่ย)</div>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-4 text-center">
+          <div class="text-2xl font-bold text-solar-green">750-960 kWh</div>
+          <div class="text-sm text-gray-600">ต่อเดือน</div>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-4 text-center">
+          <div class="text-2xl font-bold text-solar-green">9,000-11,500 kWh</div>
+          <div class="text-sm text-gray-600">ต่อปี</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">เดือนที่ดีที่สุดสำหรับการติดตั้งโซลาร์</h2>
+      <p class="text-gray-700 mb-4">
+        แม้โซลาร์จะทำงานได้ตลอดปี <strong>พฤศจิกายนถึงกุมภาพันธ์</strong> ให้ผลผลิตสูงสุดในส่วนใหญ่ของภูมิภาค 
+        การติดตั้งช่วงมรสุม (พฤษภาคม-ตุลาคม) หมายความว่าระบบพร้อมรับพลังงานสูงสุดเมื่อเข้าฤดูแล้ง
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">ชั่วโมงแดดส่งผลต่อการคำนวณขนาดระบบอย่างไร</h2>
+      <p class="text-gray-700 mb-4">
+        บ้านในภูเก็ต (6.5 ชั่วโมงแดดสูงสุด) ต้องการแผงน้อยกว่าบ้านเดียวกันในเชียงใหม่ (6.0 ชั่วโมง) 
+        เพื่อผลิตพลังงานเท่ากัน เมื่อคำนวณขนาดระบบ ผู้ติดตั้งใช้ <a href="/guides/solar-system-sizing/" class="text-solar-green underline">บิลค่าไฟรายเดือน</a> 
+        และข้อมูลแดดสูงสุดท้องถิ่นของคุณ
+      </p>
+    </section>
+
+    <section class="bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-8 mb-12">
+      <h2 class="text-2xl font-bold mb-4">คู่มือที่เกี่ยวข้อง</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <a href="/th/guides/solar-panels-cloudy-days/" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">แผงโซลาร์ทำงานอย่างไรในวันที่เมฆมาก</div>
+          <div class="text-sm text-gray-600">ประสิทธิภาพในช่วงมรสุมของไทย</div>
+        </a>
+        <a href="/th/guides/solar-system-sizing/" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">คำนวณขนาดระบบโซลาร์</div>
+          <div class="text-sm text-gray-600">คำนวณขนาดจากบิลค่าไฟ</div>
+        </a>
+        <a href="/th/guides/solar-panel-maintenance/" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">คู่มือการบำรุงรักษาและล้างแผง</div>
+          <div class="text-sm text-gray-600">รักษาประสิทธิภาพแผงสูงสุด</div>
+        </a>
+      </div>
+    </section>
+
+    <div class="bg-solar-green text-white rounded-xl p-8 text-center">
+      <h2 class="text-2xl font-bold mb-2">พร้อมใช้แสงอาทิตย์ของไทยหรือยัง</h2>
+      <p class="mb-6">คำนวณศักยภาพระบบของคุณด้วยการประเมินพื้นที่ฟรี</p>
+      <a href="/th/#contact" class="inline-block bg-white text-solar-green font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+        คำนวณศักยภาพระบบของคุณ -- ขอใบเสนอราคาฟรี
+      </a>
+      <p class="text-sm mt-4 opacity-80">
+        ให้บริการทุกภูมิภาคของไทยจากฐานของเราที่ <a href="/th/" class="underline">เกาะช้าง</a>
+      </p>
+    </div>
+  </article>
+</Layout>
