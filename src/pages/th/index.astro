@@ -223,21 +223,45 @@ const eduArticles = [
         <h2 class="text-3xl md:text-4xl font-bold mb-4">ผลงานของเราทั่วประเทศไทย</h2>
         <p class="text-gray-600 max-w-2xl mx-auto">การติดตั้งจริงที่เสร็จสมบูรณ์ในภาคตะวันออกเฉียงเหนือและภาคตะวันออก ภาพทั้งหมดจากโครงการลูกค้าจริง</p>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="col-span-2 row-span-2 rounded-xl overflow-hidden">
-          <img src="/images/20kw-solar-on-grid.webp" alt="ติดตั้งโซลาร์ออนกริด 20kW" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+      <div class="grid grid-cols-2 md:grid-cols-12 gap-4 auto-rows-[200px] md:auto-rows-[240px]">
+        <!-- Feature image -- spans 2 cols, 2 rows -->
+        <div class="col-span-2 md:col-span-6 row-span-2 rounded-xl overflow-hidden relative group">
+          <img src="/images/new-build-solar-systems.webp" alt="ระบบโซลาร์บ้านใหม่บนหลังคากระเบื้อง" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <span class="text-white font-semibold text-sm">ระบบบ้านพักอาศัย -- จังหวัดตราด</span>
+          </div>
         </div>
-        <div class="rounded-xl overflow-hidden aspect-square">
-          <img src="/images/new-build-solar-systems.webp" alt="ระบบโซลาร์บ้านใหม่" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+
+        <!-- Top right -- spans 3 cols -->
+        <div class="col-span-1 md:col-span-3 rounded-xl overflow-hidden relative group">
+          <img src="/images/new-build-solar-systems-2.webp" alt="โซลาร์บนหลังคาบ้านใหม่" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-semibold text-xs">ติดตั้งบ้านใหม่</span>
+          </div>
         </div>
-        <div class="rounded-xl overflow-hidden aspect-square">
-          <img src="/images/new-build-solar-systems-2.webp" alt="ระบบโซลาร์บ้านใหม่ 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+
+        <!-- Top far right -->
+        <div class="col-span-1 md:col-span-3 rounded-xl overflow-hidden relative group">
+          <img src="/images/26.webp" alt="แผงโซลาร์บนหลังคากระเบื้องดินเผา" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-semibold text-xs">ยึดหลังคากระเบื้อง</span>
+          </div>
         </div>
-        <div class="rounded-xl overflow-hidden aspect-square">
-          <img src="/images/solar-roof-model.webp" alt="แบบจำลองหลังคาโซลาร์" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+
+        <!-- Bottom row left -->
+        <div class="col-span-1 md:col-span-3 rounded-xl overflow-hidden relative group">
+          <img src="/images/9.webp" alt="โซลาร์บนหลังคาเมทัลชีทโรงงาน" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-semibold text-xs">ระบบธุรกิจ</span>
+          </div>
         </div>
-        <div class="rounded-xl overflow-hidden aspect-square">
-          <img src="/images/solar-model.webp" alt="แบบจำลองระบบโซลาร์" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+
+        <!-- Bottom row right -->
+        <div class="col-span-1 md:col-span-3 rounded-xl overflow-hidden relative group">
+          <img src="/images/17.webp" alt="ติดตั้งโซลาร์บนหลังคาเมทัลพร้อมทีมงาน" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-semibold text-xs">กำลังติดตั้ง</span>
+          </div>
         </div>
       </div>
     </div>
