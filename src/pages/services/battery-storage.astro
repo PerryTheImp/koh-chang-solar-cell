@@ -1,226 +1,144 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-
+const title = 'Battery Storage Systems Thailand | Solar Batteries | JJ Com Solar Cell';
+const description = 'Professional solar battery storage installation in Koh Chang, Thailand. Energy storage systems, lithium-ion phosphate batteries, and backup power for Thai homes and businesses. Free quote.';
 ---
-
 <Layout
-  title="Solar Battery Storage Systems in Koh Chang, Thailand"
-  description="Professional solar battery storage installation in Koh Chang. Energy storage systems, lithium-ion phosphate batteries, and backup power for Thai homes and businesses."
+  title={title}
+  description={description}
+  ogType="website"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Solar Battery Storage Systems",
+    "provider": { "@type": "Organization", "name": "JJ Com Solar Cell" },
+    "areaServed": { "@type": "Country", "name": "Thailand" }
+  }}
 >
-  <!-- Breadcrumbs -->
-  <nav class="breadcrumbs container" aria-label="Breadcrumb">
-    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href={`/`}><span itemprop="name">Home</span></a>
-        <meta itemprop="position" content="1" />
-      </li>
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href={`/services/`}><span itemprop="name">Services</span></a>
-        <meta itemprop="position" content="2" />
-      </li>
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <span itemprop="name">Battery Storage</span>
-        <meta itemprop="position" content="3" />
-      </li>
-    </ol>
-  </nav>
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-sm text-gray-500 mb-6">
+      <a href="/" class="hover:text-solar-green">Home</a> / <span>Services</span> / <span>Battery Storage</span>
+    </nav>
 
-  <!-- Hero Section -->
-  <section class="hero hero--service">
-    <div class="hero__content container">
-      <h1>Solar Battery Storage Systems</h1>
-      <p class="hero__subtitle">
-        Store your solar energy for nighttime use, power outages, and true energy independence
-        in Koh Chang and across Thailand.
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center gap-2 bg-solar-yellow/20 text-solar-yellow px-4 py-2 rounded-full text-sm font-medium mb-6">
+        Serving Thailand Since 2016
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Battery Storage Systems</h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Store excess solar energy for night use, backup power during outages, and true energy independence across Thailand.
       </p>
-      <div class="hero__cta">
-        <a href={`/contact/`} class="btn btn--primary">Get a Battery Storage Quote</a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="bg-gray-50 rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold text-solar-green mb-2">24/7</div>
+        <div class="text-sm text-gray-600">Power available day and night</div>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold text-solar-green mb-2">95%+</div>
+        <div class="text-sm text-gray-600">Round-trip efficiency</div>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold text-solar-green mb-2">10+</div>
+        <div class="text-sm text-gray-600">Year battery lifespan</div>
       </div>
     </div>
-  </section>
 
-  <!-- Stats -->
-  <section class="stats container">
-    <div class="stats__grid">
-      <div class="stat-card">
-        <span class="stat-card__number">95%</span>
-        <span class="stat-card__label">Round-Trip Efficiency</span>
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">How Solar Battery Storage Works</h2>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        Solar photovoltaic modules generate direct current (DC) electricity during daylight hours, but most Thai households consume the majority of power in the evening -- after sunset. Without an energy storage system, excess daytime generation from your PV panels is either exported to the Provincial Electricity Authority (PEA) grid at unfavorable rates or simply wasted.
+      </p>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        A properly sized solar battery bank solves this mismatch through a time-shift strategy. During daylight, your solar arrays feed DC power to a hybrid inverter equipped with Maximum Power Point Tracking (MPPT) charge controllers. The inverter converts DC to alternating current (AC) for immediate household use, while surplus energy routes to your battery bank at optimal charging voltage. Modern lithium-ion phosphate (LiFePO4) batteries achieve 80% to 95% round-trip efficiency, meaning very little energy is lost in the storage cycle compared to older lead-acid technologies that typically achieve only 70% to 80%.
+      </p>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        When grid power fails -- common during monsoon storms on Koh Chang and other Thai islands -- the inverter automatically disconnects from the utility and switches to stand-alone mode within 10 to 20 milliseconds. This is fast enough that computers, medical equipment, and refrigeration continue operating without interruption. The battery management system (BMS) monitors each cell's state of charge, temperature, and depth of discharge. We typically configure residential systems to limit depth of discharge to 90% of rated capacity, preserving the 10% buffer that extends battery lifespan beyond 6,000 cycles -- roughly 15 to 20 years of daily use in Thailand.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">Battery Options We Install</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          <h3 class="font-bold text-lg mb-2">Lithium-Ion (Li-ion)</h3>
+          <p class="text-gray-700 leading-relaxed">High energy density, compact footprint, and fast charging capability. Best for urban homes and businesses with limited installation space. Typical configurations range from 5 to 15 kilowatt-hours of usable capacity. Suitable for properties where roof space is restricted but energy demand is moderate to high.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          <h3 class="font-bold text-lg mb-2">LiFePO4 (Lithium Iron Phosphate)</h3>
+          <p class="text-gray-700 leading-relaxed">Superior thermal stability and longer cycle life compared to standard lithium-ion. Ideal for Thailand's tropical climate where ambient temperatures regularly exceed 35 degrees Celsius. These solar batteries tolerate high humidity and resist thermal runaway, making them the safest choice for residential and commercial installations in coastal and island environments like Koh Chang.</p>
+        </div>
       </div>
-      <div class="stat-card">
-        <span class="stat-card__number">10+</span>
-        <span class="stat-card__label">Year Battery Lifespan</span>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">Why Battery Storage Matters in Thailand</h2>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        Thailand's electricity tariffs operate on a progressive scale -- the more you consume, the higher your per-unit rate. For households consuming over 150 kWh monthly, rates climb to 4.0 to 5.5 THB per unit. By storing solar energy generated during peak sun hours and discharging it during evening peak pricing, you avoid the highest tariff tiers entirely.
+      </p>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        Island communities face additional challenges. Koh Chang and similar destinations experience grid outages during monsoon season (May through October) when storms damage overhead lines. For resorts that cannot afford refrigeration downtime, family homes with medical equipment, or commercial facilities processing payments, battery backup ensures continuous operation. The combination of solar arrays and energy storage transforms your property from a passive consumer into an active, resilient power station.
+      </p>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        Off-grid configurations common on remote Koh Chang properties use the battery as the primary energy reservoir, sized to provide 2 to 3 days of autonomy during monsoon season when heavy cloud cover reduces solar generation by 60% to 80%. We calculate autonomy requirements based on your critical load profile -- the minimum equipment that must remain operational during extended bad weather.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">What You Get with Our Battery Storage Service</h2>
+      <ul class="space-y-4">
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>Professional assessment:</strong> We analyse your electricity bills, consumption patterns, and critical loads to specify the optimal battery capacity -- typically 5 to 20 kilowatt-hours for residential systems.</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>Hybrid inverter integration:</strong> We supply and install inverters that manage both solar arrays and battery banks, with built-in MPPT charge controllers and automatic grid-islanding protection.</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>Safe installation:</strong> Batteries are mounted in ventilated, weatherproof enclosures with fire-resistant backing. All DC cabling uses appropriate gauge and fuse protection per Thai electrical standards.</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>System programming:</strong> We configure charging schedules, discharge limits, and backup priorities. The BMS is calibrated for Thailand's voltage and frequency standards (220V, 50Hz).</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>Monitoring setup:</strong> Smartphone app integration so you can track state of charge, daily cycles, and energy flows in real time from anywhere.</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>1-year maintenance included:</strong> Annual capacity testing, BMS firmware updates, terminal cleaning, and thermal inspection at no additional cost.</span></li>
+      </ul>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">Benefits of Solar Battery Storage</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-gray-50 p-5 rounded-lg">
+          <h3 class="font-bold mb-2">Energy Independence</h3>
+          <p class="text-gray-700 text-sm">Reduce reliance on the grid and rising PEA electricity tariffs. Generate, store, and consume your own power.</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-lg">
+          <h3 class="font-bold mb-2">Backup Power</h3>
+          <p class="text-gray-700 text-sm">Keep lights, refrigeration, medical equipment, and security systems running during grid outages.</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-lg">
+          <h3 class="font-bold mb-2">Maximize Solar ROI</h3>
+          <p class="text-gray-700 text-sm">Store daytime surplus for evening use instead of exporting at low net metering rates or wasting generation.</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-lg">
+          <h3 class="font-bold mb-2">Off-Grid Capability</h3>
+          <p class="text-gray-700 text-sm">Complete energy autonomy for remote locations where grid connection is unreliable or unavailable.</p>
+        </div>
       </div>
-      <div class="stat-card">
-        <span class="stat-card__number">24/7</span>
-        <span class="stat-card__label">Backup Power Available</span>
+    </section>
+
+    <section class="bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-8 mb-12">
+      <h2 class="text-2xl font-bold mb-4">Related Resources</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <a href="/guides/solar-system-sizing" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">System Sizing Calculator</div>
+          <div class="text-sm text-gray-600">Size your system with battery storage included</div>
+        </a>
+        <a href="/guides/solar-panels-cloudy-days" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">Cloudy Day Performance</div>
+          <div class="text-sm text-gray-600">How batteries help during low-generation periods</div>
+        </a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Intro -->
-  <section class="section container">
-    <div class="section__content">
-      <h2>Energy Storage for Thai Solar Systems</h2>
-      <p>
-        Solar photovoltaic modules generate power during daylight hours, but most households
-        and businesses in Thailand consume the majority of electricity in the evening -- after
-        the sun has set. Without an energy storage system, excess daytime generation from your
-        PV panels is exported to the grid at unfavorable rates or simply wasted. A properly
-        sized solar battery bank solves this mismatch by capturing surplus energy for use when
-        you actually need it.
-      </p>
-      <p>
-        At Koh Chang Solar Cell, we design and install battery storage systems using modern
-        lithium-ion phosphate (LiFePO4) technology. These batteries offer superior thermal
-        stability compared to standard lithium-ion chemistries, making them ideal for Thailand's
-        tropical climate where ambient temperatures regularly exceed 35 degrees Celsius. Our
-        typical residential installations range from 5 kilowatt-hours to 20 kilowatt-hours
-        of usable capacity, sized precisely to match your evening consumption patterns and
-        critical load requirements.
-      </p>
-      <p>
-        Whether you operate a beach resort that cannot afford refrigeration downtime, a
-        family home with medical equipment, or a commercial facility processing payments,
-        battery backup ensures continuous operation during the grid outages that occasionally
-        affect Koh Chang and other island communities. The combination of solar arrays and
-        energy storage transforms your property from a passive consumer into an active,
-        resilient power station.
-      </p>
+    <div class="bg-solar-green text-white rounded-xl p-8 text-center">
+      <h2 class="text-2xl font-bold mb-2">Ready for Energy Independence?</h2>
+      <p class="mb-6">Get a free battery storage assessment and personalised quote for your property in Thailand.</p>
+      <a href="/#contact" class="inline-block bg-white text-solar-green font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+        Get a Free Quote
+      </a>
     </div>
-  </section>
-
-  <!-- How It Works -->
-  <section class="section section--alt container">
-    <div class="section__content">
-      <h2>How Battery Storage Works</h2>
-      <p>
-        A complete battery storage installation involves several integrated components working
-        in concert with your existing or new photovoltaic system. Understanding the technical
-        process helps you make informed decisions about capacity, configuration, and investment.
-      </p>
-      <p>
-        During daylight, your solar arrays feed DC power to a hybrid inverter equipped with
-        Maximum Power Point Tracking (MPPT) charge controllers. The inverter's primary job
-        is converting DC to AC for immediate household use, but the MPPT circuitry also routes
-        surplus energy to your battery bank at the optimal charging voltage. Modern lithium-ion
-        phosphate batteries charge efficiently between 80% and 95% round-trip efficiency,
-        meaning very little energy is lost in the storage cycle compared to older lead-acid
-        technologies that typically achieve only 70% to 80%.
-      </p>
-      <p>
-        The battery management system (BMS) monitors each cell's state of charge, temperature,
-        and depth of discharge. We typically configure residential systems to limit depth of
-        discharge to 90% of rated capacity, preserving the 10% buffer that extends battery
-        lifespan beyond 6,000 cycles -- roughly 15 to 20 years of daily use in Thailand. When
-        grid power fails, the inverter automatically disconnects from the utility and switches
-        to island mode within 10 to 20 milliseconds, fast enough that computers and medical
-        equipment continue operating uninterrupted.
-      </p>
-      <p>
-        For systems with net metering agreements, the battery operates in a "time-shift"
-        strategy: charging from excess solar during the day, then discharging in the evening
-        when grid electricity rates are highest. In off-grid configurations common on remote
-        Koh Chang properties, the battery serves as the primary energy reservoir, sized to
-        provide 2 to 3 days of autonomy during monsoon season when heavy cloud cover reduces
-        solar generation by 60% to 80%.
-      </p>
-    </div>
-  </section>
-
-  <!-- Why Thailand -->
-  <section class="section container">
-    <div class="section__content">
-      <h2>Why Battery Storage Matters in Thailand</h2>
-      <p>
-        Thailand's electricity tariff structure makes battery storage financially compelling
-        for solar owners. The Provincial Electricity Authority (PEA) uses a progressive rate
-        where consumption above 150 kilowatt-hours per month costs significantly more per unit
-        than baseline usage. Without storage, your exported daytime solar earns credits at the
-        low baseline rate, while your evening consumption gets charged at the expensive upper
-        tiers. A battery captures that value by moving your own solar energy to the evening
-        when you would otherwise buy expensive grid power.
-      </p>
-      <p>
-        The tropical climate presents unique challenges that our battery designs address
-        specifically. Standard lithium-ion batteries degrade rapidly above 45 degrees Celsius,
-        but the lithium-ion phosphate chemistry we specify maintains stable performance up to
-        60 degrees Celsius -- well above ambient temperatures even in Thailand's hottest
-        months. Our outdoor battery enclosures include passive ventilation and optional active
-        cooling for installations where direct sun exposure cannot be avoided.
-      </p>
-      <p>
-        Monsoon season, typically May through October, brings extended periods of heavy cloud
-        cover and rain that reduce solar array output by 50% to 70% on the worst days. For
-        properties relying entirely on solar, adequate battery capacity bridges these gaps.
-        We size off-grid systems with a minimum 48-hour autonomy buffer, meaning your stored
-        energy covers two full days of typical consumption without any solar input. Grid-tied
-        systems with battery backup can operate with smaller banks since the grid serves as
-        the ultimate backup during prolonged bad weather.
-      </p>
-      <p>
-        Power reliability varies across Thailand. While Bangkok and major cities enjoy stable
-        grids, island communities including Koh Chang experience occasional outages from
-        transformer maintenance, cable damage, or supply constraints during peak tourist season.
-        A battery-backed solar system eliminates the inconvenience and potential revenue loss
-        these outages cause for hospitality businesses.
-      </p>
-    </div>
-  </section>
-
-  <!-- What You Get -->
-  <section class="section section--alt container">
-    <div class="section__content">
-      <h2>What You Get with Our Battery Storage Service</h2>
-      <p>
-        Every battery storage installation from Koh Chang Solar Cell includes comprehensive
-        service from initial assessment through ongoing support. We handle the technical
-        complexity so you receive a reliable system that performs as promised.
-      </p>
-      <p>
-        Our process begins with a detailed energy consumption analysis. We review your past
-        12 months of electricity bills, identify your peak evening loads, and calculate the
-        optimal battery capacity -- not oversized (wasting money on unused capacity) or
-        undersized (leaving you dependent on grid power). For residential customers, this
-        typically results in a 10 kilowatt-hour system costing 180,000 to 350,000 Thai Baht
-        depending on brand and features. Commercial installations range from 50 kilowatt-hours
-        upward, with pricing scaled accordingly.
-      </p>
-      <p>
-        We supply only Tier 1 battery products from manufacturers with established track records
-        in tropical climates. Current options include BYD, Pylontech, and Victron lithium-ion
-        phosphate systems, all carrying 10-year warranties and 6,000+ cycle guarantees. The
-        installation itself includes DC cabling with appropriate gauge sizing, fuse protection,
-        battery enclosure (indoor or outdoor rated IP65), and integration with your existing
-        or new inverter. We never reuse old cabling or mix incompatible battery generations in
-        the same bank.
-      </p>
-      <p>
-        The deliverable package includes a complete commissioning report showing actual
-        round-trip efficiency measured during installation, BMS configuration settings,
-        warranty documentation registered in your name, and a user manual specific to your
-        system. We also provide a mobile app connection where supported, allowing real-time
-        monitoring of state of charge, charge/discharge rates, and battery health from your
-        phone.
-      </p>
-      <p>
-        Post-installation support includes a 30-day performance verification visit, annual
-        health checks included for the first two years, and phone support for operational
-        questions. If your energy needs change -- for example, adding air conditioning units
-        or electric vehicle charging -- we assess battery expansion feasibility and install
-        additional capacity using matched components.
-      </p>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="cta-section__content container">
-      <h2>Ready for Energy Independence?</h2>
-      <p>
-        Contact us today for a free battery storage consultation. We'll analyze your consumption
-        patterns and design a system that keeps your lights on -- day or night, rain or shine.
-      </p>
-      <a href={`/contact/`} class="btn btn--primary btn--large">Get Your Free Quote</a>
-    </div>
-  </section>
+  </article>
 </Layout>

@@ -1,256 +1,148 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-
+const title = 'Solar Racking and Mounting Thailand | Roof Mount Systems | JJ Com Solar Cell';
+const description = 'Professional solar racking and mounting installation in Thailand. Corrosion-resistant aluminium mounting systems for concrete, metal, and tile roofs. Engineered for tropical storms and high winds. Free quote.';
 ---
-
 <Layout
-  title="Solar Panel Racking & Mounting in Koh Chang, Thailand"
-  description="Expert solar racking and mounting installation for all roof types in Thailand. Concrete, metal, and tile roof mounting systems engineered for tropical storms and monsoon winds."
+  title={title}
+  description={description}
+  ogType="website"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Solar Racking and Mounting Installation",
+    "provider": { "@type": "Organization", "name": "JJ Com Solar Cell" },
+    "areaServed": { "@type": "Country", "name": "Thailand" }
+  }}
 >
-  <!-- Breadcrumbs -->
-  <nav class="breadcrumbs container" aria-label="Breadcrumb">
-    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href={`/`}><span itemprop="name">Home</span></a>
-        <meta itemprop="position" content="1" />
-      </li>
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href={`/services/`}><span itemprop="name">Services</span></a>
-        <meta itemprop="position" content="2" />
-      </li>
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <span itemprop="name">Racking & Mounting</span>
-        <meta itemprop="position" content="3" />
-      </li>
-    </ol>
-  </nav>
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-sm text-gray-500 mb-6">
+      <a href="/" class="hover:text-solar-green">Home</a> / <span>Services</span> / <span>Racking and Mounting</span>
+    </nav>
 
-  <!-- Hero Section -->
-  <section class="hero hero--service">
-    <div class="hero__content container">
-      <h1>Solar Panel Racking & Mounting</h1>
-      <p class="hero__subtitle">
-        Engineered mounting systems for Thailand's roof types -- concrete, metal, and tile --
-        designed to withstand tropical storms, monsoon winds, and decades of service.
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center gap-2 bg-solar-yellow/20 text-solar-yellow px-4 py-2 rounded-full text-sm font-medium mb-6">
+        Serving Thailand Since 2016
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Solar Racking and Mounting Systems</h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Corrosion-resistant aluminium mounting systems engineered for Thailand's tropical climate, monsoon winds, and diverse roof types.
       </p>
-      <div class="hero__cta">
-        <a href={`/contact/`} class="btn btn--primary">Get a Mounting Quote</a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="bg-gray-50 rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold text-solar-green mb-2">25yr</div>
+        <div class="text-sm text-gray-600">Structural warranty</div>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold text-solar-green mb-2">150+</div>
+        <div class="text-sm text-gray-600">km/h wind rated</div>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold text-solar-green mb-2">100%</div>
+        <div class="text-sm text-gray-600">Aluminium construction</div>
       </div>
     </div>
-  </section>
 
-  <!-- Stats -->
-  <section class="stats container">
-    <div class="stats__grid">
-      <div class="stat-card">
-        <span class="stat-card__number">180 km/h</span>
-        <span class="stat-card__label">Wind Load Rating</span>
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">How Solar Racking Systems Work</h2>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        A solar racking system is the structural foundation that holds photovoltaic modules in place for 25 years or more. It must withstand tropical storms, seismic events, thermal expansion, and constant UV exposure -- all while keeping panels at the optimal tilt angle to maximise annual energy yield.
+      </p>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        The mounting system consists of several integrated components: roof attachments that penetrate or clamp to the existing roof structure; rails that span across the roof surface; and module clamps that grip the aluminium frame of each solar panel. Every connection point must be electrically bonded and grounded to prevent galvanic corrosion between dissimilar metals and to provide a safe path for lightning strikes.
+      </p>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        In Thailand, we engineer mounting systems for a design wind speed of 150 kilometres per hour -- matching the maximum wind loads specified in Thai building codes for coastal and exposed areas. This exceeds typical monsoon wind speeds but provides the safety margin needed when storms occasionally intensify beyond forecast levels. All structural bolts use A2-70 stainless steel to resist corrosion from salt spray and acid rain.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">Mounting Solutions by Roof Type</h2>
+      <div class="space-y-6">
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          <h3 class="font-bold text-lg mb-2">Concrete and Flat Roofs</h3>
+          <p class="text-gray-700 leading-relaxed">The most common roof type in modern Thai construction. We use chemical anchor bolts drilled into structural concrete with epoxy resin bonding. For large commercial installations, we install aluminium ballasted frames that distribute weight across the roof slab without penetrations -- ideal where waterproofing integrity must be preserved. Tilt angles are optimised based on latitude; for most of Thailand (12°N to 18°N), we set panels between 10 and 15 degrees for optimal year-round production.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          <h3 class="font-bold text-lg mb-2">Metal Sheet Roofs (Trapezoidal)</h3>
+          <p class="text-gray-700 leading-relaxed">Common in factories, warehouses, and rural homes. We use standing-seam clamps or L-foot brackets with butyl rubber flashings that create a watertight seal around each penetration point. Thermal expansion clips allow the metal roof to expand and contract without stressing the mounting rails. Critical for Thailand where metal roofs reach 60°C in direct sun, creating significant thermal movement cycles daily.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          <h3 class="font-bold text-lg mb-2">Ceramic Tile Roofs</h3>
+          <p class="text-gray-700 leading-relaxed">Traditional Thai architecture often uses curved ceramic tiles. Installation requires removing individual tiles, installing flashing plates beneath, and replacing tiles around the mounting points. We use tile hooks designed for the specific tile profile -- S-tiles, W-tiles, or flat interlocking tiles. Extra care is taken to maintain the roof's water-shedding capability, as broken or improperly seated tiles lead to leaks during monsoon rains.</p>
+        </div>
       </div>
-      <div class="stat-card">
-        <span class="stat-card__number">25+</span>
-        <span class="stat-card__label">Year Structural Warranty</span>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">Why Proper Mounting Matters in Thailand</h2>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        Thailand's climate is uniquely challenging for solar mounting systems. Year-round high humidity accelerates corrosion of steel components, which is why we specify marine-grade anodised aluminium (6063-T5 alloy) for all rails, clamps, and brackets. This alloy forms a protective oxide layer that prevents further corrosion even when scratched or abraded.
+      </p>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+          Coastal installations face additional salt spray exposure. On Koh Chang and similar islands, airborne salt deposits on metal surfaces within weeks, creating electrolytic cells that pit and weaken structural members. Our mounting hardware receives additional anodising thickness (20 microns versus the standard 10) and all fasteners are A4-80 marine stainless steel -- the highest corrosion resistance class available.
+        </p>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        Thermal expansion is significant. A 6-meter aluminium rail on a Thai rooftop can expand by 8 to 10 millimetres between dawn (25°C) and peak afternoon (65°C). Our systems use slotted rail joints and expansion clips that accommodate this movement without stressing panel frames or loosening connections over time.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">What You Get with Our Racking Service</h2>
+      <ul class="space-y-4">
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>Structural survey:</strong> We assess roof condition, load-bearing capacity, orientation, and shading before recommending a mounting approach.</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>Engineering design:</strong> Tilt angle, row spacing, and wind load calculations prepared for your specific location and roof type.</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>Quality components:</strong> Rails, clamps, brackets, and fasteners from Tier 1 manufacturers with 25-year structural warranties.</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>Waterproofing guarantee:</strong> All roof penetrations sealed with EPDM rubber flashings and polyurethane sealant. We warranty against leaks for 5 years.</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>Electrical grounding:</strong> Complete bonding and earthing system connecting all rails, frames, and inverters to your building's earth electrode.</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>Inspection and certification:</strong> Post-installation torque check on all fasteners, alignment verification, and structural load test. Certificate of compliance provided.</span></li>
+      </ul>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">Mounting System Specifications</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-gray-50 p-5 rounded-lg">
+          <h3 class="font-bold mb-2">Wind Load Rating</h3>
+          <p class="text-gray-700 text-sm">Engineered for 150 km/h sustained winds with gusts to 200 km/h. Exceeds Thai Building Code requirements for all regions except direct cyclone zones.</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-lg">
+          <h3 class="font-bold mb-2">Snow Load (Northern Thailand)</h3>
+          <p class="text-gray-700 text-sm">Systems for Chiang Mai and mountainous regions rated to 50 kg/m² snow load -- far above any historical accumulation in Thailand.</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-lg">
+          <h3 class="font-bold mb-2">Seismic Rating</h3>
+          <p class="text-gray-700 text-sm">Ballasted systems and flexible joint designs accommodate ground movement without panel displacement or connection failure.</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-lg">
+          <h3 class="font-bold mb-2">Tilt Angle Optimisation</h3>
+          <p class="text-gray-700 text-sm">10-15° for Southern/Central Thailand. 15-20° for Northern regions. Steeper angles shed dust and debris more effectively in dry season.</p>
+        </div>
       </div>
-      <div class="stat-card">
-        <span class="stat-card__number">100%</span>
-        <span class="stat-card__label">Custom Fit for Thai Roofs</span>
+    </section>
+
+    <section class="bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-8 mb-12">
+      <h2 class="text-2xl font-bold mb-4">Related Resources</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <a href="/services/solar-panel-installation" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">Solar Panel Installation</div>
+          <div class="text-sm text-gray-600">Complete system design including racking, panels, and inverters</div>
+        </a>
+        <a href="/guides/solar-system-sizing" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">System Sizing Calculator</div>
+          <div class="text-sm text-gray-600">Calculate how many panels fit your available roof space</div>
+        </a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Intro -->
-  <section class="section container">
-    <div class="section__content">
-      <h2>Secure Your Solar Investment with Proper Mounting</h2>
-      <p>
-        The racking and mounting system is the structural foundation of every solar installation,
-        yet it receives less attention than photovoltaic modules or inverters because it operates
-        silently out of sight. A poorly designed or incorrectly installed mounting system can
-        cause roof leaks, permit system failures under high winds, create shading that reduces
-        panel output, or even allow arrays to detach during tropical storms. In Thailand,
-        where monsoon winds regularly exceed 80 kilometers per hour and coastal properties
-        face salt-laden air that accelerates corrosion, mounting quality is not negotiable.
-      </p>
-      <p>
-        At Koh Chang Solar Cell, we design and install mounting systems specifically for
-        Thailand's common roof types and environmental conditions. Our engineers assess roof
-        structure, orientation, and wind exposure before specifying aluminum or galvanized
-        steel rail systems, attachment hardware, and waterproofing methods matched to your
-        specific building. We do not use universal mounting kits designed for temperate climates
-        -- every installation uses components rated for tropical humidity, salt corrosion,
-        and the wind loads specified in Thailand's building codes.
-      </p>
-      <p>
-        Whether you have a reinforced concrete roof typical of modern Thai construction,
-        a galvanized metal sheet roof common on commercial buildings and older homes, or
-        traditional ceramic tile roofing that requires non-penetrating solutions, we have
-        engineered mounting systems that secure your solar arrays without compromising roof
-        integrity. Our installations include structural calculations signed by licensed Thai
-        engineers where required by the Provincial Electricity Authority for net metering
-        approval.
-      </p>
+    <div class="bg-solar-green text-white rounded-xl p-8 text-center">
+      <h2 class="text-2xl font-bold mb-2">Need a Mounting Assessment?</h2>
+      <p class="mb-6">Get a free structural survey and mounting system recommendation for your roof type.</p>
+      <a href="/#contact" class="inline-block bg-white text-solar-green font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+        Get a Free Quote
+      </a>
     </div>
-  </section>
-
-  <!-- How It Works -->
-  <section class="section section--alt container">
-    <div class="section__content">
-      <h2>How Our Racking & Mounting Process Works</h2>
-      <p>
-        A proper mounting installation requires structural engineering knowledge, not just
-        handyman skills. Our process ensures your solar arrays remain secure and your roof
-        stays waterproof for the full 25-year panel warranty period and beyond.
-      </p>
-      <p>
-        The process begins with a site survey and structural assessment. We inspect your
-        roof's construction type, truss or beam spacing, and structural condition. For
-        concrete roofs, we verify slab thickness and rebar placement to ensure chemical
-        anchors achieve rated pull-out strength. Metal roofs require purlin spacing
-        measurements to determine appropriate clamp placement. Tile roofs need assessment
-        of batten condition and rafter spacing for hook-based mounting. We photograph all
-        structural elements and note any pre-existing damage that should be repaired before
-        solar installation.
-      </p>
-      <p>
-        Based on this assessment, our engineer calculates wind loads using the 3-second
-        gust speeds specified for your location under Thailand's building standards. Koh
-        Chang's coastal exposure places it in a higher wind zone than inland areas, so our
-        designs incorporate safety margins above code minimums. We specify rail profiles,
-        clamp quantities, and attachment spacing that exceed calculated loads by a factor
-        of 1.5 to 2.0, ensuring your system remains secure even in storm conditions that
-        exceed typical expectations. The mounting structure is designed as a rigid, continuous
-        frame that distributes wind loads across multiple attachment points rather than
-        concentrating stress on individual fasteners.
-      </p>
-      <p>
-        Installation follows a precise sequence. For penetrative mounts on concrete or
-        tile roofs, we drill pilot holes, inject structural adhesive, and install stainless
-        steel anchors with torque-controlled tightening to manufacturer specifications.
-        Every roof penetration receives a multi-layer waterproofing system: butyl rubber
-        gasket, aluminum flashing, and UV-resistant sealant rated for 25-year service life.
-        Metal roof clamps use S-5! or equivalent clamp systems that grip the sheet profile
-        without penetrating the roofing material, preserving waterproofing integrity.
-        Rails are leveled to within 2 millimeters across the array to ensure even load
-        distribution and proper drainage.
-      </p>
-      <p>
-        Panel attachment uses grounding clips and end clamps with proper torque settings
-        -- overtightening damages frames and undertightening allows movement during wind
-        events. We maintain consistent gap spacing between panels for thermal expansion
-        and airflow cooling, typically 10 to 15 millimeters depending on panel dimensions.
-        Tilt angle is optimized for your latitude (approximately 12 degrees for Koh Chang)
-        while respecting roof pitch and any shading considerations from parapets or adjacent
-        structures.
-      </p>
-    </div>
-  </section>
-
-  <!-- Why Thailand -->
-  <section class="section container">
-    <div class="section__content">
-      <h2>Why Quality Mounting Matters in Thailand</h2>
-      <p>
-        Thailand's climate and construction practices create mounting challenges that
-        generic international products fail to address. Understanding these local factors
-        explains why we invest in specialized hardware and installation techniques.
-      </p>
-      <p>
-        Monsoon storms deliver sustained winds of 60 to 100 kilometers per hour with gusts
-        exceeding 120 kilometers per hour during tropical depression passages. Standard
-        mounting systems rated for European wind conditions fail at these loads. Our
-        installations use rails and clamps tested to 180 kilometer per hour wind ratings
-        with appropriate safety factors, and we never use plastic components for structural
-        connections in tropical environments where UV degradation accelerates material
-        failure.
-      </p>
-      <p>
-        The combination of high humidity and coastal salt exposure causes rapid corrosion
-        of unprotected steel hardware. We specify anodized aluminum rails (6005-T5 alloy)
-        and stainless steel fasteners (A2-70 or A4-80 grade) for all installations, even
-        inland properties where salt transport during storms creates corrosive conditions.
-        Galvanized steel is used only where specifically appropriate, with HDG (hot-dip
-        galvanized) ratings of G90 or higher rather than electro-galvanized alternatives
-        that corrode within 5 years in Thai conditions.
-      </p>
-      <p>
-        Thai roof construction differs significantly from Western standards. Concrete
-        slabs in residential construction range from 100 to 150 millimeters thick, sometimes
-        with unknown rebar placement that makes anchor depth unpredictable. Metal roofs use
-        thin-gauge corrugated sheets mounted on widely spaced timber or steel purlins, creating
-        limited structural attachment options. Ceramic tile roofs have steep pitches that
-        create both wind uplift challenges and difficult working conditions. Our mounting
-        solutions accommodate these realities with adjustable systems that work within
-        structural constraints rather than forcing standardized Western hardware onto
-        incompatible construction.
-      </p>
-      <p>
-        Thermal cycling in Thailand -- where rooftop temperatures reach 70 degrees Celsius
-        during hot season days and drop to 25 degrees Celsius during monsoon nights --
-        creates expansion and contraction stress on mounting hardware. We design arrays
-        with expansion joints on runs exceeding 10 meters and use sliding rail connections
-        that accommodate movement without loosening. Rigid, fixed connections in long
-        arrays develop stress fractures over time from this daily thermal cycling, a failure
-        mode we eliminate through proper engineering.
-      </p>
-    </div>
-  </section>
-
-  <!-- What You Get -->
-  <section class="section section--alt container">
-    <div class="section__content">
-      <h2>What You Get with Our Mounting Service</h2>
-      <p>
-        Our racking and mounting service delivers a complete structural solution with
-        engineering documentation, quality materials, and installation workmanship that
-        outlasts your solar panels themselves.
-      </p>
-      <p>
-        We provide detailed structural drawings showing rail layout, attachment point
-        locations, and hardware specifications. Where required for PEA net metering
-        applications or building permits, these drawings carry a licensed Thai engineer's
-        stamp. The documentation includes pull-test results for anchor installations,
-        confirming that chemical or mechanical anchors achieve the manufacturer-specified
-        withdrawal resistance in your specific concrete or masonry substrate.
-      </p>
-      <p>
-        Materials supplied include all rails, clamps, brackets, anchors, flashings, and
-        sealants necessary for a complete installation. We do not substitute generic hardware
-        for specified components. Rail systems come from established manufacturers such as
-        K2 Systems, Schletter, or equivalent tier-one suppliers with proven tropical
-        installations. Stainless steel hardware is sourced from verified suppliers -- we
-        have encountered counterfeit fasteners in Thai markets and verify material
-        composition through spot testing. Standard residential mounting systems range from
-        15,000 to 35,000 Thai Baht depending on array size and roof complexity, with
-        commercial ground-mount systems quoted individually.
-      </p>
-      <p>
-        Installation workmanship includes proper waterproofing at every roof penetration,
-        torque-controlled tightening of all fasteners to manufacturer specifications,
-        and post-installation inspection for rail alignment and panel spacing. We test
-        grounding continuity across the array structure and verify that no sharp edges
-        or protrusions remain that could damage panel backsheets or cable insulation.
-        The completed installation is photographed from multiple angles for your records
-        and warranty documentation.
-      </p>
-      <p>
-        Structural warranty coverage extends 25 years on mounting hardware and 10 years
-        on waterproofing integrity. If any attachment fails, any rail corrodes, or any
-        roof leak develops at a mounting penetration within the warranty period, we repair
-        it at no cost. This warranty is transferable to subsequent property owners, adding
-        value if you sell your building. Annual inspection is included for the first three
-        years to catch and address any developing issues before they become serious problems.
-      </p>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="cta-section__content container">
-      <h2>Ready for a Secure Solar Installation?</h2>
-      <p>
-        Don't risk your solar panels -- or your roof -- with substandard mounting. Get
-        an engineered mounting system built for Thailand's climate and your specific building.
-      </p>
-      <a href={`/contact/`} class="btn btn--primary btn--large">Request a Free Quote</a>
-    </div>
-  </section>
+  </article>
 </Layout>

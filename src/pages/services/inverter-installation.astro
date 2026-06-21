@@ -1,241 +1,148 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-
+const title = 'Solar Inverter Installation Thailand | Grid-Tie, Hybrid, Off-Grid | JJ Com Solar Cell';
+const description = 'Professional solar inverter installation in Thailand. Grid-tie, hybrid, and off-grid inverters with MPPT charge controllers. Deye and Sofar brands. Free quote for Koh Chang and nationwide.';
 ---
-
 <Layout
-  title="Solar Inverter Installation in Koh Chang, Thailand"
-  description="Expert inverter installation for grid-tie, hybrid, and off-grid solar systems in Koh Chang. String inverters, microinverters, and MPPT technology for maximum efficiency."
+  title={title}
+  description={description}
+  ogType="website"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Solar Inverter Installation",
+    "provider": { "@type": "Organization", "name": "JJ Com Solar Cell" },
+    "areaServed": { "@type": "Country", "name": "Thailand" }
+  }}
 >
-  <!-- Breadcrumbs -->
-  <nav class="breadcrumbs container" aria-label="Breadcrumb">
-    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href={`/`}><span itemprop="name">Home</span></a>
-        <meta itemprop="position" content="1" />
-      </li>
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href={`/services/`}><span itemprop="name">Services</span></a>
-        <meta itemprop="position" content="2" />
-      </li>
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <span itemprop="name">Inverter Installation</span>
-        <meta itemprop="position" content="3" />
-      </li>
-    </ol>
-  </nav>
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-sm text-gray-500 mb-6">
+      <a href="/" class="hover:text-solar-green">Home</a> / <span>Services</span> / <span>Inverter Installation</span>
+    </nav>
 
-  <!-- Hero Section -->
-  <section class="hero hero--service">
-    <div class="hero__content container">
-      <h1>Solar Inverter Installation</h1>
-      <p class="hero__subtitle">
-        Professional installation of grid-tie, hybrid, and off-grid inverters with MPPT
-        technology for maximum solar harvest on Koh Chang.
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center gap-2 bg-solar-yellow/20 text-solar-yellow px-4 py-2 rounded-full text-sm font-medium mb-6">
+        Serving Thailand Since 2016
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Solar Inverter Installation</h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Grid-tie, hybrid, and off-grid inverters with MPPT charge controllers. We install the right power conversion system for your solar array and energy needs.
       </p>
-      <div class="hero__cta">
-        <a href={`/contact/`} class="btn btn--primary">Get an Inverter Quote</a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="bg-gray-50 rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold text-solar-green mb-2">3</div>
+        <div class="text-sm text-gray-600">Inverter types installed</div>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold text-solar-green mb-2">98%+</div>
+        <div class="text-sm text-gray-600">Peak conversion efficiency</div>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold text-solar-green mb-2">5yr</div>
+        <div class="text-sm text-gray-600">Standard warranty</div>
       </div>
     </div>
-  </section>
 
-  <!-- Stats -->
-  <section class="stats container">
-    <div class="stats__grid">
-      <div class="stat-card">
-        <span class="stat-card__number">98.6%</span>
-        <span class="stat-card__label">Peak Inverter Efficiency</span>
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">How Solar Inverters Work</h2>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        Solar photovoltaic modules generate direct current (DC) electricity, but homes and businesses in Thailand run on alternating current (AC) at 220 volts and 50 hertz. The inverter is the critical bridge that converts DC power from your solar arrays into usable AC power for appliances, lighting, and equipment.
+      </p>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        Modern inverters use Maximum Power Point Tracking (MPPT) technology to maximise energy harvest from your PV panels. MPPT charge controllers continuously adjust the electrical operating point of the solar array, ensuring it produces at peak voltage and current even as sunlight intensity changes throughout the day. A well-configured MPPT system can increase annual energy yield by 20% to 30% compared to simple PWM controllers.
+      </p>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        The inverter also manages grid interaction. In grid-tie systems, it synchronises its AC output frequency and voltage with the Provincial Electricity Authority (PEA) supply, allowing excess generation to flow back to the grid. Hybrid and off-grid inverters include anti-islanding protection -- a safety feature that instantly disconnects the solar system from the grid during outages to prevent energising downed power lines and endangering repair workers.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">Inverter Types We Install</h2>
+      <div class="space-y-6">
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          <h3 class="font-bold text-lg mb-2">Grid-Tie Inverters</h3>
+          <p class="text-gray-700 leading-relaxed">The simplest and most cost-effective option for properties with reliable grid access. Grid-tie inverters convert all solar DC power to AC and feed it directly into your building's electrical system. Excess generation exports to the PEA grid through net metering arrangements. These systems shut down during grid outages for safety -- they do not provide backup power. Best for urban homes and commercial buildings in stable grid areas with net metering agreements.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          <h3 class="font-bold text-lg mb-2">Hybrid Inverters</h3>
+          <p class="text-gray-700 leading-relaxed">The most popular choice for Thai residential installations. Hybrid inverters manage both solar arrays and battery banks, converting DC to AC while simultaneously routing surplus energy to storage. When the grid fails, the inverter automatically switches to stand-alone mode, drawing power from the battery bank to keep essential circuits running. We recommend hybrid systems for Koh Chang properties and other locations where grid reliability varies seasonally.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          <h3 class="font-bold text-lg mb-2">Off-Grid Inverters</h3>
+          <p class="text-gray-700 leading-relaxed">For remote properties without grid connection. Off-grid inverters operate independently, managing power flows between solar arrays, batteries, and household loads. They require larger battery banks and solar arrays sized for worst-case weather conditions -- typically 2 to 3 days of autonomy during monsoon season. We design these systems with generous capacity margins to ensure reliable power year-round.</p>
+        </div>
       </div>
-      <div class="stat-card">
-        <span class="stat-card__number">5-12</span>
-        <span class="stat-card__label">Year Standard Warranty</span>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">Why Inverter Choice Matters in Thailand</h2>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        Thailand's tropical climate places unique demands on inverter performance. Ambient temperatures regularly reach 35 to 40 degrees Celsius, and inverter efficiency degrades as internal temperature rises. We specify inverters with wide operating temperature ranges (-20°C to +60°C) and install them in ventilated, shaded locations -- never in direct sunlight or enclosed spaces without airflow.
+      </p>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        Humidity is another factor. Coastal installations on Koh Chang and other islands face salt-laden air that corrodes unprotected electronics. We recommend inverters with IP65-rated enclosures for outdoor mounting, or indoor installation in climate-controlled utility rooms. All AC and DC terminals receive anti-corrosion treatment during installation.
+      </p>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        Thailand's grid voltage fluctuates more than in developed countries, with swings between 210V and 240V common in rural areas. Quality inverters handle this range without issue, but cheap units may trip offline unnecessarily, wasting generation. We specify inverters with wide voltage windows (180V to 270V) and automatic restart after grid events.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">What You Get with Our Inverter Service</h2>
+      <ul class="space-y-4">
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>Load analysis:</strong> We calculate your peak and average power demand to size the inverter correctly -- typically 1.2 to 1.5 times your maximum load for headroom.</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>Brand selection:</strong> We supply Deye and Sofar inverters -- proven in Thai conditions with local warranty support. Both brands offer WiFi monitoring and smartphone app integration.</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>Professional mounting:</strong> Wall-mounted installation with proper ventilation clearance, seismic-rated brackets, and cable management. We never mount inverters directly above batteries or other heat sources.</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>Grid synchronisation:</strong> Phase alignment, frequency matching, and anti-islanding tests completed before commissioning. We provide PEA-compliant documentation for net metering applications.</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>Monitoring setup:</strong> App configuration so you can track real-time power output, daily generation, and system health from your phone.</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>5-year warranty:</strong> All inverters carry manufacturer warranties with local service support through our Koh Chang office.</span></li>
+      </ul>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">Inverter Performance and Monitoring</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-gray-50 p-5 rounded-lg">
+          <h3 class="font-bold mb-2">MPPT Tracking Efficiency</h3>
+          <p class="text-gray-700 text-sm">Our inverters achieve 99.5% MPPT efficiency, capturing maximum energy even during partial shading from passing clouds or afternoon tree shadows.</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-lg">
+          <h3 class="font-bold mb-2">Conversion Efficiency</h3>
+          <p class="text-gray-700 text-sm">Peak DC-to-AC conversion reaches 98.6%, with Euro efficiency (weighted average) above 97.5% across Thailand's typical operating temperature range.</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-lg">
+          <h3 class="font-bold mb-2">Smartphone Monitoring</h3>
+          <p class="text-gray-700 text-sm">Real-time data on power output, voltage, current, and daily yield. Historical graphs help identify performance trends and detect issues early.</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-lg">
+          <h3 class="font-bold mb-2">Automatic Fault Detection</h3>
+          <p class="text-gray-700 text-sm">Inverters self-diagnose ground faults, arc faults, and insulation failures -- alerting you immediately if a safety issue develops.</p>
+        </div>
       </div>
-      <div class="stat-card">
-        <span class="stat-card__number">100%</span>
-        <span class="stat-card__label">MPPT Tracking Accuracy</span>
+    </section>
+
+    <section class="bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-8 mb-12">
+      <h2 class="text-2xl font-bold mb-4">Related Resources</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <a href="/guides/solar-system-sizing" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">System Sizing Calculator</div>
+          <div class="text-sm text-gray-600">Match inverter capacity to your solar array and household demand</div>
+        </a>
+        <a href="/services/battery-storage" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">Battery Storage Systems</div>
+          <div class="text-sm text-gray-600">Combine your inverter with energy storage for backup power</div>
+        </a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Intro -->
-  <section class="section container">
-    <div class="section__content">
-      <h2>The Heart of Your Solar Power System</h2>
-      <p>
-        Solar panels generate direct current (DC) electricity, but your home appliances, air
-        conditioners, and business equipment all run on alternating current (AC). The inverter
-        is the critical bridge that converts DC to usable AC power, and its quality directly
-        determines how much of your solar array's potential actually reaches your electrical
-        devices. A poorly chosen or incorrectly installed inverter can waste 10% to 20% of
-        your system's annual production -- equivalent to thousands of Baht in lost energy
-        value over the equipment lifetime.
-      </p>
-      <p>
-        At Koh Chang Solar Cell, we install inverters matched precisely to your system type,
-        panel configuration, and local grid requirements. Our technicians are certified by
-        leading manufacturers including Huawei, Growatt, SMA, and Victron, ensuring every
-        installation meets factory specifications and preserves your warranty coverage. We
-        work with all three major system architectures: grid-tie inverters for properties
-        connected to the Provincial Electricity Authority (PEA) grid, hybrid inverters that
-        combine grid connection with battery charging capability, and pure off-grid inverters
-        for remote locations without utility access.
-      </p>
-      <p>
-        Inverter selection depends on more than just power rating. The number of MPPT (Maximum
-        Power Point Tracking) inputs determines how effectively your inverter handles partial
-        shading, different panel orientations, or mixed monocrystalline and polycrystalline
-        module types. Efficiency curves vary across loading levels -- an inverter rated at
-        98% efficiency might drop to 92% when your panels produce only 20% of their rated
-        kilowatt-peak capacity during cloudy mornings. We analyze your specific conditions
-        and select inverters that maintain high efficiency across your actual operating range,
-        not just laboratory test conditions.
-      </p>
+    <div class="bg-solar-green text-white rounded-xl p-8 text-center">
+      <h2 class="text-2xl font-bold mb-2">Need the Right Inverter?</h2>
+      <p class="mb-6">Get a free assessment and inverter recommendation for your Thai solar installation.</p>
+      <a href="/#contact" class="inline-block bg-white text-solar-green font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+        Get a Free Quote
+      </a>
     </div>
-  </section>
-
-  <!-- How It Works -->
-  <section class="section section--alt container">
-    <div class="section__content">
-      <h2>How Inverter Installation Works</h2>
-      <p>
-        A professional inverter installation follows a systematic process that ensures safety,
-        code compliance, and optimal performance. Understanding these steps helps you evaluate
-        contractor quality and know what to expect during your project.
-      </p>
-      <p>
-        We begin with system design and inverter sizing. The inverter capacity must match your
-        solar array's total kilowatt-peak output while respecting the 1.0 to 1.25 DC-to-AC
-        ratio recommended for tropical installations. In Thailand's intense solar irradiance,
-        panels frequently exceed their rated output during cool, clear mornings. An oversized
-        inverter captures this "clipping-free" production, while an undersized unit unnecessarily
-        limits your peak generation. For a typical 5 kilowatt-peak residential system, we
-        specify a 5 kilowatt or 6 kilowatt inverter depending on panel orientation and shading
-        patterns.
-      </p>
-      <p>
-        The physical installation starts with mounting the inverter enclosure in a protected,
-        ventilated location. Inverters generate significant heat during operation -- a 5
-        kilowatt unit produces roughly 100 to 150 watts of waste heat at full load. We mount
-        units on north-facing walls or under eaves where direct tropical sun never strikes
-        the enclosure, preventing thermal derating that reduces summer output. AC and DC
-        cabling runs in separate conduits per electrical code, with DC cables sized for
-        voltage drop under 1.5% to preserve MPPT accuracy.
-      </p>
-      <p>
-        Programming and commissioning represent the most technical phase. We configure grid
-        parameters -- voltage (230V nominal), frequency (50Hz), and anti-islanding protection
-        -- to match PEA requirements. For grid-tie systems, we program export limits if your
-        net metering agreement specifies a maximum feed-in capacity. Hybrid systems require
-        battery charging profiles specific to your lithium-ion phosphate or lead-acid battery
-        bank, while off-grid installations need load-shedding logic to protect batteries from
-        excessive depth of discharge. Every parameter is documented in your commissioning
-        report for future reference.
-      </p>
-      <p>
-        Final testing includes efficiency verification at multiple load levels, MPPT response
-        testing with artificial shading, and grid disconnection simulations to confirm
-        anti-islanding compliance. We provide a complete handover including warranty
-        registration, monitoring app setup, and a walkthrough of any user-adjustable settings
-        such as battery charging priorities or backup power modes.
-      </p>
-    </div>
-  </section>
-
-  <!-- Why Thailand -->
-  <section class="section container">
-    <div class="section__content">
-      <h2>Why Inverter Quality Matters in Thailand</h2>
-      <p>
-        Thailand's climate subjects inverters to conditions far more demanding than European
-        or North American standards. Ambient temperatures regularly reach 38 degrees Celsius
-        with 80% relative humidity, while rooftop installations experience even higher surface
-        temperatures from absorbed solar radiation. Cheap inverters rated for 40 degrees Celsius
-        ambient operation experience thermal shutdowns or accelerated capacitor degradation
-        under these conditions, leading to premature failure exactly when you need cooling
-        power most.
-      </p>
-      <p>
-        We specify inverters with tropicalized ratings -- typically 45 to 60 degrees Celsius
-        full-power operation with active or passive cooling systems designed for humid
-        environments. IP65 or higher enclosure ratings prevent moisture ingress during monsoon
-        rains, while conformal coating on circuit boards resists the salt-laden air affecting
-        coastal properties on Koh Chang. These features add modest upfront cost but eliminate
-        the frequent replacement cycles that cheap inverters require in Thai conditions.
-      </p>
-      <p>
-        Voltage stability varies across Thailand's distribution network. Rural and island
-        locations often experience voltage fluctuations outside the narrow bands that basic
-        inverters tolerate. Our installations include inverters with wide MPPT voltage ranges
-        -- typically 200 to 850 volts DC -- and extended AC voltage operating windows that
-        continue producing power during brief grid disturbances rather than disconnecting
-        unnecessarily. This resilience translates directly into higher annual energy yields.
-      </p>
-      <p>
-        The rapid growth of solar in Thailand means grid interconnection standards are
-        evolving. The PEA periodically updates technical requirements for inverter compliance,
-        including power factor regulation, harmonic distortion limits, and remote disconnect
-        capabilities. We maintain current certification documents for all inverters we install
-        and update firmware during annual maintenance visits to ensure ongoing compliance as
-        standards change.
-      </p>
-    </div>
-  </section>
-
-  <!-- What You Get -->
-  <section class="section section--alt container">
-    <div class="section__content">
-      <h2>What You Get with Our Inverter Service</h2>
-      <p>
-        Our inverter installation service delivers a complete, documented, and supported
-        system -- not just a box mounted on your wall. Every project includes the components
-        and services necessary for reliable long-term operation.
-      </p>
-      <p>
-        We supply inverters from tier-one manufacturers with established service networks in
-        Thailand. Current standard offerings include Huawei SUN2000 series for grid-tie
-        installations (5-year warranty, extendable to 10 years), Growatt SPF and SPH series
-        for hybrid battery systems, and Victron MultiPlus/Quattro for off-grid and marine
-        applications. Each unit arrives with Thai-language documentation and region-specific
-        firmware pre-installed. Budget installations start around 25,000 Thai Baht for a
-        3-kilowatt grid-tie unit, while premium hybrid systems for larger homes range from
-        45,000 to 85,000 Thai Baht depending on power rating and feature set.
-      </p>
-      <p>
-        The installation package includes all DC and AC cabling, appropriately rated circuit
-        breakers and surge protection, conduit and trunking, and the AC distribution panel
-        modifications needed to integrate solar generation with your existing electrical
-        system. For hybrid installations, we also supply battery cabling, DC fusing, and
-        the communication cables linking inverter to battery management system. No hidden
-        extras -- the quoted price covers a complete, working system.
-      </p>
-      <p>
-        Our commissioning process produces a detailed performance baseline. We record actual
-        DC input voltages and currents from each MPPT channel, AC output voltage and frequency,
-        measured efficiency at 25%, 50%, 75%, and 100% load levels, and total harmonic distortion
-        on the AC output. This documentation protects you if performance issues arise later
-        -- you have measurable proof of how the system performed when new.
-      </p>
-      <p>
-        Post-installation support includes a 30-day performance review, manufacturer warranty
-        management (we handle claims directly, in Thai, with local service centers), and
-        annual preventive maintenance that includes thermal imaging of connections, firmware
-        updates, and performance benchmarking against your commissioning baseline. If your
-        inverter requires replacement under warranty, we manage the swap with minimal system
-        downtime.
-      </p>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="cta-section__content container">
-      <h2>Need a New Inverter or System Upgrade?</h2>
-      <p>
-        Whether you're installing new solar panels or replacing an aging inverter, we'll
-        specify the right unit for Thailand's climate and your energy goals. Get your quote
-        today.
-      </p>
-      <a href={`/contact/`} class="btn btn--primary btn--large">Request a Free Quote</a>
-    </div>
-  </section>
+  </article>
 </Layout>
