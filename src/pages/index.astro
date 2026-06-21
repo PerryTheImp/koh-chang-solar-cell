@@ -413,23 +413,49 @@ const eduArticles = [
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Work Across Thailand</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Real installations completed in the Northeast and Eastern regions. All photos from actual client projects.</p>
+        <p class="text-gray-600 max-w-2xl mx-auto">Real installations completed across the Northeast and Eastern regions. Every photo from an actual client project.</p>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="col-span-2 row-span-2 rounded-xl overflow-hidden">
-          <img src="/images/20kw Solar on grid.webp" alt="20kW solar on-grid installation" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+
+      {/* Gallery Grid — asymmetric bento layout */}
+      <div class="grid grid-cols-2 md:grid-cols-12 gap-4 auto-rows-[200px] md:auto-rows-[240px]">
+        {/* Feature image — spans 2 cols, 2 rows */}
+        <div class="col-span-2 md:col-span-6 row-span-2 rounded-xl overflow-hidden relative group">
+          <img src="/images/new build solar systems.webp" alt="Residential solar installation on tiled roof" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <span class="text-white font-semibold text-sm">Residential System — Trat Province</span>
+          </div>
         </div>
-        <div class="rounded-xl overflow-hidden aspect-square">
-          <img src="/images/new build solar systems.webp" alt="New build solar system" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+
+        {/* Top right — spans 3 cols */}
+        <div class="col-span-1 md:col-span-3 rounded-xl overflow-hidden relative group">
+          <img src="/images/new build solar systems 2.webp" alt="Solar panels on modern residential roof" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-semibold text-xs">New Build Installation</span>
+          </div>
         </div>
-        <div class="rounded-xl overflow-hidden aspect-square">
-          <img src="/images/new build solar systems 2.webp" alt="New build solar system 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+
+        {/* Top far right */}
+        <div class="col-span-1 md:col-span-3 rounded-xl overflow-hidden relative group">
+          <img src="/images/26.webp" alt="Solar panels on terracotta tile roof" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-semibold text-xs">Tile Roof Mount</span>
+          </div>
         </div>
-        <div class="rounded-xl overflow-hidden aspect-square">
-          <img src="/images/solar roof model.webp" alt="Solar roof model" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+
+        {/* Bottom row left */}
+        <div class="col-span-1 md:col-span-3 rounded-xl overflow-hidden relative group">
+          <img src="/images/9.webp" alt="Solar panels on commercial metal roof" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-semibold text-xs">Commercial Array</span>
+          </div>
         </div>
-        <div class="rounded-xl overflow-hidden aspect-square">
-          <img src="/images/solar model.webp" alt="Solar system model" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+
+        {/* Bottom row right */}
+        <div class="col-span-1 md:col-span-3 rounded-xl overflow-hidden relative group">
+          <img src="/images/17.webp" alt="Solar installation on metal roof with workers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-semibold text-xs">Installation in Progress</span>
+          </div>
         </div>
       </div>
     </div>
