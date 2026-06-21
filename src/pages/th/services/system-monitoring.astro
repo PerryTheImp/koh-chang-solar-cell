@@ -1,0 +1,152 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+const title = 'ระบบตรวจสอบโซลาร์ ประเทศไทย | แอพมอนิเตอร์อัจฉริยะ | JJ Com Solar Cell';
+const description = 'บริการติดตั้งระบบตรวจสอบโซลาร์มืออาชีพในประเทศไทย ติดตามการผลิตไฟแบบเรียลไทม์ แจ้งเตือนประสิทธิภาพ และผสานรวมแอพมือถือสำหรับบ้านและธุรกิจ ขอใบเสนอราคาฟรี';
+---
+<Layout
+  title={title}
+  description={description}
+  ogType="website"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "ระบบตรวจสอบและเซ็นเซอร์อัจฉริยะโซลาร์",
+    "provider": { "@type": "Organization", "name": "JJ Com Solar Cell" },
+    "areaServed": { "@type": "Country", "name": "Thailand" }
+  }}
+>
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-sm text-gray-500 mb-6">
+      <a href="/th/" class="hover:text-solar-green">หน้าแรก</a> / <span>บริการ</span> / <span>ตรวจสอบระบบโซลาร์</span>
+    </nav>
+
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center gap-2 bg-solar-yellow/20 text-solar-yellow px-4 py-2 rounded-full text-sm font-medium mb-6">
+        ให้บริการในประเทศไทยตั้งแต่ปี 2016
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">ระบบตรวจสอบโซลาร์</h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        ติดตามการผลิตไฟแบบเรียลไทม์ แจ้งเตือนประสิทธิภาพ และผสานรวมแอพมือถือ รู้ผลการทำงานของระบบโซลาร์คุณทุกนาที
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="bg-gray-50 rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold text-solar-green mb-2">เรียลไทม์</div>
+        <div class="text-sm text-gray-600">ข้อมูลผลิตไฟทุก 5 นาที</div>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold text-solar-green mb-2">แอพ</div>
+        <div class="text-sm text-gray-600">ดูผ่านมือถือจากทุกที่</div>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold text-solar-green mb-2">แจ้งเตือน</div>
+        <div class="text-sm text-gray-600">รู้ทันทีเมื่อมีปัญหา</div>
+      </div>
+    </div>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">ระบบตรวจสอบโซลาร์ทำงานอย่างไร</h2>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        ระบบตรวจสอบโซลาร์วัดและบันทึกทุกพารามิเตอร์ที่ส่งผลต่อประสิทธิภาพระบบโฟโตโวอลเทอิกของคุณ เซ็นเซอร์วัดพลังงานอัจฉริยะติดตั้งที่จุดสำคัญในระบบไฟฟ้าสุ่มตัวอย่างแรงดัน กระแส power factor และความถี่หลายครั้งต่อวินาที ส่งข้อมูลรวมไปยังแพลตฟอร์มคลาวด์ผ่าน WiFi หรือ 4G
+      </p>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        ฮาร์ดแวร์ตรวจสอบสื่อสารโดยตรงกับอินเวอร์เตอร์ผ่านโปรโตคอล Modbus, RS485 หรือ CAN bus อ่านค่ารีจิสเตอร์ภายในที่ติดตามแรงดันและกระแส DC จากแต่ละสายแผงโซลาร์ กำลังผลิต AC อุณหภูมิอินเวอร์เตอร์ และพลังงานสะสม ข้อมูลละเอียดนี้เปิดเผยมากกว่ามิเตอร์ไฟฟ้าง่ายๆ มาก แสดงให้เห็นว่าแต่ละส่วนประกอบทำงานอย่างไรในสภาวะต่างๆ
+      </p>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        การวิเคราะห์บนคลาวด์ประมวลผลข้อมูลดิบให้เป็นข้อมูลเชิงลึกที่นำไปใช้ได้ อัลกอริทึม machine learning เปรียบเทียบผลผลิตจริงของระบบคุณกับผลผลิตที่คาดหวังจากข้อมูลอากาศ สเปคแผง และประสิทธิภาพย้อนหลัง เมื่อผลผลิตจริงต่ำกว่าที่คาดหวังเกิน 10% ระบบแจ้งเตือนปัญหาที่อาจเกิดขึ้น เช่น แผงสกปรก ร่มเงา อินเวอร์เตอร์เสีย หรือแผงเสื่อม ก่อนที่จะสูญเสียรายได้มาก
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">ส่วนประกอบตรวจสอบที่เราติดตั้ง</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          <h3 class="font-bold text-lg mb-2">เซ็นเซอร์วัดพลังงานอัจฉริยะ</h3>
+          <p class="text-gray-700 leading-relaxed">หม้อแปลงวัดกระแสและตัวแยกแรงดันวัดการไหลของพลังงานสองทิศทาง เราติดตั้งเซ็นเซอร์ที่เอาต์พุตอินเวอร์เตอร์ แผงจ่ายไฟหลัก และจุดเชื่อมต่อกับระบบไฟฟ้า ข้อมูลอัปเดตทุก 5 วินาทีด้วยความแม่นยำ 0.5% เข้ากันได้กับโปรโตคอลสื่อสารอินเวอร์เตอร์ Huawei, Deye และ Sofar</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          <h3 class="font-bold text-lg mb-2">เซ็นเซอร์รังสีแสงอาทิตย์</h3>
+          <p class="text-gray-700 leading-relaxed">เซลล์โฟโตโวอลเทอิกขนาดเล็กติดตั้งข้างๆ แผงวัดความเข้มแสงจริงในหน่วยวัตต์ต่อตารางเมตร ข้อมูลอ้างอิงนี้ช่วยให้ระบบตรวจสอบแยกแยะระหว่างการลดผลผลิตจากสภาพอากาศและปัญหาจริงของระบบ จำเป็นสำหรับการคำนวณ performance ratio ที่แม่นยำ</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          <h3 class="font-bold text-lg mb-2">ตรวจสอบระดับโมดูล (ตัวเลือก)</h3>
+          <p class="text-gray-700 leading-relaxed"> power optimiser หรือ microinverter บนแผงแต่ละแผ่นให้ข้อมูลประสิทธิภาพแผงแต่ละแผ่น ระบุแผงใดผลิตต่ำจากร่มเงา สกปรก หรือเสีย ลดการเดาปัญหา แนะนำสำหรับหลังคาซับซ้อนที่มีหลายทิศทางหรือร่มเงาบางส่วน</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          <h3 class="font-bold text-lg mb-2">เซ็นเซอร์สภาพแวดล้อม</h3>
+          <p class="text-gray-700 leading-relaxed">เซ็นเซอร์อุณหภูมิอากาศและอุณหภูมิด้านหลังแผงช่วยแยกแยะระหว่างการลดกำลังผลิตจากความร้อนปกติและความร้อนสูงผิดปกติ ค่าสัมประสิทธิ์อุณหภูมิแผงลดผลผลิต 0.4% ต่อองศาสูงกว่า 25°C ในไทยหมายความว่าสูญเสีย 10-15% ในช่วงบ่ายร้อน ซึ่งระบบตรวจสอบจัดบริบทถูกต้อง</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">ทำไมการตรวจสอบจึงสำคัญในไทย</h2>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        สภาพแวดล้อมเมืองร้อนของไทยสร้างความท้าทายและโอกาสในการตรวจสอบที่เป็นเอกลักษณ์ ความชื้นและอุณหภูมิสูงเร่งการกัดกร่อนขั้วต่อและความเครียดความร้อนของอินเวอร์เตอร์ แนวโน้มที่ระบบตรวจสอบเปิดเผยหลายเดือนก่อนความล้มเหลวที่มองเห็นได้ เช่น การลดประสิทธิภาพอินเวอร์เตอร์ 3% ต่อเดือนแบบค่อยเป็นค่อยไป ซึ่งมองไม่เห็นหากไม่มีการตรวจสอบ มีค่าใช้จ่ายหลายพันบาทต่อปีบนระบบ 5 กิโลวัตต์พีค
+      </p>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        ความสกปรกเกิดขึ้นเร็วในไทย หลังฤดูเผาในภาคตะวันออกเฉียงเหนือหรือเหตุการณ์ฝุ่นทะเลทรายในภาคใต้ แผงที่ผลิต 100% อาจลดเหลือ 70% ภายในไม่กี่วัน การแจ้งเตือนจากระบบตรวจสอบจับเหตุการณ์นี้ทันที แทนที่จะรอบิลค่าไฟครั้งต่อไปเผยให้เห็นความสูญเสีย ลูกค้าของเราที่ตอบสนองการแจ้งเตือนความสกปรกภายใน 48 ชั่วโมงสูญเสียผลผลิตน้อยกว่า 2% ต่อปี ในขณะที่ผู้ที่ไม่มีการตรวจสอบมักเสีย 15-20%
+      </p>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        การผลิตไฟเกินคืนกับ PEA ต้องการบันทึกการผลิตที่แม่นยำสำหรับการคำนวณเครดิต ระบบตรวจสอบให้ข้อมูลที่ได้รับการยืนยันสำหรับข้อพิพาทและยืนยันว่าการอ่านของมิเตอร์ส่งออกตรงกับการผลิตจริง สำหรับการติดตั้งเชิงพาณิชย์ที่มีสัญญาซื้อขายไฟ ข้อมูลตรวจสอบเป็นรากฐานสำหรับการชำระเงินตามสัญญา
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">สิ่งที่คุณได้รับจากบริการของเรา</h2>
+      <ul class="space-y-4">
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>ติดตั้งเซ็นเซอร์:</strong> ติดตั้งเซ็นเซอร์วัดพลังงานอัจฉริยะ เซ็นเซอร์รังสี และเซ็นเซอร์อุณหภูมิที่จุดวัดที่ถูกต้อง พร้อมการแยกไฟฟ้าและป้องกันไฟกระชาก</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>ตั้งค่าสื่อสาร:</strong> กำหนดค่าเกตเวย์ WiFi หรือ 4G แม็พรีจิสเตอร์อินเวอร์เตอร์ และลงทะเบียนแพลตฟอร์มคลาวด์ มั่นใจว่าข้อมูลไหลเสถียรแม้อินเทอร์เน็ตไทยดับเป็นครั้งคราว</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>สอนใช้แอพ:</strong> สอนส่วนบุคคลการอ่านแดชบอร์ด แปล performance ratio และตอบสนองการแจ้งเตือน เราสอนเมตริกสำคัญที่บ่งชี้สุขภาพระบบ</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>ตั้งค่าแจ้งเตือน:</strong> กำหนดเกณฑ์เฉพาะสำหรับพื้นที่ของคุณ การลดผลผลิต อุณหภูมิอินเวอร์เตอร์สูง แจ้งเตือน ground fault และการสื่อสารล้มเหลวส่งไปยังโทรศัพท์และอีเมล</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>รายงานรายเดือน:</strong> สรุปอีเมลอัตโนมัติแสดงผลผลิตพลังงาน performance ratio เปอร์เซ็นต์ความพร้อมใช้ และเหตุการณ์ใดๆ ที่ต้องดูแล</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>ทบทวนประสิทธิภาพรายปี:</strong> เราวิเคราะห์ข้อมูลทั้งปีเพื่อระบุรูปแบบตามฤดูกาล อัตราการเสื่อม และโอกาสเพิ่มประสิทธิภาพ รวมฟรีสำหรับลูกค้าเดิม</span></li>
+      </ul>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">เมตริกสำคัญที่คุณติดตามได้</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-gray-50 p-5 rounded-lg">
+          <h3 class="font-bold mb-2">Performance Ratio (PR)</h3>
+          <p class="text-gray-700 text-sm">อัตราส่วนผลผลิตพลังงานจริงต่อทฤษฎีสูงสุด ระบบไทยที่บำรุงรักษาดีควรได้ PR 78-83% ต่ำกว่า 75% บ่งชี้แผงสกปรก ร่มเงา หรือปัญหาอุปกรณ์</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-lg">
+          <h3 class="font-bold mb-2">Specific Yield (kWh/kWp)</h3>
+          <p class="text-gray-700 text-sm">พลังงานรายปีต่อกิโลวัตต์พีคติดตั้ง ในไทยคาดหวัง 1,400-1,600 kWh/kWp/ปี ขึ้นกับพื้นที่และทิศทาง</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-lg">
+          <h3 class="font-bold mb-2">เปอร์เซ็นต์ความพร้อมใช้</h3>
+          <p class="text-gray-700 text-sm">เปอร์เซ็นต์เวลาที่ระบบผลิตเมื่อมีแสงอาทิตย์ เป้าหมาย: 99%+ ค่าต่ำบ่งชี้อินเวอร์เตอร์เสียบ่อยหรือปัญหาไฟฟ้า</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-lg">
+          <h3 class="font-bold mb-2">อัตราส่วนผลผลิตพลังงาน</h3>
+          <p class="text-gray-700 text-sm">เปรียบเทียบการผลิตรายเดือนกับบิลค่าไฟ ยืนยันว่าพลังงานที่ส่งออกได้รับเครดิตถูกต้องตามสัญญาผลิตไฟเกินคืน PEA</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-8 mb-12">
+      <h2 class="text-2xl font-bold mb-4">แหล่งข้อมูลที่เกี่ยวข้อง</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <a href="/th/services/solar-panel-installation" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">ติดตั้งแผงโซลาร์เซลล์</div>
+          <div class="text-sm text-gray-600">ออกแบบระบบครบวงจรพร้อมตรวจสอบตั้งแต่วันแรก</div>
+        </a>
+        <a href="/th/services/battery-storage" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">ระบบกักเก็บพลังงานแบตเตอรี่</div>
+          <div class="text-sm text-gray-600">ตรวจสอบสถานะการชาร์จแบตเตอรี่พร้อมการผลิตโซลาร์</div>
+        </a>
+      </div>
+    </section>
+
+    <div class="bg-solar-green text-white rounded-xl p-8 text-center">
+      <h2 class="text-2xl font-bold mb-2">อยากรู้ว่าระบบผลิตไฟเท่าไร?</h2>
+      <p class="mb-6">ติดตั้งระบบตรวจสอบมืออาชีพบนระบบโซลาร์เก่าหรือใหม่ของคุณทั่วประเทศไทย</p>
+      <a href="/th/#contact" class="inline-block bg-white text-solar-green font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+        ขอใบเสนอราคาฟรี
+      </a>
+    </div>
+  </article>
+</Layout>

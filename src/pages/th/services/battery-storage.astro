@@ -1,0 +1,141 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+const title = 'ระบบกักเก็บพลังงานแบตเตอรี่โซลาร์ ประเทศไทย | JJ Com Solar Cell';
+const description = 'ติดตั้งระบบกักเก็บพลังงานแบตเตอรี่มืออาชีพในเกาะช้าง ประเทศไทย แบตเตอรี่ลิเธียมไอออน ฟอสเฟต LiFePO4 และระบบสำรองไฟสำหรับบ้านและธุรกิจ ขอใบเสนอราคาฟรี';
+---
+<Layout
+  title={title}
+  description={description}
+  ogType="website"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "ระบบกักเก็บพลังงานแบตเตอรี่โซลาร์",
+    "provider": { "@type": "Organization", "name": "JJ Com Solar Cell" },
+    "areaServed": { "@type": "Country", "name": "Thailand" }
+  }}
+>
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <nav class="text-sm text-gray-500 mb-6">
+      <a href="/th/" class="hover:text-solar-green">หน้าแรก</a> / <span>บริการ</span> / <span>กักเก็บพลังงานแบตเตอรี่</span>
+    </nav>
+
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center gap-2 bg-solar-yellow/20 text-solar-yellow px-4 py-2 rounded-full text-sm font-medium mb-6">
+        ให้บริการในประเทศไทยตั้งแต่ปี 2016
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">ระบบกักเก็บพลังงานแบตเตอรี่</h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        กักเก็บพลังงานโซลาร์ส่วนเกินใช้ตอนกลางคืน สำรองไฟตอนดับ และความเป็นอิสระทางพลังงานทั่วประเทศไทย
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="bg-gray-50 rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold text-solar-green mb-2">24/7</div>
+        <div class="text-sm text-gray-600">มีไฟใช้ทั้งวันและค่ำ</div>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold text-solar-green mb-2">95%+</div>
+        <div class="text-sm text-gray-600">ประสิทธิภาพรอบกลับ</div>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold text-solar-green mb-2">10+</div>
+        <div class="text-sm text-gray-600">ปี อายุการใช้งานแบตเตอรี่</div>
+      </div>
+    </div>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">แบตเตอรี่โซลาร์ทำงานอย่างไร</h2>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        โมดูลโฟโตโวอลเทอิกผลิตไฟฟ้ากระแสตรงในช่วงกลางวัน แต่บ้านและธุรกิจในไทยใช้ไฟส่วนใหญ่ตอนเย็น หลังดวงอาทิตย์ตก หากไม่มีระบบกักเก็บพลังงาน พลังงานส่วนเกินช่วงกลางวันจากแผง PV จะส่งเข้าระบบไฟฟ้า PEA ในอัตราที่ไม่คุ้มค่า หรือสูญเปล่าไปเลย
+      </p>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        แบตเตอรี่โซลาร์ขนาดเหมาะสมแก้ปัญหานี้ด้วยกลยุทธ์ time-shift ระหว่างกลางวันอินเวอร์เตอร์ไฮบริดส่ง DC จากแผงโซลาร์ไปใช้ในบ้านทันที ขณะที่พลังงานส่วนเกินชาร์จเข้าแบตเตอรี่ผ่าน MPPT charge controller แบตเตอรี่ลิเธียมไอออนฟอสเฟต LiFePO4 มีประสิทธิภาพรอบกลับ 80-95% สูญเสียพลังงานน้อยกว่าแบตเตอรี่ตะกั่วกรดที่มีประสิทธิภาพเพียง 70-80%
+      </p>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        เมื่อไฟดับซึ่งเกิดบ่อยในพายุมรสุมที่เกาะช้างและเกาะอื่นๆ อินเวอร์เตอร์ตัดการเชื่อมต่อจากระบบไฟและสลับเป็นโหมด standalone ภายใน 10-20 มิลลิวินาที เร็วพอที่คอมพิวเตอร์ เครื่องมือแพทย์ และตู้เย็นยังทำงานต่อเนื่อง ระบบ BMS ตรวจสอบสถานะการชาร์จ อุณหภูมิ และความลึกการปล่อยประจุแต่ละเซลล์ เราตั้งค่าระบบบ้านให้จำกัดความลึกการปล่อยประจุที่ 90% เหลือ 10% สำรองยืดอายุแบตเตอรี่เกิน 6,000 รอบ หรือ 15-20 ปีการใช้งานในไทย
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">ชนิดแบตเตอรี่ที่เราติดตั้ง</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          <h3 class="font-bold text-lg mb-2">Lithium-Ion (Li-ion)</h3>
+          <p class="text-gray-700 leading-relaxed">ความหนาแน่นพลังงานสูง ขนาดกะทัดรัด ชาร์จเร็ว เหมาะสำหรับบ้านและธุรกิจที่มีพื้นที่ติดตั้งจำกัด ขนาดติดตั้งทั่วไป: 5-15 กิโลวัตต์ชั่วโมง ความจุใช้งาน เหมาะกับทรัพย์สินที่มีพื้นที่จำกัดแต่ต้องการพลังงานมาก</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          <h3 class="font-bold text-lg mb-2">LiFePO4 (Lithium Iron Phosphate)</h3>
+          <p class="text-gray-700 leading-relaxed">เสถียรภาพความร้อนสูงและวงจรชีวิตยาวกว่า Li-ion ทั่วไป เหมาะสำหรับอากาศเมืองร้อนของไทยที่อุณหภูมิสูงกว่า 35 องศาเซลเซียสเป็นประจำ แบตเตอรี่เหล่านี้ทนความชื้นสูงและต้านทาน thermal runaway เป็นตัวเลือกที่ปลอดภัยที่สุดสำหรับการติดตั้งบ้านและธุรกิจในสภาพแวดล้อมชายฝั่งและเกาะ เช่น เกาะช้าง</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">ทำไมแบตเตอรี่จึงสำคัญในไทย</h2>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        ค่าไฟฟ้าไทยคิดตามอัตราโปรเกรสซีฟ ยิ่งใช้มากยิ่งจ่ายแพงต่อหน่วย บ้านที่ใช้เกิน 150 กิโลวัตต์ชั่วโมงต่อเดือนเสียค่าไฟ 4.0-5.5 บาทต่อหน่วย โดยกักเก็บพลังงานโซลาร์ที่ผลิตช่วงกลางวันและปล่อยใช้ตอนเย็นช่วงค่าไฟแพง คุณหลีกเลี่ยงระดับอัตราที่สูงที่สุดได้ทั้งหมด
+      </p>
+      <p class="text-gray-700 mb-4 leading-relaxed">
+        ชุมชนเกาะเผชิญปัญหาเพิ่มเติม เกาะช้างและพื้นที่คล้ายกันประสบการณ์ไฟดับในช่วงมรสุมพฤษภาคมถึงตุลาคม เมื่อพายุทำลายสายไฟ สำหรับรีสอร์ทที่ขาดตู้เย็นไม่ได้ บ้านที่มีเครื่องมือแพทย์ หรือธุรกิจที่รับชำระเงิน แบตเตอรี่สำรองช่วยให้ดำเนินงานต่อเนื่อง การผสมผสานแผงโซลาร์และระบบกักเก็บพลังงานเปลี่ยนทรัพย์สินของคุณจากผู้บริโภค被动เป็นโรงไฟฟ้าที่ยืดหยุ่นและกระตือรือร้น
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">สิ่งที่คุณได้รับจากบริการของเรา</h2>
+      <ul class="space-y-4">
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>ประเมินมืออาชีพ:</strong> วิเคราะห์บิลค่าไฟ รูปแบบการใช้ไฟ และโหลดสำคัญเพื่อกำหนดความจุแบตเตอรี่ที่เหมาะสม ทั่วไป 5-20 กิโลวัตต์ชั่วโมงสำหรับระบบบ้าน</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>ติดตั้งอินเวอร์เตอร์ไฮบริด:</strong> จัดหาและติดตั้งอินเวอร์เตอร์ที่จัดการแผงและแบตเตอรี่ พร้อม MPPT charge controller และระบบตัดไฟอัตโนมัติ</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>ติดตั้งปลอดภัย:</strong> แบตเตอรี่ติดตั้งในตู้ระบายอากาศกันน้ำ พร้อมฉากกันไฟ สาย DC ใช้ขนาดและฟิวส์ป้องกันตามมาตรฐานไฟฟ้าไทย</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>ตั้งค่าระบบ:</strong> กำหนดตารางชาร์จ ขีดจำกัดการปล่อยประจุ และลำดับความสำคัญสำรองไฟ BMS ปรับแต่งตามมาตรฐานแรงดันและความถี่ไทย 220V 50Hz</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>ติดตั้งมอนิเตอร์:</strong> ผสานรวมแอปมือถือติดตามสถานะการชาร์จ รอบการใช้งานรายวัน และการไหลของพลังงานแบบเรียลไทม์จากทุกที่</span></li>
+        <li class="flex items-start gap-3"><span class="text-solar-green text-xl">✓</span> <span class="text-gray-700"><strong>บำรุงรักษา 1 ปี:</strong> ทดสอบความจุประจำปี อัปเดตเฟิร์มแวร์ BMS ทำความสะอาดขั้ว และตรวจสอบอุณหภูมิฟรีไม่มีค่าใช้จ่ายเพิ่ม</span></li>
+      </ul>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">ประโยชน์ของระบบกักเก็บพลังงาน</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-gray-50 p-5 rounded-lg">
+          <h3 class="font-bold mb-2">เป็นอิสระทางพลังงาน</h3>
+          <p class="text-gray-700 text-sm">ลดการพึ่งพาระบบไฟฟ้าและค่าไฟที่ขึ้นอยู่กับการเมือง ผลิต กักเก็บ และใช้ไฟของตัวเอง</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-lg">
+          <h3 class="font-bold mb-2">สำรองไฟดับ</h3>
+          <p class="text-gray-700 text-sm">ไฟส่องสว่าง ตู้เย็น เครื่องมือแพทย์ และระบบรักษาความปลอดภัยยังทำงานต่อเนื่องเมื่อไฟดับ</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-lg">
+          <h3 class="font-bold mb-2">เพิ่มผลตอบแทนโซลาร์</h3>
+          <p class="text-gray-700 text-sm">กักเก็บพลังงานส่วนเกินช่วงกลางวันใช้ตอนเย็นแทนการส่งขายคืนในราคาต่ำหรือสูญเปล่า</p>
+        </div>
+        <div class="bg-gray-50 p-5 rounded-lg">
+          <h3 class="font-bold mb-2">ระบบออฟกริด</h3>
+          <p class="text-gray-700 text-sm">เป็นอิสระทางพลังงานอย่างสมบูรณ์สำหรับพื้นที่ห่างไกลที่ไม่มีระบบไฟหรือไฟไม่เสถียร</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-8 mb-12">
+      <h2 class="text-2xl font-bold mb-4">แหล่งข้อมูลที่เกี่ยวข้อง</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <a href="/th/guides/solar-system-sizing" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">คำนวณขนาดระบบ</div>
+          <div class="text-sm text-gray-600">คำนวณขนาดระบบรวมแบตเตอรี่กักเก็บพลังงาน</div>
+        </a>
+        <a href="/th/guides/solar-panels-cloudy-days" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="font-bold">ประสิทธิภาพวันฟ้าคลึม</div>
+          <div class="text-sm text-gray-600">แบตเตอรี่ช่วยอย่างไรในช่วงผลิตไฟต่ำ</div>
+        </a>
+      </div>
+    </section>
+
+    <div class="bg-solar-green text-white rounded-xl p-8 text-center">
+      <h2 class="text-2xl font-bold mb-2">พร้อมเป็นอิสระทางพลังงาน?</h2>
+      <p class="mb-6">ขอประเมินระบบกักเก็บพลังงานและใบเสนอราคาส่วนบุคคลสำหรับทรัพย์สินของคุณในประเทศไทย</p>
+      <a href="/th/#contact" class="inline-block bg-white text-solar-green font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+        ขอใบเสนอราคาฟรี
+      </a>
+    </div>
+  </article>
+</Layout>
