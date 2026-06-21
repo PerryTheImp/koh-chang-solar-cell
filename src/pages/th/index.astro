@@ -48,12 +48,12 @@ const t = {
   contactPayment: 'การชำระเงิน: รับโอนเงินและเงินสด ยังไม่รับบัตรเครดิต',
 };
 const services = [
-  { icon: '\u2600\ufe0f', title: 'ติดตั้งแผงโซลาร์เซลล์', desc: 'ระบบแผงโซลาร์บนหลังคาและติดตั้งบนพื้นดินสำหรับที่อยู่อาศัยและอาคารพาณิชย์' },
-  { icon: '\u26a1', title: 'ระบบเก็บพลังงานแบตเตอรี่', desc: 'เก็บพลังงานส่วนเกินสำหรับใช้ในตอนกลางคนหรือไฟดับ' },
-  { icon: '\ud83d\udd27', title: 'ติดตั้งอินเวอร์เตอร์', desc: 'อินเวอร์เตอร์ Grid-tie, Off-grid และ Hybrid จากผู้ผลิตชั้นนำ' },
-  { icon: '\ud83e\uddfc', title: 'ทำความสะอาดและบำรุงรักษา', desc: 'ทำความสะอาดเป็นประจำ 300 บาทต่อแผ่น รวมค่าเดินทาง รักษาประสิทธิภาพสูงสุด' },
-  { icon: '\ud83d\udcf1', title: 'ระบบตรวจสอบ', desc: 'แอพตรวจสอบอัจฉริยะเพื่อติดตามการผลิตและการใช้พลังงาน' },
-  { icon: '\ud83c\udfd7\ufe0f', title: 'ระบบยึดติด', desc: 'ระบบยึดอลูมิเนียมกันสนิมออกแบบสำหรับภูมิอากาศเขตร้อนของไทย' },
+  { icon: '\u2600\ufe0f', title: 'ติดตั้งแผงโซลาร์เซลล์', desc: 'ระบบแผงโซลาร์บนหลังคาและติดตั้งบนพื้นดินสำหรับที่อยู่อาศัยและอาคารพาณิชย์', link: '/th/services/solar-panel-installation/' },
+  { icon: '\u26a1', title: 'ระบบเก็บพลังงานแบตเตอรี่', desc: 'เก็บพลังงานส่วนเกินสำหรับใช้ในตอนกลางคนหรือไฟดับ', link: '/th/services/battery-storage/' },
+  { icon: '\ud83d\udd27', title: 'ติดตั้งอินเวอร์เตอร์', desc: 'อินเวอร์เตอร์ Grid-tie, Off-grid และ Hybrid จากผู้ผลิตชั้นนำ', link: '/th/services/inverter-installation/' },
+  { icon: '\ud83e\uddfc', title: 'ทำความสะอาดและบำรุงรักษา', desc: 'ทำความสะอาดเป็นประจำ 300 บาทต่อแผ่น รวมค่าเดินทาง รักษาประสิทธิภาพสูงสุด', link: '/th/services/panel-cleaning/' },
+  { icon: '\ud83d\udcf1', title: 'ระบบตรวจสอบ', desc: 'แอพตรวจสอบอัจฉริยะเพื่อติดตามการผลิตและการใช้พลังงาน', link: '/th/services/system-monitoring/' },
+  { icon: '\ud83c\udfd7\ufe0f', title: 'ระบบยึดติด', desc: 'ระบบยึดอลูมิเนียมกันสนิมออกแบบสำหรับภูมิอากาศเขตร้อนของไทย', link: '/th/services/racking-mounting/' },
 ];
 const products = [
   { name: 'แผงโซลาร์เซลล์', desc: 'แผงโมโนคริสตัลไลน์และพอลิคริสตัลไลน์ประสิทธิภาพสูงจากผู้ผลิตระดับ Tier 1', img: '/images/42.webp' },
@@ -183,13 +183,13 @@ const eduArticles = [
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((s) => (
-          <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-gray-100">
+          <a href={s.link} class="block bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-gray-100 hover:border-solar-green">
             <div class="w-12 h-12 bg-solar-yellow/10 rounded-lg flex items-center justify-center mb-4 text-2xl">
               {s.icon}
             </div>
             <h3 class="font-bold text-lg mb-2">{s.title}</h3>
             <p class="text-gray-600 text-sm">{s.desc}</p>
-          </div>
+          </a>
         ))}
       </div>
     </div>
