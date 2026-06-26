@@ -301,9 +301,9 @@ const eduArticles = [
                 return false;
               }
               
-              // Show loading state and let native submit proceed
+              // Show loading state but DON'T disable button — it blocks form submission in Chrome
               submitBtn.textContent = 'Sending...';
-              submitBtn.disabled = true;
+              // submitBtn.disabled = true; // DISABLED: This freezes the form
               
               // Form submits natively to Apps Script, which redirects to ?submitted=true
               return true;
