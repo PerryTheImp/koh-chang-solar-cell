@@ -353,10 +353,13 @@ const eduArticles = [
       </div>
     </div>
   </section>
-
   <div id="chatbot-container"></div>
   <script is:inline>
     window.addEventListener('load', function() {
+      var LINE_ID = 'mamatommassage2019';
+      var PHONE = '094 050 9623';
+      var EMAIL = 'jjcomandsolarcell@gmail.com';
+      
       var chatToggle = document.createElement('button');
       chatToggle.id = 'chat-toggle';
       chatToggle.textContent = '\uD83D\uDCAC';
@@ -365,24 +368,92 @@ const eduArticles = [
       
       var chatPanel = document.createElement('div');
       chatPanel.id = 'chat-panel';
-      chatPanel.style.cssText = 'position:fixed;bottom:90px;right:24px;width:340px;height:450px;background:white;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,0.2);z-index:998;display:none;overflow:hidden;border:1px solid #e5e7eb;';
+      chatPanel.style.cssText = 'position:fixed;bottom:90px;right:24px;width:340px;height:480px;background:white;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,0.2);z-index:998;display:none;overflow:hidden;border:1px solid #e5e7eb;';
       chatPanel.innerHTML = '<div style="background:#2d7a3e;color:white;padding:16px;font-weight:bold;display:flex;justify-content:space-between;align-items:center;">' +
-        '<span>เจเจคอมโซล่าเซลล์</span>' +
+        '<div style="display:flex;align-items:center;gap:10px;"><div style="width:36px;height:36px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;">\uD83C\uDF1E</div><div>JJ Com Solar<div style="font-size:11px;opacity:0.9;">\u0E2D\u0E2D\u0E19\u0E44\u0E25\u0E19\u0E4C \u2022 \u0E15\u0E2D\u0E1A\u0E40\u0E23\u0E47\u0E27</div></div></div>' +
         '<button id="chat-close" style="background:none;border:none;color:white;font-size:20px;cursor:pointer;">\u00D7</button></div>' +
-        '<div style="padding:16px;height:320px;overflow-y:auto;background:#f9fafb;">' +
-        '<div style="background:white;padding:12px;border-radius:12px 12px 12px 2px;margin-bottom:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1);max-width:85%;">' +
-        '<p style="margin:0;font-size:14px;">สวัสดีค่ะ! ฉันผู้ช่วยของเจเจคอมโซล่าเซลล์ มีอะไรให้ช่วยคะ?</p></div>' +
-        '<div style="display:flex;flex-direction:column;gap:8px;margin-top:12px;">' +
-        '<button class="chat-opt" style="text-align:left;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;background:white;cursor:pointer;font-size:13px;">\uD83D\uDCA1 แผงโซลาร์ทำงานอย่างไร?</button>' +
-        '<button class="chat-opt" style="text-align:left;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;background:white;cursor:pointer;font-size:13px;">\uD83D\uDCB0 ขอใบเสนอราคาฟรี</button>' +
-        '<button class="chat-opt" style="text-align:left;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;background:white;cursor:pointer;font-size:13px;">\uD83D\uDD27 การบำรุงรักษาและทำความสะอาด</button>' +
-        '<button class="chat-opt" style="text-align:left;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;background:white;cursor:pointer;font-size:13px;">\uD83D\uDCDE ติดต่อเจ้าหน้าที่</button></div></div>' +
-        '<div style="padding:12px;border-top:1px solid #e5e7eb;background:white;">' +
-        '<input type="text" placeholder="พิมพ์ข้อความ..." style="width:100%;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;font-size:14px;outline:none;"></div>';
+        '<div id="chat-messages" style="padding:16px;height:310px;overflow-y:auto;background:#f9fafb;display:flex;flex-direction:column;gap:10px;">' +
+        '<div style="background:white;padding:12px 14px;border-radius:14px 14px 14px 2px;box-shadow:0 1px 3px rgba(0,0,0,0.08);max-width:85%;font-size:13px;line-height:1.5;color:#374151;">\uD83D\uDC4B \u0E2A\u0E27\u0E31\u0E2D\u0E14\u0E35\u0E04\u0E48\u0E30! \u0E09\u0E31\u0E19\u0E1C\u0E39\u0E49\u0E0A\u0E48\u0E27\u0E22\u0E02\u0E2D\u0E07\u0E40\u0E08\u0E40\u0E08\u0E04\u0E2D\u0E21\u0E42\u0E0B\u0E25\u0E48\u0E32\u0E40\u0E0B\u0E25\u0E25\u0E4C \u0E21\u0E35\u0E2D\u0E30\u0E44\u0E23\u0E43\u0E2B\u0E49\u0E0A\u0E48\u0E27\u0E22\u0E04\u0E30? \u0E16\u0E32\u0E21\u0E44\u0E14\u0E49\u0E17\u0E38\u0E01\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E40\u0E01\u0E35\u0E48\u0E22\u0E27\u0E01\u0E31\u0E1A\u0E42\u0E0B\u0E25\u0E32\u0E23\u0E4C\u0E40\u0E0B\u0E25\u0E25\u0E4C \u0E23\u0E32\u0E04\u0E32 \u0E2B\u0E23\u0E37\u0E2D\u0E01\u0E32\u0E23\u0E15\u0E34\u0E14\u0E15\u0E31\u0E48\u0E07\u0E43\u0E19\u0E1B\u0E23\u0E30\u0E40\u0E17\u0E28\u0E44\u0E17\u0E22\u0E04\u0E48\u0E30</div>' +
+        '<div id="chat-options" style="display:flex;flex-direction:column;gap:8px;margin-top:4px;">' +
+        '<button class="chat-opt" data-action="how-solar" style="text-align:left;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;background:white;cursor:pointer;font-size:13px;">\uD83D\uDCA1 \u0E41\u0E1C\u0E07\u0E42\u0E0B\u0E25\u0E32\u0E23\u0E4C\u0E17\u0E33\u0E07\u0E32\u0E19\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E44\u0E23?</button>' +
+        '<button class="chat-opt" data-action="quote" style="text-align:left;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;background:white;cursor:pointer;font-size:13px;">\uD83D\uDCB0 \u0E02\u0E2D\u0E43\u0E1A\u0E40\u0E2A\u0E19\u0E2D\u0E23\u0E32\u0E04\u0E32\u0E1F\u0E23\u0E35</button>' +
+        '<button class="chat-opt" data-action="maintenance" style="text-align:left;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;background:white;cursor:pointer;font-size:13px;">\uD83D\uDD27 \u0E01\u0E32\u0E23\u0E1A\u0E33\u0E23\u0E38\u0E07\u0E23\u0E31\u0E01\u0E29\u0E32\u0E41\u0E25\u0E30\u0E17\u0E33\u0E04\u0E27\u0E32\u0E21\u0E2A\u0E30\u0E2D\u0E32\u0E14</button>' +
+        '<button class="chat-opt" data-action="line" style="text-align:left;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;background:white;cursor:pointer;font-size:13px;">\uD83D\uDCAC \u0E40\u0E1E\u0E34\u0E48\u0E21\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E19 LINE</button>' +
+        '<button class="chat-opt" data-action="human" style="text-align:left;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;background:white;cursor:pointer;font-size:13px;">\uD83D\uDCDE \u0E15\u0E34\u0E14\u0E15\u0E48\u0E2D\u0E40\u0E08\u0E49\u0E32\u0E2B\u0E19\u0E49\u0E32\u0E17\u0E35\u0E48</button></div></div>' +
+        '<div style="padding:12px;border-top:1px solid #e5e7eb;background:white;display:flex;gap:8px;">' +
+        '<input id="chat-input" type="text" placeholder="\u0E1E\u0E34\u0E21\u0E1E\u0E4C\u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21..." style="flex:1;padding:10px 14px;border:1px solid #e5e7eb;border-radius:10px;font-size:14px;outline:none;">' +
+        '<button id="chat-send" style="padding:10px 14px;background:#2d7a3e;color:white;border:none;border-radius:10px;cursor:pointer;font-size:14px;">\u0E2A\u0E48\u0E07</button></div>';
       document.body.appendChild(chatPanel);
+      
+      var messages = document.getElementById('chat-messages');
+      var input = document.getElementById('chat-input');
+      var options = document.getElementById('chat-options');
       
       document.getElementById('chat-toggle').onclick = function() { chatPanel.style.display = chatPanel.style.display === 'none' ? 'block' : 'none'; };
       document.getElementById('chat-close').onclick = function() { chatPanel.style.display = 'none'; };
+      
+      function addMessage(text, isUser) {
+        var div = document.createElement('div');
+        div.style.cssText = isUser ? 'background:#2d7a3e;color:white;padding:12px 14px;border-radius:14px 14px 2px 14px;align-self:flex-end;max-width:85%;font-size:13px;line-height:1.5;box-shadow:0 1px 3px rgba(0,0,0,0.1);' : 'background:white;padding:12px 14px;border-radius:14px 14px 14px 2px;box-shadow:0 1px 3px rgba(0,0,0,0.08);max-width:85%;font-size:13px;line-height:1.5;color:#374151;';
+        div.innerHTML = text;
+        messages.appendChild(div);
+        messages.scrollTop = messages.scrollHeight;
+      }
+      
+      function showTyping(callback) {
+        var div = document.createElement('div');
+        div.style.cssText = 'display:flex;gap:4px;padding:12px 14px;background:white;border-radius:14px 14px 14px 2px;box-shadow:0 1px 3px rgba(0,0,0,0.08);max-width:60px;';
+        div.innerHTML = '<span style="width:6px;height:6px;background:#9ca3af;border-radius:50%;"></span><span style="width:6px;height:6px;background:#9ca3af;border-radius:50%;"></span><span style="width:6px;height:6px;background:#9ca3af;border-radius:50%;"></span>';
+        messages.appendChild(div);
+        messages.scrollTop = messages.scrollHeight;
+        setTimeout(function() { div.remove(); callback(); }, 1200);
+      }
+      
+      messages.addEventListener('click', function(e) {
+        var btn = e.target.closest('.chat-opt');
+        if (!btn) return;
+        var action = btn.dataset.action;
+        var text = btn.textContent;
+        addMessage(text, true);
+        if (options) options.style.display = 'none';
+        
+        showTyping(function() {
+          switch(action) {
+            case 'how-solar':
+              addMessage('\uD83D\uDCA1 \u0E41\u0E1C\u0E07\u0E42\u0E0B\u0E25\u0E32\u0E23\u0E4C\u0E40\u0E0B\u0E25\u0E25\u0E4C\u0E41\u0E1B\u0E25\u0E07\u0E41\u0E2A\u0E07\u0E2D\u0E32\u0E17\u0E34\u0E15\u0E22\u0E4C\u0E40\u0E1B\u0E47\u0E19\u0E1E\u0E25\u0E31\u0E07\u0E07\u0E32\u0E19\u0E44\u0E1F\u0E1F\u0E49\u0E32 \u0E42\u0E14\u0E22\u0E43\u0E0A\u0E49\u0E40\u0E0B\u0E25\u0E25\u0E4C\u0E42\u0E1F\u0E42\u0E15\u0E42\u0E27\u0E2D\u0E34\u0E40\u0E25\u0E47\u0E01\u0E17\u0E23\u0E34\u0E01 \u0E43\u0E19\u0E2A\u0E20\u0E32\u0E1E\u0E2D\u0E32\u0E01\u0E32\u0E28\u0E44\u0E17\u0E22 \u0E23\u0E30\u0E1A\u0E1A 5kW \u0E2A\u0E32\u0E21\u0E32\u0E23\u0E16\u0E1C\u0E25\u0E34\u0E15\u0E44\u0E1F\u0E1F\u0E49\u0E32\u0E44\u0E14\u0E49 20-25 kWh \u0E15\u0E48\u0E2D\u0E27\u0E31\u0E19 \u0E25\u0E14\u0E04\u0E48\u0E32\u0E44\u0E1F\u0E44\u0E14\u0E49 70-90%');
+              break;
+            case 'quote':
+              addMessage('\uD83D\uDCB0 \u0E23\u0E30\u0E1A\u0E1A 5kW \u0E23\u0E32\u0E04\u0E32\u0E1B\u0E23\u0E30\u0E21\u0E32\u0E13 150,000\u2013200,000 \u0E1A\u0E32\u0E17 \u0E23\u0E30\u0E1A\u0E1A 10kW+ 300,000\u2013400,000 \u0E1A\u0E32\u0E17 \u0E40\u0E23\u0E32\u0E21\u0E35\u0E15\u0E31\u0E27\u0E40\u0E25\u0E37\u0E2D\u0E01\u0E01\u0E32\u0E23\u0E1C\u0E48\u0E2D\u0E19\u0E0A\u0E33\u0E23\u0E30 \u0E15\u0E49\u0E2D\u0E07\u0E01\u0E32\u0E23\u0E43\u0E1A\u0E40\u0E2A\u0E19\u0E2D\u0E23\u0E32\u0E04\u0E32\u0E23\u0E32\u0E22\u0E25\u0E30\u0E40\u0E2D\u0E35\u0E22\u0E14?');
+              break;
+            case 'maintenance':
+              addMessage('\uD83D\uDD27 \u0E1A\u0E23\u0E34\u0E01\u0E32\u0E23\u0E02\u0E2D\u0E07\u0E40\u0E23\u0E32:\u003cbr\u003e\u2022 \u0E17\u0E33\u0E04\u0E27\u0E32\u0E21\u0E2A\u0E30\u0E2D\u0E32\u0E14\u0E41\u0E1C\u0E07: 300 \u0E1A\u0E32\u0E17/\u0E41\u0E1C\u0E07 + \u0E04\u0E48\u0E32\u0E40\u0E14\u0E34\u0E19\u0E17\u0E32\u0E07\u003cbr\u003e\u2022 \u0E15\u0E23\u0E27\u0E08\u0E40\u0E0A\u0E47\u0E04\u0E1B\u0E23\u0E30\u0E08\u0E33\u0E1B\u0E35: \u0E1F\u0E23\u0E35\u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A\u0E25\u0E39\u0E01\u0E04\u0E49\u0E32\u0E40\u0E01\u0E48\u0E32\u003cbr\u003e\u2022 \u0E2D\u0E34\u0E19\u0E40\u0E27\u0E2D\u0E23\u0E4C\u0E40\u0E15\u0E2D\u0E23\u0E4C: \u0E2D\u0E31\u0E1E\u0E40\u0E14\u0E15\u0E40\u0E1F\u0E34\u0E23\u0E4C\u0E21\u0E41\u0E27\u0E23\u0E4C\u0E41\u0E25\u0E30\u0E15\u0E23\u0E27\u0E08\u0E2A\u0E2D\u0E1A');
+              break;
+            case 'line':
+              addMessage('\uD83D\uDCAC \u0E40\u0E1E\u0E34\u0E48\u0E21\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E19 LINE \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E15\u0E34\u0E14\u0E15\u0E48\u0E2D\u0E2A\u0E30\u0E14\u0E27\u0E01:');
+              showTyping(function() {
+                addMessage('\u003cdiv style="text-align:center;">\u003ca href="https://line.me/ti/p/~' + LINE_ID + '" target="_blank">\u003cimg src="/images/line-qr-code.jpg" alt="LINE QR" style="width:180px;height:180px;border-radius:12px;margin:8px 0;box-shadow:0 2px 8px rgba(0,0,0,0.1);">\u003c/a>\u003cdiv style="font-size:12px;color:#666;">\uD83D\uDC46 \u0E41\u0E15\u0E30\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E40\u0E1B\u0E34\u0E14 LINE \u0E2B\u0E23\u0E37\u0E2D\u0E2A\u0E41\u0E01\u0E19 QR Code\u003c/div\u003e\u003cdiv style="font-size:13px;margin-top:8px;">LINE ID: \u003cstrong\u003e' + LINE_ID + '\u003c/strong\u003e\u003c/div\u003e\u003c/div\u003e');
+              });
+              break;
+            case 'human':
+              addMessage('\uD83D\uDCDE \u0E15\u0E34\u0E14\u0E15\u0E48\u0E2D\u0E40\u0E23\u0E32\u0E42\u0E14\u0E22\u0E15\u0E23\u0E07:\u003cbr\u003e\uD83D\uDCF1 \u0E42\u0E17\u0E23: \u003ca href="tel:+66940509623"\u003e' + PHONE + '\u003c/a\u003e\u003cbr\u003e\uD83D\uDCE7 \u0E2D\u0E35\u0E40\u0E21\u0E25: ' + EMAIL + '\u003cbr\u003e\uD83D\uDCAC LINE: \u003ca href="https://line.me/ti/p/~' + LINE_ID + '" target="_blank"\u003e@' + LINE_ID + '\u003c/a\u003e');
+              break;
+          }
+        });
+      });
+      
+      function sendMessage() {
+        var text = input.value.trim();
+        if (!text) return;
+        addMessage(text, true);
+        input.value = '';
+        if (options) options.style.display = 'none';
+        showTyping(function() {
+          addMessage('\uD83D\uDE0A \u0E02\u0E2D\u0E1A\u0E04\u0E38\u0E13\u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A\u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E04\u0E48\u0E30! \u0E40\u0E23\u0E32\u0E08\u0E30\u0E2A\u0E48\u0E07\u0E15\u0E48\u0E2D\u0E43\u0E2B\u0E49\u0E17\u0E35\u0E21\u0E07\u0E32\u0E19\u0E41\u0E25\u0E30\u0E15\u0E2D\u0E1A\u0E01\u0E25\u0E31\u0E1A\u0E42\u0E14\u0E22\u0E40\u0E23\u0E47\u0E27\u0E17\u0E35\u0E48\u0E2A\u0E38\u0E14\u0E04\u0E48\u0E30\u003cbr\u003e\u003cbr\u003e\u0E2B\u0E23\u0E37\u0E2D \u003ca href="https://line.me/ti/p/~' + LINE_ID + '" target="_blank"\u003e\u0E04\u0E25\u0E34\u0E01\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E04\u0E38\u0E22\u0E1A\u0E19 LINE (@' + LINE_ID + ')\u003c/a\u003e \u0E15\u0E2D\u0E1A\u0E40\u0E23\u0E47\u0E27\u0E01\u0E27\u0E48\u0E32\u0E04\u0E48\u0E30');
+        });
+      }
+      
+      document.getElementById('chat-send').onclick = sendMessage;
+      input.addEventListener('keypress', function(e) { if (e.key === 'Enter') sendMessage(); });
     });
   </script>
 </Layout>

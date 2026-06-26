@@ -4,7 +4,7 @@
  */
 (function() {
   var PHONE = '094 050 9623';
-  var LINE_ID = 'jjcomsolar';
+  var LINE_ID = 'mamatommassage2019';
   var EMAIL = 'jjcomandsolarcell@gmail.com';
 
   // Inject CSS
@@ -64,6 +64,7 @@
         '<button class="chat-opt" data-action="quote">💰 Get a free quote</button>',
         '<button class="chat-opt" data-action="maintenance">🔧 Maintenance and cleaning</button>',
         '<button class="chat-opt" data-action="human">📞 Speak to a human</button>',
+        '<button class="chat-opt" data-action="line">💬 Add us on LINE</button>',
       '</div>',
     '</div>',
     '<div id="chat-footer">',
@@ -151,11 +152,26 @@
           }, 400);
           break;
 
+        case 'line':
+          addMessage('💬 Add us on LINE for quick replies:');
+          setTimeout(function() {
+            showTyping(function() {
+              addMessage('<div style="text-align:center;">' +
+                '<a href="https://line.me/ti/p/~' + LINE_ID + '" target="_blank">' +
+                '<img src="/images/line-qr-code.jpg" alt="LINE QR Code" style="width:180px;height:180px;border-radius:12px;margin:8px 0;box-shadow:0 2px 8px rgba(0,0,0,0.1);">' +
+                '</a>' +
+                '<div style="font-size:12px;color:#666;">👆 Tap to open LINE, or scan the QR code</div>' +
+                '<div style="font-size:13px;margin-top:8px;">LINE ID: <strong>' + LINE_ID + '</strong></div>' +
+                '</div>');
+            });
+          }, 400);
+          break;
+
         case 'human':
           addMessage('📞 Reach us directly:');
           setTimeout(function() {
             showTyping(function() {
-              addMessage('📱 <strong>Phone:</strong> <a href="tel:+66940509623">' + PHONE + '</a><br>📧 <strong>Email:</strong> ' + EMAIL + '<br>💬 <strong>LINE:</strong> <a href="https://line.me/ti/p/~' + LINE_ID + '" target="_blank">Click to chat on LINE</a><br><br>We typically respond within 1 hour during business hours (8 AM – 6 PM).');
+              addMessage('📱 <strong>Phone:</strong> <a href="tel:+66940509623">' + PHONE + '</a><br>📧 <strong>Email:</strong> ' + EMAIL + '<br>💬 <strong>LINE:</strong> <a href="https://line.me/ti/p/~' + LINE_ID + '" target="_blank">@' + LINE_ID + ' — click to chat</a><br><br>We typically respond within 1 hour during business hours (8 AM – 6 PM).');
             });
           }, 400);
           break;
@@ -190,7 +206,7 @@
       } else if (lower.match(/hello|hi|hey|greeting|sawadee/)) {
         addMessage('👋 Sawadee krub! How can I help you with solar today? Ask about pricing, installation, or anything else.');
       } else {
-        addMessage('😊 Thanks for your message! That\'s a great question. I\'ll pass it to our team and we\'ll get back to you with a detailed answer.<br><br>Or click <a href="https://line.me/ti/p/~' + LINE_ID + '" target="_blank">here to chat with us on LINE</a> for faster replies.');
+        addMessage('😊 Thanks for your message! That\'s a great question. I\'ll pass it to our team and we\'ll get back to you with a detailed answer.<br><br>Or click <a href="https://line.me/ti/p/~' + LINE_ID + '" target="_blank">here to chat with us on LINE (@' + LINE_ID + ')</a> for faster replies.');
       }
     });
   }
