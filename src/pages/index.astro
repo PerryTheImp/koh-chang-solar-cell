@@ -148,7 +148,7 @@ const eduArticles = [
           <p class="text-xs text-gray-400 mt-2">Step <span id="step-num">1</span> of 3</p>
         </div>
 
-        <form id="multi-step-form" action="https://script.google.com/macros/s/AKfycbzcOTOz_NxY7t8dHr4NLzssTfruUGb03HyrtdcqG-6NyrconblE6T6HHS5XrdSga9N0Wg/exec" method="POST" class="space-y-4">
+        <form id="multi-step-form" action="https://script.google.com/macros/s/AKfycbySvFQvsIwrds71XDfeHrneJqFZWKC9Eqn9f6RnEgQX6LLJicx2dTPx4hd0jQctOkFlqQ/exec" method="POST" class="space-y-4">
                     <input type="hidden" name="service" id="selected-service" value="" />
 
           <div id="step-1">
@@ -307,33 +307,53 @@ const eduArticles = [
               submitBtn.textContent = 'Sending...';
               submitBtn.disabled = true;
               
-              // Submit via fetch with CORS to get actual response
+              // Serialize form data as URL-encoded (Google Apps Script e.parameter reads this)
+              var formData = new FormData(form);
+              var params = new URLSearchParams();
+              for (var pair of formData.entries()) {
+                params.append(pair[0], pair[1]);
+              }
+              
+              // Submit via fetch with URL-encoded body
               fetch(form.action, {
                 method: 'POST',
-                body: new FormData(form),
+                body: params.toString(),
                 headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded',
                   'Accept': 'application/json'
                 }
               }).then(function(response) {
-                if (response.ok || response.status === 302) {
-                  showBanner('\u2714 Quote Request Sent! We will contact you within 24 hours.', 'success');
+                return response.text().then(function(text) {
+                  if (response.ok || text === 'OK' || text.indexOf('success') !== -1) {
+                    showBanner('✅ Quote Request Sent! We will contact you within 24 hours.', 'success');
+                    form.reset();
+                    currentStep = 1;
+                    selectedService = '';
+                    updateUI();
+                  } else {
+                    console.error('Submission error:', text);
+                    showBanner('Submission failed. Please try again or call us at 094 050 9623.', 'error');
+                    submitBtn.textContent = 'Submit Quote Request';
+                    submitBtn.disabled = false;
+                  }
+                });
+              }).catch(function(err) {
+                console.error('Network error:', err);
+                // Fallback: native form submission via hidden iframe
+                showBanner('Sending via fallback...', 'info');
+                var iframe = document.createElement('iframe');
+                iframe.name = 'form-fallback';
+                iframe.style.display = 'none';
+                document.body.appendChild(iframe);
+                form.target = 'form-fallback';
+                form.submit();
+                setTimeout(function() {
+                  showBanner('✅ Quote Request Sent! We will contact you within 24 hours.', 'success');
                   form.reset();
                   currentStep = 1;
                   selectedService = '';
                   updateUI();
-                } else {
-                  return response.text().then(function(text) {
-                    console.error('Formspree error:', text);
-                    showBanner('Submission failed. Please try again or call us at 094 050 9623.', 'error');
-                    submitBtn.textContent = 'Submit Quote Request';
-                    submitBtn.disabled = false;
-                  });
-                }
-              }).catch(function(err) {
-                console.error('Network error:', err);
-                // Fallback: try native form submission
-                showBanner('Sending via fallback...', 'info');
-                form.submit();
+                }, 2000);
               });
               
               return false;
