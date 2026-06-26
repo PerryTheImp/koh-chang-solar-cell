@@ -161,7 +161,7 @@
                 '<img src="/images/line-qr-code.jpg" alt="LINE QR Code" style="width:180px;height:180px;border-radius:12px;margin:8px 0;box-shadow:0 2px 8px rgba(0,0,0,0.1);">' +
                 '</a>' +
                 '<div style="font-size:12px;color:#666;">👆 Tap to open LINE, or scan the QR code</div>' +
-                '<div style="font-size:13px;margin-top:8px;">LINE ID: <strong>' + LINE_ID + '</strong></div>' +
+                '<div style="font-size:13px;margin-top:8px;"><a href="https://line.me/ti/p/~' + LINE_ID + '" target="_blank" style="color:#06C755;text-decoration:underline;">LINE: Click to chat →</a></div>' +
                 '</div>');
             });
           }, 400);
@@ -171,7 +171,7 @@
           addMessage('📞 Reach us directly:');
           setTimeout(function() {
             showTyping(function() {
-              addMessage('📱 <strong>Phone:</strong> <a href="tel:+66940509623">' + PHONE + '</a><br>📧 <strong>Email:</strong> ' + EMAIL + '<br>💬 <strong>LINE:</strong> <a href="https://line.me/ti/p/~' + LINE_ID + '" target="_blank">@' + LINE_ID + ' — click to chat</a><br><br>We typically respond within 1 hour during business hours (8 AM – 6 PM).');
+              addMessage('📱 <strong>Phone:</strong> <a href="tel:+66940509623">' + PHONE + '</a><br>📧 <strong>Email:</strong> ' + EMAIL + '<br>💬 <strong>LINE:</strong> <a href="https://line.me/ti/p/~' + LINE_ID + '" target="_blank">Click to chat →</a><br><br>We typically respond within 1 hour during business hours (8 AM – 6 PM).');
             });
           }, 400);
           break;
