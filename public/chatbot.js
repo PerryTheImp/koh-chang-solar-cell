@@ -206,7 +206,7 @@
       } else if (lower.match(/hello|hi|hey|greeting|sawadee/)) {
         addMessage('👋 Sawadee krub! How can I help you with solar today? Ask about pricing, installation, or anything else.');
       } else {
-        addMessage('😊 Thanks for your message! That\'s a great question. I\'ll pass it to our team and we\'ll get back to you with a detailed answer.<br><br>Or click <a href="https://line.me/ti/p/~' + LINE_ID + '" target="_blank">here to chat with us on LINE (@' + LINE_ID + ')</a> for faster replies.');
+        addMessage('😊 Thanks for your message! That\'s a great question. I\'ll pass it to our team and we\'ll get back to you with a detailed answer.<br><br>Or <a href="https://line.me/ti/p/~' + LINE_ID + '" target="_blank">click here to chat with us on LINE</a> for faster replies.');
       }
     });
   }
