@@ -137,7 +137,7 @@ const eduArticles = [
         <h3 class="text-2xl font-bold mb-2">{t.ctaFormTitle}</h3>
         <p class="text-gray-500 text-sm mb-6">กรอกข้อมูลของคุณ เราจะโทรกลับภายใน 24 ชั่วโมง</p>
         <form action="https://formspree.io/f/mrevwnnv" method="POST" class="space-y-4">
-          <input type="hidden" name="_cc" value="hendrixclaw@gmail.com" />
+          <input type="hidden" name="_cc" value="hendrixclaw@gmail.com, jjcomandsolarcell@gmail.com" />
           <input type="hidden" name="_subject" value="สอบถามใหม่ - kohchangsolarcell.com" />
           <input type="hidden" name="_redirect" value="https://www.kohchangsolarcell.com/th/?submitted=true" />
           <div>
@@ -355,16 +355,53 @@ const eduArticles = [
     </div>
   </section>
   <script is:inline>
-    // Show success banner after Formspree redirect (?submitted=true)
+    // AJAX submit for the TH quote form — stays on page, no redirect
     (function() {
-      if (window.location.search.indexOf('submitted=true') === -1) return;
-      var banner = document.createElement('div');
-      banner.innerHTML = '<div style="position:fixed;top:80px;left:50%;transform:translateX(-50%);background:#2d7a3e;color:white;padding:16px 24px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:9999;text-align:center;max-width:90%;font-family:sans-serif;"><div style="font-weight:bold;font-size:16px;">\u2714 ส่งคำขอใบเสนอราคาเรียบร้อย! เราจะติดต่อกลับภายใน 24 ชั่วโมง</div></div>';
-      document.body.appendChild(banner);
-      setTimeout(function() { banner.remove(); }, 6000);
-      if (window.history.replaceState) {
-        window.history.replaceState({}, document.title, window.location.pathname);
+      var form = document.querySelector('form[action*="formspree.io"]');
+      if (!form) return;
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var originalLabel = submitBtn ? submitBtn.textContent : '';
+
+      function showBanner(message, type) {
+        var colors = { success: '#2d7a3e', error: '#dc2626' };
+        var banner = document.createElement('div');
+        banner.innerHTML = '<div style="position:fixed;top:80px;left:50%;transform:translateX(-50%);background:' + colors[type] + ';color:white;padding:16px 24px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:9999;text-align:center;max-width:90%;font-family:sans-serif;font-size:16px;font-weight:bold;">' + message + '</div>';
+        document.body.appendChild(banner);
+        setTimeout(function() { banner.remove(); }, 6000);
       }
+
+      // Banner on no-JS redirect-back path (?submitted=true)
+      if (window.location.search.indexOf('submitted=true') !== -1) {
+        showBanner('\u2714 ส่งคำขอใบเสนอราคาเรียบร้อย! เราจะติดต่อกลับภายใน 24 ชั่วโมง', 'success');
+        if (window.history.replaceState) {
+          window.history.replaceState({}, document.title, window.location.pathname);
+        }
+      }
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (submitBtn) submitBtn.textContent = 'กำลังส่ง...';
+
+        var formData = new FormData(form);
+        fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        }).then(function(response) {
+          if (submitBtn) submitBtn.textContent = originalLabel;
+          if (response.ok) {
+            form.reset();
+            showBanner('\u2714 ส่งคำขอใบเสนอราคาเรียบร้อย! เราจะติดต่อกลับภายใน 24 ชั่วโมง', 'success');
+          } else {
+            showBanner('\u2718 ส่งไม่สำเร็จ กรุณาโทร 094 050 9623', 'error');
+          }
+        }).catch(function() {
+          if (submitBtn) submitBtn.textContent = originalLabel;
+          showBanner('\u2718 เกิดข้อผิดพลาด กรุณาโทร 094 050 9623', 'error');
+        });
+
+        return false;
+      });
     })();
   </script>
 
