@@ -148,7 +148,7 @@ const eduArticles = [
           <p class="text-xs text-gray-400 mt-2">Step <span id="step-num">1</span> of 3</p>
         </div>
 
-        <form id="multi-step-form" action="https://formspree.io/f/mrevwnnv" data-sheets-url="" method="POST" class="space-y-4">
+        <form id="multi-step-form" action="https://formspree.io/f/mrevwnnv" method="POST" class="space-y-4">
                     <input type="hidden" name="_cc" value="hendrixclaw@gmail.com, jjcomandsolarcell@gmail.com" />
                     <input type="hidden" name="_subject" value="New Solar Inquiry - kohchangsolarcell.com" />
                     <input type="hidden" name="_redirect" value="https://www.kohchangsolarcell.com/?submitted=true" />
@@ -316,15 +316,6 @@ const eduArticles = [
               }).then(function(response) {
                 submitBtn.textContent = 'Request Free Quote';
                 if (response.ok) {
-                  // Fire-and-forget Sheets write (no nav, no banner delay)
-                  var sheetsUrl = form.getAttribute('data-sheets-url');
-                  if (sheetsUrl) {
-                    fetch(sheetsUrl, {
-                      method: 'POST',
-                      body: new FormData(form),
-                      headers: { 'Accept': 'application/json' }
-                    }).catch(function() { /* Sheet write is best-effort */ });
-                  }
                   form.reset();
                   // Reset multi-step state back to step 1
                   currentStep = 1;
